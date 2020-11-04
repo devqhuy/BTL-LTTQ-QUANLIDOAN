@@ -1,0 +1,13 @@
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.exe.config
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.exe
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.pdb
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csprojAssemblyReference.cache
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.Properties.Resources.resources
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.GenerateResource.cache
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CoreCompileInputs.cache
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.exe
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.pdb
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.forms.FormMenu.resources
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\bin\Debug\XanderUI.dll
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CopyComplete
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.btnThoat.resources
