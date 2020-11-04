@@ -11,3 +11,15 @@ D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.forms
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\bin\Debug\XanderUI.dll
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CopyComplete
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.btnThoat.resources
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.exe.config
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.exe
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.pdb
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csprojAssemblyReference.cache
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.btnThoat.resources
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.forms.FormMenu.resources
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.Properties.Resources.resources
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.GenerateResource.cache
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CoreCompileInputs.cache
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CopyComplete
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.exe
+D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.pdb
