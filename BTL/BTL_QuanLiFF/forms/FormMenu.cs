@@ -7,19 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BTL_QuanLiFF.Forms;
 
-namespace BTL_QuanLiFF.forms
+
+
+namespace BTL_QuanLiFF.Forms
 {
-    public partial class FormMenu : Form
+    public partial class frmMenu : Form
     {
-        public FormMenu()
+        frmLogin frmLogin1 = new frmLogin();
+
+        public static string username = "";
+        public static string role = "";
+      
+        public frmMenu()
         {
             InitializeComponent();
+           
         }
 
         private void btnThoatMenu_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            
+            
         }
         private void moveSidePanel(Control control)
         {
@@ -40,6 +50,36 @@ namespace BTL_QuanLiFF.forms
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnNhanVien);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnDA);
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            //frmLogin1.ShowDialog();
+
+            this.MaximizeBox = false;
+            this.MinimizeBox = false; 
+
+            /*
+                Xu ly phan nhan lai thong tin tu form login
+             */
+        }
+
+        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dgResult;
+            dgResult = MessageBox.Show("Bạn Có Muốn Thoát không", "Thông Báo",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question );
+            if (dgResult == DialogResult.No)
+            {
+                this.Close();
+            }
+          
         }
     }
 }

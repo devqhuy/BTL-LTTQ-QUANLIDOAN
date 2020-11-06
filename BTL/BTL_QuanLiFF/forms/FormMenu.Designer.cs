@@ -1,6 +1,6 @@
-﻿namespace BTL_QuanLiFF.forms
+﻿namespace BTL_QuanLiFF.Forms
 {
-    partial class FormMenu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDA = new System.Windows.Forms.Button();
             this.panelSlide = new System.Windows.Forms.Panel();
             this.btnDoAnUong = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnThoatMenu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.lblTen = new System.Windows.Forms.Label();
+            this.lblCD = new System.Windows.Forms.Label();
+            this.lblCM = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,14 +57,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.btnNhanVien);
             this.panel1.Controls.Add(this.btnKhachHang);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnDA);
             this.panel1.Controls.Add(this.panelSlide);
             this.panel1.Controls.Add(this.btnDoAnUong);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(211, 720);
+            this.panel1.Size = new System.Drawing.Size(211, 703);
             this.panel1.TabIndex = 0;
             // 
             // btnNhanVien
@@ -99,21 +101,22 @@
             this.btnKhachHang.UseVisualStyleBackColor = true;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // button2
+            // btnDA
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(9, 260);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 77);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "ĐỒ ĂN";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDA.FlatAppearance.BorderSize = 0;
+            this.btnDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDA.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDA.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDA.Image = ((System.Drawing.Image)(resources.GetObject("btnDA.Image")));
+            this.btnDA.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDA.Location = new System.Drawing.Point(9, 260);
+            this.btnDA.Name = "btnDA";
+            this.btnDA.Size = new System.Drawing.Size(199, 77);
+            this.btnDA.TabIndex = 3;
+            this.btnDA.Text = "ĐỒ ĂN";
+            this.btnDA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDA.UseVisualStyleBackColor = true;
+            this.btnDA.Click += new System.EventHandler(this.button2_Click);
             // 
             // panelSlide
             // 
@@ -143,7 +146,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -151,14 +154,15 @@
             this.panel2.Size = new System.Drawing.Size(211, 171);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ĐẠT HUY FOOD";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(19, 108);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(181, 29);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "ĐẠT HUY FOOD";
             // 
             // pictureBox1
             // 
@@ -176,7 +180,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(211, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(989, 61);
+            this.panel3.Size = new System.Drawing.Size(923, 61);
             this.panel3.TabIndex = 1;
             // 
             // btnThoatMenu
@@ -186,7 +190,7 @@
             this.btnThoatMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnThoatMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoatMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatMenu.Image")));
-            this.btnThoatMenu.Location = new System.Drawing.Point(918, 0);
+            this.btnThoatMenu.Location = new System.Drawing.Point(852, 0);
             this.btnThoatMenu.Name = "btnThoatMenu";
             this.btnThoatMenu.Size = new System.Drawing.Size(71, 61);
             this.btnThoatMenu.TabIndex = 0;
@@ -196,45 +200,70 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lblRole);
+            this.panel4.Controls.Add(this.lblTen);
+            this.panel4.Controls.Add(this.lblCD);
+            this.panel4.Controls.Add(this.lblCM);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(211, 61);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(989, 110);
+            this.panel4.Size = new System.Drawing.Size(923, 110);
             this.panel4.TabIndex = 2;
             // 
-            // label3
+            // lblRole
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Chức Danh :";
+            this.lblRole.AutoSize = true;
+            this.lblRole.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.Location = new System.Drawing.Point(285, 62);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(197, 23);
+            this.lblRole.TabIndex = 3;
+            this.lblRole.Text = "Hien thi chuc vu ";
             // 
-            // label2
+            // lblTen
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Chào mừng :";
+            this.lblTen.AutoSize = true;
+            this.lblTen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.Location = new System.Drawing.Point(285, 19);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(142, 23);
+            this.lblTen.TabIndex = 2;
+            this.lblTen.Text = "Hien Thi Ten";
             // 
-            // FormMenu
+            // lblCD
+            // 
+            this.lblCD.AutoSize = true;
+            this.lblCD.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCD.Location = new System.Drawing.Point(79, 62);
+            this.lblCD.Name = "lblCD";
+            this.lblCD.Size = new System.Drawing.Size(131, 23);
+            this.lblCD.TabIndex = 1;
+            this.lblCD.Text = "Chức Danh :";
+            // 
+            // lblCM
+            // 
+            this.lblCM.AutoSize = true;
+            this.lblCM.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCM.Location = new System.Drawing.Point(79, 19);
+            this.lblCM.Name = "lblCM";
+            this.lblCM.Size = new System.Drawing.Size(131, 23);
+            this.lblCM.TabIndex = 0;
+            this.lblCM.Text = "Chào mừng :";
+            // 
+            // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.ClientSize = new System.Drawing.Size(1134, 703);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Control;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMenu";
-            this.Text = "Form2";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Trang hiển thị";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing);
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -255,12 +284,14 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panelSlide;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDA;
         private System.Windows.Forms.Button btnNhanVien;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCD;
+        private System.Windows.Forms.Label lblCM;
         private System.Windows.Forms.Button btnThoatMenu;
+        private System.Windows.Forms.Label lblTen;
+        private System.Windows.Forms.Label lblRole;
     }
 }

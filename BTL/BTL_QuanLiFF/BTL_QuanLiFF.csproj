@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DataBaseProcess.cs" />
     <Compile Include="forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\BTL_QuanLiFF.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,7 +95,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\BTL_QuanLiFF.exe" />
+    <Content Include="bin\Debug\BTL_QuanLiFF.pdb" />
+    <Content Include="bin\Debug\XanderUI.dll" />
     <Content Include="img\hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\Image\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BTL_QuanLiFF;
+using BTL_QuanLiFF.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace BTL_QuanLiFF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new btnThoat());
+            Application.Run(new frmMenu());
         }
     }
 }
