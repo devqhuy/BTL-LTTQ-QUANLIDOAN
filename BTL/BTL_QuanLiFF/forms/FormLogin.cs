@@ -7,8 +7,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,10 +19,12 @@ namespace BTL_QuanLiFF
     public partial class frmLogin : Form
     {
         Classes.DataBaseProcess dtbase = new Classes.DataBaseProcess();
-        
+
+        frmMenu frmMenu1;
         string username = "";
         string role = "";
 
+        
         public frmLogin()
         {
             InitializeComponent();
@@ -50,10 +54,16 @@ namespace BTL_QuanLiFF
                         "on nhanvien.idNV = TAIKHOAN.idNV " +
                         "where email = '" + txtTK.Text +"'");
                     username = dt.Rows[0]["hoTenNV"].ToString() ;
-                    role = dt.Rows[0]["chucVu"].ToString();  
-                    /*
-                        Xu ly phan quay tro lai trnag menu ban dau 
-                     */
+                    role = dt.Rows[0]["chucVu"].ToString();
+
+                    MessageBox.Show(username);
+
+                    txtMK.Text = "";
+                    txtTK.Text = "";
+
+                    frmMenu1 = new frmMenu(username, role, true);
+                    frmMenu1.ShowDialog();
+                    
                 }
                 else
                 {
@@ -107,5 +117,26 @@ namespace BTL_QuanLiFF
                 return false;
             }
         }
+
+        /*
+        private void tm1_Tick(object sender, EventArgs e)
+        {
+            if(frmMenu1.bl == true )
+            {
+               DialogResult dgResult = MessageBox.Show("Bạn Có Muốn Thoát KHỎI CHƯƠNG TRÌNH", "Thông Báo 2",
+                                       MessageBoxButtons.YesNo,
+                                       MessageBoxIcon.Question);
+
+                if (dgResult == DialogResult.No)
+                {
+                    this.Show();
+                }
+
+            }
+
+            
+        }
+
+        */
     }
 }

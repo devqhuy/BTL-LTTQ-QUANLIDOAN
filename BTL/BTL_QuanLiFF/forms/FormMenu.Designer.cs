@@ -195,7 +195,6 @@
             this.btnThoatMenu.Size = new System.Drawing.Size(71, 61);
             this.btnThoatMenu.TabIndex = 0;
             this.btnThoatMenu.UseVisualStyleBackColor = true;
-            this.btnThoatMenu.Click += new System.EventHandler(this.btnThoatMenu_Click);
             // 
             // panel4
             // 
@@ -262,7 +261,6 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang hiển thị";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing);
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

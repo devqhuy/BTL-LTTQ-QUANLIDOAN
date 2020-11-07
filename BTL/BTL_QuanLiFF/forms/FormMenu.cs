@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,11 @@ namespace BTL_QuanLiFF.Forms
     {
         frmLogin frmLogin1 = new frmLogin();
 
-        public static string username = "";
-        public static string role = "";
+        public string username = "";
+        public string role = "";
+        public bool start_session = false;
+        public bool end_session = false;
+        public bool bl = false;
       
         public frmMenu()
         {
@@ -26,11 +30,22 @@ namespace BTL_QuanLiFF.Forms
            
         }
 
-        private void btnThoatMenu_Click(object sender, EventArgs e)
+          private void frmMenu_Load(object sender, EventArgs e)
         {
-            
-            
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
+            lblTen.Text = username;
+            lblRole.Text = role;
         }
+
+        public frmMenu(string name, string role, bool start) :this()
+        {
+            this.username = name;
+            this.role = role;
+            this.start_session = true;
+        }
+
         private void moveSidePanel(Control control)
         {
             panelSlide.Top = control.Top;
@@ -57,29 +72,5 @@ namespace BTL_QuanLiFF.Forms
             moveSidePanel(btnDA);
         }
 
-        private void frmMenu_Load(object sender, EventArgs e)
-        {
-            //frmLogin1.ShowDialog();
-
-            this.MaximizeBox = false;
-            this.MinimizeBox = false; 
-
-            /*
-                Xu ly phan nhan lai thong tin tu form login
-             */
-        }
-
-        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dgResult;
-            dgResult = MessageBox.Show("Bạn Có Muốn Thoát không", "Thông Báo",
-                                       MessageBoxButtons.YesNo,
-                                       MessageBoxIcon.Question );
-            if (dgResult == DialogResult.No)
-            {
-                this.Close();
-            }
-          
-        }
     }
 }
