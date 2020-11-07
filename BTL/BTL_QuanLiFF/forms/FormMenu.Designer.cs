@@ -45,6 +45,8 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblCD = new System.Windows.Forms.Label();
             this.lblCM = new System.Windows.Forms.Label();
+            this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -250,10 +252,19 @@
             this.lblCM.TabIndex = 0;
             this.lblCM.Text = "Chào mừng :";
             // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(211, 171);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(923, 532);
+            this.panel5.TabIndex = 3;
+            // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1134, 703);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -293,5 +304,7 @@
         private System.Windows.Forms.Button btnThoatMenu;
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblRole;
+        private XanderUI.XUIBackgroundSleeper xuiBackgroundSleeper1;
+        private System.Windows.Forms.Panel panel5;
     }
 }

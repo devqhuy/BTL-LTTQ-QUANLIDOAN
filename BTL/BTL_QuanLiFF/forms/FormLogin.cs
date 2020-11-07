@@ -18,8 +18,8 @@ namespace BTL_QuanLiFF
     {
         Classes.DataBaseProcess dtbase = new Classes.DataBaseProcess();
         
-        string username = "";
-        string role = "";
+        public static string username = "";
+        public static string role = "";
 
         public frmLogin()
         {
@@ -35,7 +35,7 @@ namespace BTL_QuanLiFF
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true)
+            /*if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true) 
             {
                 DataTable dt = new DataTable();
                 dt = dtbase.DataReader("select email, matKhau from TAIKHOAN where" +
@@ -53,16 +53,25 @@ namespace BTL_QuanLiFF
                     role = dt.Rows[0]["chucVu"].ToString();  
                     /*
                         Xu ly phan quay tro lai trnag menu ban dau 
-                     */
+                     
                 }
                 else
                 {
                     MessageBox.Show(txtMK.Text);
                     MessageBox.Show("Ten dang nhap hay mat khau khong dung");
                 }
+                
+            }
+            */
+            if (txtTK.Text == "admin" & txtMK.Text == "123")
+            {
+                username = txtTK.Text;
+                frmMenu f = new frmMenu();
+                f.ShowDialog();
             }
         }
 
+       
         public bool validateLogin()
         {
             if(txtTK.Text.Trim() == "")

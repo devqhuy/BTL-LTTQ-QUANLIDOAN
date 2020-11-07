@@ -13,9 +13,12 @@ using BTL_QuanLiFF.Forms;
 
 namespace BTL_QuanLiFF.Forms
 {
+    
     public partial class frmMenu : Form
     {
+        public static frmMenu fMenu = new frmMenu();
         frmLogin frmLogin1 = new frmLogin();
+        
 
         public static string username = "";
         public static string role = "";
@@ -23,7 +26,7 @@ namespace BTL_QuanLiFF.Forms
         public frmMenu()
         {
             InitializeComponent();
-           
+            
         }
 
         private void btnThoatMenu_Click(object sender, EventArgs e)
@@ -45,6 +48,8 @@ namespace BTL_QuanLiFF.Forms
         private void btnDoAnUong_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnDoAnUong);
+            
+           
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -62,7 +67,14 @@ namespace BTL_QuanLiFF.Forms
             //frmLogin1.ShowDialog();
 
             this.MaximizeBox = false;
-            this.MinimizeBox = false; 
+            this.MinimizeBox = false;
+            frmLogin1.ShowDialog();
+            lblTen.Text = username;
+
+
+            
+            
+            
 
             /*
                 Xu ly phan nhan lai thong tin tu form login
