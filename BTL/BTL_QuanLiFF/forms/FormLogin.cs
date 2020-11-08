@@ -19,16 +19,10 @@ namespace BTL_QuanLiFF
     public partial class frmLogin : Form
     {
         Classes.DataBaseProcess dtbase = new Classes.DataBaseProcess();
-<<<<<<< HEAD
-        
-        public static string username = "";
-        public static string role = "";
-=======
 
         frmMenu frmMenu1;
         string username = "";
         string role = "";
->>>>>>> f3895feae0c7938966ee1ffaf2315ac26841e245
 
         
         public frmLogin()
