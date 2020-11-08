@@ -74,7 +74,7 @@ namespace BTL_QuanLiFF
                 }
                 
             }
-            */
+           
             if (txtTK.Text == "admin" & txtMK.Text == "123")
             {
                 username = txtTK.Text;
