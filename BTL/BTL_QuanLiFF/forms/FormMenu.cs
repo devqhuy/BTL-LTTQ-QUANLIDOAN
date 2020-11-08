@@ -77,25 +77,6 @@ namespace BTL_QuanLiFF.Forms
             moveSidePanel(btnDA);
         }
 
-<<<<<<< HEAD
-        private void frmMenu_Load(object sender, EventArgs e)
-        {
-            //frmLogin1.ShowDialog();
-
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            frmLogin1.ShowDialog();
-            lblTen.Text = username;
-
-
-            
-            
-            
-
-            /*
-                Xu ly phan nhan lai thong tin tu form login
-             */
-        }
 
         private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -109,7 +90,6 @@ namespace BTL_QuanLiFF.Forms
             }
           
         }
-=======
->>>>>>> f3895feae0c7938966ee1ffaf2315ac26841e245
+
     }
 }
