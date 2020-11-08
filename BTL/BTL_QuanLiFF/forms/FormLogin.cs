@@ -39,7 +39,7 @@ namespace BTL_QuanLiFF
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            /*if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true) 
+            if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true) 
             {
                 DataTable dt = new DataTable();
                 dt = dtbase.DataReader("select email, matKhau from TAIKHOAN where" +
@@ -54,13 +54,9 @@ namespace BTL_QuanLiFF
                         "on nhanvien.idNV = TAIKHOAN.idNV " +
                         "where email = '" + txtTK.Text +"'");
                     username = dt.Rows[0]["hoTenNV"].ToString() ;
-<<<<<<< HEAD
+
                     role = dt.Rows[0]["chucVu"].ToString();  
-                    /*
-                        Xu ly phan quay tro lai trnag menu ban dau 
-                     
-=======
-                    role = dt.Rows[0]["chucVu"].ToString();
+                   
 
                     MessageBox.Show(username);
 
@@ -70,7 +66,6 @@ namespace BTL_QuanLiFF
                     frmMenu1 = new frmMenu(username, role, true);
                     frmMenu1.ShowDialog();
                     
->>>>>>> f3895feae0c7938966ee1ffaf2315ac26841e245
                 }
                 else
                 {
