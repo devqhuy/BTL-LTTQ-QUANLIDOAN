@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BTL_QuanLiFF.Forms;
-
-
+using BTL_QuanLiFF.UserControls;
 
 namespace BTL_QuanLiFF.Forms
 {
@@ -33,6 +32,13 @@ namespace BTL_QuanLiFF.Forms
             
         }
 
+        //ham khi click tung button se cho form userControl vao panel cua form tuong ung
+        private void addControlsToPanel(Control c)
+        {
+            c.Dock = DockStyle.Fill;
+            panelControl.Controls.Clear();
+            panelControl.Controls.Add(c);
+        }
           private void frmMenu_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
@@ -63,7 +69,6 @@ namespace BTL_QuanLiFF.Forms
         private void btnDoAnUong_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnDoAnUong);
-            
            
         }
 
@@ -72,11 +77,12 @@ namespace BTL_QuanLiFF.Forms
             moveSidePanel(btnNhanVien);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnDA);
+            moveSidePanel(btnThongKe);
+            ucThongKe ucDAU = new ucThongKe();
+            addControlsToPanel(ucDAU);
         }
-
 
         private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -91,5 +97,6 @@ namespace BTL_QuanLiFF.Forms
           
         }
 
+        
     }
 }

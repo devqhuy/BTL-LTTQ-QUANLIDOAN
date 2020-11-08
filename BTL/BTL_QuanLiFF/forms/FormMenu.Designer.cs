@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
-            this.btnDA = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
             this.panelSlide = new System.Windows.Forms.Panel();
             this.btnDoAnUong = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,7 +46,7 @@
             this.lblCD = new System.Windows.Forms.Label();
             this.lblCM = new System.Windows.Forms.Label();
             this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelControl = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +59,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.btnNhanVien);
             this.panel1.Controls.Add(this.btnKhachHang);
-            this.panel1.Controls.Add(this.btnDA);
+            this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.panelSlide);
             this.panel1.Controls.Add(this.btnDoAnUong);
             this.panel1.Controls.Add(this.panel2);
@@ -103,22 +103,22 @@
             this.btnKhachHang.UseVisualStyleBackColor = true;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // btnDA
+            // btnThongKe
             // 
-            this.btnDA.FlatAppearance.BorderSize = 0;
-            this.btnDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDA.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDA.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDA.Image = ((System.Drawing.Image)(resources.GetObject("btnDA.Image")));
-            this.btnDA.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDA.Location = new System.Drawing.Point(9, 260);
-            this.btnDA.Name = "btnDA";
-            this.btnDA.Size = new System.Drawing.Size(199, 77);
-            this.btnDA.TabIndex = 3;
-            this.btnDA.Text = "ĐỒ ĂN";
-            this.btnDA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDA.UseVisualStyleBackColor = true;
-            this.btnDA.Click += new System.EventHandler(this.button2_Click);
+            this.btnThongKe.FlatAppearance.BorderSize = 0;
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThongKe.Location = new System.Drawing.Point(9, 260);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(199, 77);
+            this.btnThongKe.TabIndex = 3;
+            this.btnThongKe.Text = "THỐNG KÊ";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // panelSlide
             // 
@@ -251,19 +251,19 @@
             this.lblCM.TabIndex = 0;
             this.lblCM.Text = "Chào mừng :";
             // 
-            // panel5
+            // panelControl
             // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(211, 171);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(923, 532);
-            this.panel5.TabIndex = 3;
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl.Location = new System.Drawing.Point(211, 171);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(923, 532);
+            this.panelControl.TabIndex = 3;
             // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1134, 703);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -295,7 +295,7 @@
         private System.Windows.Forms.Panel panelSlide;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Button btnDA;
+        private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Label lblCD;
         private System.Windows.Forms.Label lblCM;
@@ -303,6 +303,6 @@
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblRole;
         private XanderUI.XUIBackgroundSleeper xuiBackgroundSleeper1;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelControl;
     }
 }

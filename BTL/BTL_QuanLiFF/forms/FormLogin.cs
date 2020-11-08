@@ -39,6 +39,7 @@ namespace BTL_QuanLiFF
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            /*
             if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true) 
             {
                 DataTable dt = new DataTable();
@@ -64,8 +65,12 @@ namespace BTL_QuanLiFF
                     txtTK.Text = "";
 
                     frmMenu1 = new frmMenu(username, role, true);
+                    //khi dang nhap thanh cong thi tat form login di roi hien form menu len 
+                    //neu form menu tat di thi hien lai fomr login
+                    this.Hide();
                     frmMenu1.ShowDialog();
-                    
+                    this.Show();
+
                 }
                 else
                 {
@@ -74,13 +79,10 @@ namespace BTL_QuanLiFF
                 }
                 
             }
-           
-            if (txtTK.Text == "admin" & txtMK.Text == "123")
-            {
-                username = txtTK.Text;
-                frmMenu f = new frmMenu();
-                f.ShowDialog();
-            }
+           */
+
+            frmMenu f = new frmMenu();
+            f.ShowDialog();
         }
 
        

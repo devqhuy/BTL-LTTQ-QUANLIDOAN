@@ -35,5 +35,5 @@ D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CopyComplete
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.exe
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.pdb
-D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.forms.UserControl1.resources
 D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucDoAnUong.resources
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucDoAnUong.resources

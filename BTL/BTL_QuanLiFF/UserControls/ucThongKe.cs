@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BTL_QuanLiFF.UserControls
 {
-    public partial class ucDoAnUong : UserControl
+    public partial class ucThongKe : UserControl
     {
-        public ucDoAnUong()
+        public ucThongKe()
         {
             InitializeComponent();
         }
