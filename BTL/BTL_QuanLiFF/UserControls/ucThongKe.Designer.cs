@@ -30,39 +30,39 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnXemTop10 = new System.Windows.Forms.Button();
             this.dgvTop10 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXem1 = new System.Windows.Forms.Button();
+            this.dtpTo1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFrom1 = new System.Windows.Forms.DateTimePicker();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.btnXemHDN = new System.Windows.Forms.Button();
             this.dgvHDN = new System.Windows.Forms.DataGridView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.btnXemHDB = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnXem2 = new System.Windows.Forms.Button();
+            this.dtpTo2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFrom2 = new System.Windows.Forms.DateTimePicker();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgvHDB = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dtpXem3 = new System.Windows.Forms.Button();
+            this.dtpTo3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFrom3 = new System.Windows.Forms.DateTimePicker();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTop10)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDB)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -88,40 +88,6 @@
             this.tabPage1.Text = "TOP 10 BEST SELLER";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(876, 464);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "HÓA ĐƠN NHẬP";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.panel6);
-            this.tabPage3.Controls.Add(this.panel5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(876, 464);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "HÓA ĐƠN BÁN";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnXemTop10);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(870, 94);
-            this.panel1.TabIndex = 0;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvTop10);
@@ -130,31 +96,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(870, 364);
             this.panel2.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(68, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(578, 32);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker2.TabIndex = 1;
-            // 
-            // btnXemTop10
-            // 
-            this.btnXemTop10.Location = new System.Drawing.Point(364, 32);
-            this.btnXemTop10.Name = "btnXemTop10";
-            this.btnXemTop10.Size = new System.Drawing.Size(118, 32);
-            this.btnXemTop10.TabIndex = 2;
-            this.btnXemTop10.Text = "XEM";
-            this.btnXemTop10.UseVisualStyleBackColor = true;
             // 
             // dgvTop10
             // 
@@ -167,16 +108,53 @@
             this.dgvTop10.Size = new System.Drawing.Size(870, 364);
             this.dgvTop10.TabIndex = 0;
             // 
-            // panel3
+            // panel1
             // 
-            this.panel3.Controls.Add(this.btnXemHDN);
-            this.panel3.Controls.Add(this.dateTimePicker4);
-            this.panel3.Controls.Add(this.dateTimePicker3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(870, 94);
-            this.panel3.TabIndex = 0;
+            this.panel1.Controls.Add(this.btnXem1);
+            this.panel1.Controls.Add(this.dtpTo1);
+            this.panel1.Controls.Add(this.dtpFrom1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(870, 94);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnXem1
+            // 
+            this.btnXem1.Location = new System.Drawing.Point(690, 34);
+            this.btnXem1.Name = "btnXem1";
+            this.btnXem1.Size = new System.Drawing.Size(118, 32);
+            this.btnXem1.TabIndex = 2;
+            this.btnXem1.Text = "XEM";
+            this.btnXem1.UseVisualStyleBackColor = true;
+            // 
+            // dtpTo1
+            // 
+            this.dtpTo1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTo1.Location = new System.Drawing.Point(360, 32);
+            this.dtpTo1.Name = "dtpTo1";
+            this.dtpTo1.Size = new System.Drawing.Size(200, 32);
+            this.dtpTo1.TabIndex = 1;
+            // 
+            // dtpFrom1
+            // 
+            this.dtpFrom1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFrom1.Location = new System.Drawing.Point(68, 32);
+            this.dtpFrom1.Name = "dtpFrom1";
+            this.dtpFrom1.Size = new System.Drawing.Size(200, 32);
+            this.dtpFrom1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(876, 464);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "HÓA ĐƠN NHẬP";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -186,29 +164,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(870, 364);
             this.panel4.TabIndex = 1;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(36, 30);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker3.TabIndex = 0;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(584, 30);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker4.TabIndex = 1;
-            // 
-            // btnXemHDN
-            // 
-            this.btnXemHDN.Location = new System.Drawing.Point(351, 30);
-            this.btnXemHDN.Name = "btnXemHDN";
-            this.btnXemHDN.Size = new System.Drawing.Size(118, 32);
-            this.btnXemHDN.TabIndex = 2;
-            this.btnXemHDN.Text = "XEM";
-            this.btnXemHDN.UseVisualStyleBackColor = true;
             // 
             // dgvHDN
             // 
@@ -221,39 +176,50 @@
             this.dgvHDN.Size = new System.Drawing.Size(870, 364);
             this.dgvHDN.TabIndex = 0;
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.Controls.Add(this.btnXemHDB);
-            this.panel5.Controls.Add(this.dateTimePicker6);
-            this.panel5.Controls.Add(this.dateTimePicker5);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(876, 100);
-            this.panel5.TabIndex = 0;
+            this.panel3.Controls.Add(this.btnXem2);
+            this.panel3.Controls.Add(this.dtpTo2);
+            this.panel3.Controls.Add(this.dtpFrom2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(870, 94);
+            this.panel3.TabIndex = 0;
             // 
-            // dateTimePicker5
+            // btnXem2
             // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(59, 33);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker5.TabIndex = 0;
+            this.btnXem2.Location = new System.Drawing.Point(704, 32);
+            this.btnXem2.Name = "btnXem2";
+            this.btnXem2.Size = new System.Drawing.Size(118, 32);
+            this.btnXem2.TabIndex = 2;
+            this.btnXem2.Text = "XEM";
+            this.btnXem2.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker6
+            // dtpTo2
             // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(591, 33);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(200, 32);
-            this.dateTimePicker6.TabIndex = 1;
+            this.dtpTo2.Location = new System.Drawing.Point(361, 30);
+            this.dtpTo2.Name = "dtpTo2";
+            this.dtpTo2.Size = new System.Drawing.Size(200, 32);
+            this.dtpTo2.TabIndex = 1;
             // 
-            // btnXemHDB
+            // dtpFrom2
             // 
-            this.btnXemHDB.Location = new System.Drawing.Point(366, 33);
-            this.btnXemHDB.Name = "btnXemHDB";
-            this.btnXemHDB.Size = new System.Drawing.Size(118, 32);
-            this.btnXemHDB.TabIndex = 2;
-            this.btnXemHDB.Text = "XEM";
-            this.btnXemHDB.UseVisualStyleBackColor = true;
+            this.dtpFrom2.Location = new System.Drawing.Point(36, 30);
+            this.dtpFrom2.Name = "dtpFrom2";
+            this.dtpFrom2.Size = new System.Drawing.Size(200, 32);
+            this.dtpFrom2.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panel6);
+            this.tabPage3.Controls.Add(this.panel5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(876, 464);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "HÓA ĐƠN BÁN";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -275,6 +241,40 @@
             this.dgvHDB.Size = new System.Drawing.Size(876, 364);
             this.dgvHDB.TabIndex = 0;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.dtpXem3);
+            this.panel5.Controls.Add(this.dtpTo3);
+            this.panel5.Controls.Add(this.dtpFrom3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(876, 100);
+            this.panel5.TabIndex = 0;
+            // 
+            // dtpXem3
+            // 
+            this.dtpXem3.Location = new System.Drawing.Point(684, 35);
+            this.dtpXem3.Name = "dtpXem3";
+            this.dtpXem3.Size = new System.Drawing.Size(118, 32);
+            this.dtpXem3.TabIndex = 2;
+            this.dtpXem3.Text = "XEM";
+            this.dtpXem3.UseVisualStyleBackColor = true;
+            // 
+            // dtpTo3
+            // 
+            this.dtpTo3.Location = new System.Drawing.Point(365, 33);
+            this.dtpTo3.Name = "dtpTo3";
+            this.dtpTo3.Size = new System.Drawing.Size(200, 32);
+            this.dtpTo3.TabIndex = 1;
+            // 
+            // dtpFrom3
+            // 
+            this.dtpFrom3.Location = new System.Drawing.Point(59, 33);
+            this.dtpFrom3.Name = "dtpFrom3";
+            this.dtpFrom3.Size = new System.Drawing.Size(200, 32);
+            this.dtpFrom3.TabIndex = 0;
+            // 
             // ucThongKe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -284,17 +284,17 @@
             this.Size = new System.Drawing.Size(923, 532);
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTop10)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).EndInit();
-            this.panel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDB)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -306,21 +306,21 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvTop10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnXemTop10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnXem1;
+        private System.Windows.Forms.DateTimePicker dtpTo1;
+        private System.Windows.Forms.DateTimePicker dtpFrom1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgvHDN;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnXemHDN;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Button btnXem2;
+        private System.Windows.Forms.DateTimePicker dtpTo2;
+        private System.Windows.Forms.DateTimePicker dtpFrom2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnXemHDB;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.Button dtpXem3;
+        private System.Windows.Forms.DateTimePicker dtpTo3;
+        private System.Windows.Forms.DateTimePicker dtpFrom3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView dgvHDB;
     }

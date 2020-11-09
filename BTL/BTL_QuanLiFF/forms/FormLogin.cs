@@ -39,14 +39,14 @@ namespace BTL_QuanLiFF
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            /*
+            
             if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true) 
             {
                 DataTable dt = new DataTable();
                 dt = dtbase.DataReader("select email, matKhau from TAIKHOAN where" +
                     " email = '" + txtTK.Text +
                     "' and matKhau = '" + txtMK.Text + "'");
-                if (dt.Rows.Count >= 0)
+                if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("Dang nhap thanh cong");
                     dt = dtbase.DataReader("select * " +
@@ -57,16 +57,12 @@ namespace BTL_QuanLiFF
                     username = dt.Rows[0]["hoTenNV"].ToString() ;
 
                     role = dt.Rows[0]["chucVu"].ToString();  
-                   
-
-                    MessageBox.Show(username);
 
                     txtMK.Text = "";
                     txtTK.Text = "";
 
                     frmMenu1 = new frmMenu(username, role, true);
-                    //khi dang nhap thanh cong thi tat form login di roi hien form menu len 
-                    //neu form menu tat di thi hien lai fomr login
+                    
                     this.Hide();
                     frmMenu1.ShowDialog();
                     this.Show();
@@ -74,15 +70,13 @@ namespace BTL_QuanLiFF
                 }
                 else
                 {
-                    MessageBox.Show(txtMK.Text);
-                    MessageBox.Show("Ten dang nhap hay mat khau khong dung");
+                    
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
+                    txtTK.Focus();
                 }
                 
             }
-           */
-
-            frmMenu f = new frmMenu();
-            f.ShowDialog();
+          
         }
 
        
@@ -131,25 +125,5 @@ namespace BTL_QuanLiFF
             }
         }
 
-        /*
-        private void tm1_Tick(object sender, EventArgs e)
-        {
-            if(frmMenu1.bl == true )
-            {
-               DialogResult dgResult = MessageBox.Show("Bạn Có Muốn Thoát KHỎI CHƯƠNG TRÌNH", "Thông Báo 2",
-                                       MessageBoxButtons.YesNo,
-                                       MessageBoxIcon.Question);
-
-                if (dgResult == DialogResult.No)
-                {
-                    this.Show();
-                }
-
-            }
-
-            
-        }
-
-        */
     }
 }

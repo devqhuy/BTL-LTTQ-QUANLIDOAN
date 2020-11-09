@@ -47,6 +47,7 @@
             this.lblCM = new System.Windows.Forms.Label();
             this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.lblTieuDe = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +78,7 @@
             this.btnNhanVien.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhanVien.Location = new System.Drawing.Point(9, 436);
+            this.btnNhanVien.Location = new System.Drawing.Point(12, 332);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(199, 77);
             this.btnNhanVien.TabIndex = 5;
@@ -94,7 +95,7 @@
             this.btnKhachHang.ForeColor = System.Drawing.SystemColors.Control;
             this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKhachHang.Location = new System.Drawing.Point(12, 343);
+            this.btnKhachHang.Location = new System.Drawing.Point(12, 249);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(199, 77);
             this.btnKhachHang.TabIndex = 4;
@@ -111,7 +112,7 @@
             this.btnThongKe.ForeColor = System.Drawing.SystemColors.Control;
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongKe.Location = new System.Drawing.Point(9, 260);
+            this.btnThongKe.Location = new System.Drawing.Point(12, 431);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(199, 77);
             this.btnThongKe.TabIndex = 3;
@@ -153,7 +154,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(211, 171);
+            this.panel2.Size = new System.Drawing.Size(211, 152);
             this.panel2.TabIndex = 1;
             // 
             // lblTitle
@@ -178,6 +179,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblTieuDe);
             this.panel3.Controls.Add(this.btnThoatMenu);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(211, 0);
@@ -187,6 +189,7 @@
             // 
             // btnThoatMenu
             // 
+            this.btnThoatMenu.BackColor = System.Drawing.Color.Transparent;
             this.btnThoatMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnThoatMenu.FlatAppearance.BorderSize = 0;
             this.btnThoatMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -196,7 +199,8 @@
             this.btnThoatMenu.Name = "btnThoatMenu";
             this.btnThoatMenu.Size = new System.Drawing.Size(71, 61);
             this.btnThoatMenu.TabIndex = 0;
-            this.btnThoatMenu.UseVisualStyleBackColor = true;
+            this.btnThoatMenu.UseVisualStyleBackColor = false;
+            this.btnThoatMenu.Click += new System.EventHandler(this.btnThoatMenu_Click);
             // 
             // panel4
             // 
@@ -208,14 +212,14 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(211, 61);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(923, 110);
+            this.panel4.Size = new System.Drawing.Size(923, 91);
             this.panel4.TabIndex = 2;
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.Location = new System.Drawing.Point(285, 62);
+            this.lblRole.Location = new System.Drawing.Point(285, 56);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(197, 23);
             this.lblRole.TabIndex = 3;
@@ -225,7 +229,7 @@
             // 
             this.lblTen.AutoSize = true;
             this.lblTen.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTen.Location = new System.Drawing.Point(285, 19);
+            this.lblTen.Location = new System.Drawing.Point(285, 13);
             this.lblTen.Name = "lblTen";
             this.lblTen.Size = new System.Drawing.Size(142, 23);
             this.lblTen.TabIndex = 2;
@@ -235,7 +239,7 @@
             // 
             this.lblCD.AutoSize = true;
             this.lblCD.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCD.Location = new System.Drawing.Point(79, 62);
+            this.lblCD.Location = new System.Drawing.Point(79, 56);
             this.lblCD.Name = "lblCD";
             this.lblCD.Size = new System.Drawing.Size(131, 23);
             this.lblCD.TabIndex = 1;
@@ -245,7 +249,7 @@
             // 
             this.lblCM.AutoSize = true;
             this.lblCM.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCM.Location = new System.Drawing.Point(79, 19);
+            this.lblCM.Location = new System.Drawing.Point(79, 13);
             this.lblCM.Name = "lblCM";
             this.lblCM.Size = new System.Drawing.Size(131, 23);
             this.lblCM.TabIndex = 0;
@@ -254,10 +258,22 @@
             // panelControl
             // 
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl.Location = new System.Drawing.Point(211, 171);
+            this.panelControl.Location = new System.Drawing.Point(211, 152);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(923, 532);
+            this.panelControl.Size = new System.Drawing.Size(923, 551);
             this.panelControl.TabIndex = 3;
+            // 
+            // lblTieuDe
+            // 
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.BackColor = System.Drawing.Color.Transparent;
+            this.lblTieuDe.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblTieuDe.Location = new System.Drawing.Point(206, 9);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(493, 49);
+            this.lblTieuDe.TabIndex = 1;
+            this.lblTieuDe.Text = "Tiêu đề cho mục đã chọn";
             // 
             // frmMenu
             // 
@@ -272,12 +288,14 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang hiển thị";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing_1);
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -304,5 +322,6 @@
         private System.Windows.Forms.Label lblRole;
         private XanderUI.XUIBackgroundSleeper xuiBackgroundSleeper1;
         private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Label lblTieuDe;
     }
 }

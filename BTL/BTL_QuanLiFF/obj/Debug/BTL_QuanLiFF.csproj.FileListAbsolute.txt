@@ -37,3 +37,16 @@ D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.pdb
 D:\MS_visual_studio\project\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucDoAnUong.resources
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucDoAnUong.resources
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.exe.config
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.exe
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\bin\Debug\BTL_QuanLiFF.pdb
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csprojAssemblyReference.cache
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.frmLogin.resources
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.Forms.frmMenu.resources
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.Properties.Resources.resources
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucThongKe.resources
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.GenerateResource.cache
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CoreCompileInputs.cache
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CopyComplete
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.exe
+D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.pdb

@@ -42,7 +42,6 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.err1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tm1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -221,7 +220,6 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ErrorProvider err1;
-        private System.Windows.Forms.Timer tm1;
     }
 }
 

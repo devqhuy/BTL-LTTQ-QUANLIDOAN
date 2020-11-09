@@ -18,7 +18,7 @@ namespace BTL_QuanLiFF.Forms
     {
         public static frmMenu fMenu = new frmMenu();
         frmLogin frmLogin1 = new frmLogin();
-        
+        ucThongKe ucDAU = new ucThongKe();
 
         public string username = "";
         public string role = "";
@@ -38,6 +38,7 @@ namespace BTL_QuanLiFF.Forms
             c.Dock = DockStyle.Fill;
             panelControl.Controls.Clear();
             panelControl.Controls.Add(c);
+
         }
           private void frmMenu_Load(object sender, EventArgs e)
         {
@@ -64,39 +65,43 @@ namespace BTL_QuanLiFF.Forms
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnKhachHang);
+            lblTieuDe.Text = "Mục khách hàng";
         }
 
         private void btnDoAnUong_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnDoAnUong);
+            lblTieuDe.Text = "Lựa chọn đồ ăn uống";
            
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnNhanVien);
+            lblTieuDe.Text = "Mục nhân viên";
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            lblTieuDe.Text = "Mục thống kê";
+
             moveSidePanel(btnThongKe);
-            ucThongKe ucDAU = new ucThongKe();
-            addControlsToPanel(ucDAU);
+            
+            addControlsToPanel(ucDAU);   
         }
 
-        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnThoatMenu_Click(object sender, EventArgs e)
         {
-            DialogResult dgResult;
-            dgResult = MessageBox.Show("Bạn Có Muốn Thoát không", "Thông Báo",
-                                       MessageBoxButtons.YesNo,
-                                       MessageBoxIcon.Question );
-            if (dgResult == DialogResult.No)
-            {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
-            }
-          
         }
 
-        
+        private void frmMenu_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }
