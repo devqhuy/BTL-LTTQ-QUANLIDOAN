@@ -40,6 +40,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTieuDe = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblTen = new System.Windows.Forms.Label();
@@ -47,10 +49,7 @@
             this.lblCM = new System.Windows.Forms.Label();
             this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.lblTieuDe = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -184,12 +183,33 @@
             // 
             this.panel3.Controls.Add(this.lblTieuDe);
             this.panel3.Controls.Add(this.lblTime);
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(211, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(923, 61);
             this.panel3.TabIndex = 1;
+            // 
+            // lblTieuDe
+            // 
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblTieuDe.Location = new System.Drawing.Point(302, 17);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(219, 34);
+            this.lblTieuDe.TabIndex = 2;
+            this.lblTieuDe.Text = "ĐỒ ĂN NHANH";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.Orange;
+            this.lblTime.Location = new System.Drawing.Point(664, 18);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(136, 31);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "HH:MM:SS";
             // 
             // panel4
             // 
@@ -252,40 +272,9 @@
             this.panelControl.Size = new System.Drawing.Size(923, 551);
             this.panelControl.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(611, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GIỜ HIỆN TẠI";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.ForeColor = System.Drawing.Color.Blue;
-            this.lblTime.Location = new System.Drawing.Point(757, 18);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(102, 23);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "HH:MM:SS";
-            // 
             // timerTime
             // 
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
-            // 
-            // lblTieuDe
-            // 
-            this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTieuDe.Location = new System.Drawing.Point(283, 11);
-            this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(219, 34);
-            this.lblTieuDe.TabIndex = 2;
-            this.lblTieuDe.Text = "ĐỒ ĂN NHANH";
             // 
             // frmMenu
             // 
@@ -334,7 +323,6 @@
         private XanderUI.XUIBackgroundSleeper xuiBackgroundSleeper1;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label lblTieuDe;
     }

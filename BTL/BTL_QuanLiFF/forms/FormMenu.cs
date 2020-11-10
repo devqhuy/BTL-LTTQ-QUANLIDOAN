@@ -19,11 +19,11 @@ namespace BTL_QuanLiFF.Forms
         public static frmMenu fMenu = new frmMenu();
         frmLogin frmLogin1 = new frmLogin();
         ucThongKe ucDAU = new ucThongKe();
+        ucDoAnUong ucDoAn = new ucDoAnUong();
 
         public string username = "";
         public string role = "";
-        public bool start_session = false;
-        public bool end_session = false;
+       
         public bool bl = false;
       
         public frmMenu()
@@ -49,11 +49,10 @@ namespace BTL_QuanLiFF.Forms
             lblRole.Text = role;
         }
 
-        public frmMenu(string name, string role, bool start) :this()
+        public frmMenu(string name, string role) :this()
         {
             this.username = name;
             this.role = role;
-            this.start_session = true;
         }
 
         private void moveSidePanel(Control control)
@@ -72,9 +71,8 @@ namespace BTL_QuanLiFF.Forms
         {
             moveSidePanel(btnDoAnUong);
             lblTieuDe.Text = "Lựa chọn đồ ăn uống";
-            ucDoAnUong ucDoAn = new ucDoAnUong();
-            addControlsToPanel(ucDoAn);
-           
+            
+            addControlsToPanel(ucDoAn);   
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -109,12 +107,7 @@ namespace BTL_QuanLiFF.Forms
         private void timerTime_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            lblTime.Text = dt.ToString("HH:MM:ss");
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            lblTime.Text = dt.ToString();
         }
     }
 }

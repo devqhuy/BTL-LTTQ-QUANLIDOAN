@@ -60,8 +60,7 @@ namespace BTL_QuanLiFF
 
                     txtMK.Text = "";
                     txtTK.Text = "";
-
-                    frmMenu1 = new frmMenu(username, role, true);
+                    frmMenu1 = new frmMenu(username, role);
                     
                     this.Hide();
                     frmMenu1.ShowDialog();
@@ -70,16 +69,12 @@ namespace BTL_QuanLiFF
                 }
                 else
                 {
-                    
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
                     txtTK.Focus();
                 }
-                
             }
-          
         }
 
-       
         public bool validateLogin()
         {
             if(txtTK.Text.Trim() == "")
