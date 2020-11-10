@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_QuanLiFF.UserControls
 {
-    public partial class ucDoAnUong : UserControl
+    public partial class ucQuanLi : UserControl
     {
-        public ucDoAnUong()
+        public ucQuanLi()
         {
             InitializeComponent();
-        }
-
-        private void ucDoAnUong_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

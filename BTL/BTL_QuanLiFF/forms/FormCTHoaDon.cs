@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_QuanLiFF.UserControls
+namespace BTL_QuanLiFF.forms
 {
-    public partial class ucDoAnUong : UserControl
+    public partial class FormCTHoaDon : Form
     {
-        public ucDoAnUong()
+        public FormCTHoaDon()
         {
             InitializeComponent();
-        }
-
-        private void ucDoAnUong_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

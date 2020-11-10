@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnQuanLi = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.btnQuanLi);
             this.panel1.Controls.Add(this.btnNhanVien);
             this.panel1.Controls.Add(this.btnKhachHang);
             this.panel1.Controls.Add(this.btnThongKe);
@@ -71,6 +73,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 703);
             this.panel1.TabIndex = 0;
+            // 
+            // btnQuanLi
+            // 
+            this.btnQuanLi.FlatAppearance.BorderSize = 0;
+            this.btnQuanLi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLi.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnQuanLi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnQuanLi.Location = new System.Drawing.Point(9, 484);
+            this.btnQuanLi.Name = "btnQuanLi";
+            this.btnQuanLi.Size = new System.Drawing.Size(199, 77);
+            this.btnQuanLi.TabIndex = 6;
+            this.btnQuanLi.Text = "QUẢN LÍ";
+            this.btnQuanLi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLi.UseVisualStyleBackColor = true;
+            this.btnQuanLi.Click += new System.EventHandler(this.btnQuanLi_Click);
             // 
             // btnNhanVien
             // 
@@ -267,6 +285,7 @@
             // panelControl
             // 
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl.ForeColor = System.Drawing.Color.Black;
             this.panelControl.Location = new System.Drawing.Point(211, 152);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(923, 551);
@@ -325,5 +344,6 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label lblTieuDe;
+        private System.Windows.Forms.Button btnQuanLi;
     }
 }

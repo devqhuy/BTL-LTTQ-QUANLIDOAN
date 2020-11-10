@@ -20,6 +20,7 @@ namespace BTL_QuanLiFF.Forms
         frmLogin frmLogin1 = new frmLogin();
         ucThongKe ucDAU = new ucThongKe();
         ucDoAnUong ucDoAn = new ucDoAnUong();
+        ucQuanLi ucQuan = new ucQuanLi();
 
         public string username = "";
         public string role = "";
@@ -108,6 +109,11 @@ namespace BTL_QuanLiFF.Forms
         {
             DateTime dt = DateTime.Now;
             lblTime.Text = dt.ToString();
+        }
+
+        private void btnQuanLi_Click(object sender, EventArgs e)
+        {
+            addControlsToPanel(ucQuan);
         }
     }
 }

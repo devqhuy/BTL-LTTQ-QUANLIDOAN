@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataBaseProcess.cs" />
+    <Compile Include="forms\FormCTHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormCTHoaDon.Designer.cs">
+      <DependentUpon>FormCTHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,15 @@
     <Compile Include="UserControls\ucDoAnUong.Designer.cs">
       <DependentUpon>ucDoAnUong.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucQuanLi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucQuanLi.Designer.cs">
+      <DependentUpon>ucQuanLi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\FormCTHoaDon.resx">
+      <DependentUpon>FormCTHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\ucDoAnUong.resx">
       <DependentUpon>ucDoAnUong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucQuanLi.resx">
+      <DependentUpon>ucQuanLi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongKe.resx">
       <DependentUpon>ucThongKe.cs</DependentUpon>
