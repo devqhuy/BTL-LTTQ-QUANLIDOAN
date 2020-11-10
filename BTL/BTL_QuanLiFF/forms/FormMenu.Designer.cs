@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNhanVien = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnThoatMenu = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblTen = new System.Windows.Forms.Label();
@@ -47,6 +47,9 @@
             this.lblCM = new System.Windows.Forms.Label();
             this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,7 +81,7 @@
             this.btnNhanVien.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhanVien.Location = new System.Drawing.Point(12, 332);
+            this.btnNhanVien.Location = new System.Drawing.Point(12, 318);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(199, 77);
             this.btnNhanVien.TabIndex = 5;
@@ -95,7 +98,7 @@
             this.btnKhachHang.ForeColor = System.Drawing.SystemColors.Control;
             this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKhachHang.Location = new System.Drawing.Point(12, 249);
+            this.btnKhachHang.Location = new System.Drawing.Point(12, 235);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(199, 77);
             this.btnKhachHang.TabIndex = 4;
@@ -112,7 +115,7 @@
             this.btnThongKe.ForeColor = System.Drawing.SystemColors.Control;
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongKe.Location = new System.Drawing.Point(12, 431);
+            this.btnThongKe.Location = new System.Drawing.Point(9, 401);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(199, 77);
             this.btnThongKe.TabIndex = 3;
@@ -124,7 +127,7 @@
             // panelSlide
             // 
             this.panelSlide.BackColor = System.Drawing.Color.White;
-            this.panelSlide.Location = new System.Drawing.Point(3, 177);
+            this.panelSlide.Location = new System.Drawing.Point(3, 152);
             this.panelSlide.Name = "panelSlide";
             this.panelSlide.Size = new System.Drawing.Size(7, 77);
             this.panelSlide.TabIndex = 0;
@@ -137,7 +140,7 @@
             this.btnDoAnUong.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDoAnUong.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAnUong.Image")));
             this.btnDoAnUong.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDoAnUong.Location = new System.Drawing.Point(12, 178);
+            this.btnDoAnUong.Location = new System.Drawing.Point(12, 152);
             this.btnDoAnUong.Name = "btnDoAnUong";
             this.btnDoAnUong.Size = new System.Drawing.Size(199, 77);
             this.btnDoAnUong.TabIndex = 2;
@@ -180,27 +183,13 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.lblTieuDe);
-            this.panel3.Controls.Add(this.btnThoatMenu);
+            this.panel3.Controls.Add(this.lblTime);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(211, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(923, 61);
             this.panel3.TabIndex = 1;
-            // 
-            // btnThoatMenu
-            // 
-            this.btnThoatMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnThoatMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnThoatMenu.FlatAppearance.BorderSize = 0;
-            this.btnThoatMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnThoatMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoatMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatMenu.Image")));
-            this.btnThoatMenu.Location = new System.Drawing.Point(852, 0);
-            this.btnThoatMenu.Name = "btnThoatMenu";
-            this.btnThoatMenu.Size = new System.Drawing.Size(71, 61);
-            this.btnThoatMenu.TabIndex = 0;
-            this.btnThoatMenu.UseVisualStyleBackColor = false;
-            this.btnThoatMenu.Click += new System.EventHandler(this.btnThoatMenu_Click);
             // 
             // panel4
             // 
@@ -263,17 +252,40 @@
             this.panelControl.Size = new System.Drawing.Size(923, 551);
             this.panelControl.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(611, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "GIỜ HIỆN TẠI";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.ForeColor = System.Drawing.Color.Blue;
+            this.lblTime.Location = new System.Drawing.Point(757, 18);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(102, 23);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "HH:MM:SS";
+            // 
+            // timerTime
+            // 
+            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
+            // 
             // lblTieuDe
             // 
             this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.BackColor = System.Drawing.Color.Transparent;
-            this.lblTieuDe.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTieuDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTieuDe.Location = new System.Drawing.Point(206, 9);
+            this.lblTieuDe.Location = new System.Drawing.Point(283, 11);
             this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(493, 49);
-            this.lblTieuDe.TabIndex = 1;
-            this.lblTieuDe.Text = "Tiêu đề cho mục đã chọn";
+            this.lblTieuDe.Size = new System.Drawing.Size(219, 34);
+            this.lblTieuDe.TabIndex = 2;
+            this.lblTieuDe.Text = "ĐỒ ĂN NHANH";
             // 
             // frmMenu
             // 
@@ -317,11 +329,13 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Label lblCD;
         private System.Windows.Forms.Label lblCM;
-        private System.Windows.Forms.Button btnThoatMenu;
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblRole;
         private XanderUI.XUIBackgroundSleeper xuiBackgroundSleeper1;
         private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label lblTieuDe;
     }
 }

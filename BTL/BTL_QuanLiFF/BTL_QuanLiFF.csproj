@@ -71,6 +71,12 @@
     <Compile Include="UserControls\ucThongKe.Designer.cs">
       <DependentUpon>ucThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucDoAnUong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDoAnUong.Designer.cs">
+      <DependentUpon>ucDoAnUong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucDoAnUong.resx">
+      <DependentUpon>ucDoAnUong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongKe.resx">
       <DependentUpon>ucThongKe.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,9 +10,7 @@ namespace BTL_QuanLiFF.Classes
 {
     class DataBaseProcess
     {
-        string strConnect = "Data Source=MSI\\SQLEXPRESS;" +
-                "DataBase=QuanLiFastFood;User ID=;" +
-                "Password=;Integrated Security=true";
+        string strConnect = "Data Source=DESKTOP-0FU86LQ;Initial Catalog=QuanLiFastFood;Integrated Security=True";
         SqlConnection sqlConnect = null;
         //Phương thức mở kết nối
         void OpenConnect()

@@ -198,6 +198,7 @@
             // 
             // dtpTo2
             // 
+            this.dtpTo2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTo2.Location = new System.Drawing.Point(361, 30);
             this.dtpTo2.Name = "dtpTo2";
             this.dtpTo2.Size = new System.Drawing.Size(200, 32);
@@ -205,6 +206,7 @@
             // 
             // dtpFrom2
             // 
+            this.dtpFrom2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFrom2.Location = new System.Drawing.Point(36, 30);
             this.dtpFrom2.Name = "dtpFrom2";
             this.dtpFrom2.Size = new System.Drawing.Size(200, 32);
@@ -263,6 +265,7 @@
             // 
             // dtpTo3
             // 
+            this.dtpTo3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTo3.Location = new System.Drawing.Point(365, 33);
             this.dtpTo3.Name = "dtpTo3";
             this.dtpTo3.Size = new System.Drawing.Size(200, 32);
@@ -270,6 +273,7 @@
             // 
             // dtpFrom3
             // 
+            this.dtpFrom3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFrom3.Location = new System.Drawing.Point(59, 33);
             this.dtpFrom3.Name = "dtpFrom3";
             this.dtpFrom3.Size = new System.Drawing.Size(200, 32);

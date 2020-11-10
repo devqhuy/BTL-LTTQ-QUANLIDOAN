@@ -44,7 +44,7 @@ namespace BTL_QuanLiFF.Forms
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-
+            timerTime.Start();
             lblTen.Text = username;
             lblRole.Text = role;
         }
@@ -72,6 +72,8 @@ namespace BTL_QuanLiFF.Forms
         {
             moveSidePanel(btnDoAnUong);
             lblTieuDe.Text = "Lựa chọn đồ ăn uống";
+            ucDoAnUong ucDoAn = new ucDoAnUong();
+            addControlsToPanel(ucDoAn);
            
         }
 
@@ -102,6 +104,17 @@ namespace BTL_QuanLiFF.Forms
             if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
+        }
+        //ham hien thi gio giac hien tai
+        private void timerTime_Tick(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            lblTime.Text = dt.ToString("HH:MM:ss");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
