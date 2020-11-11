@@ -44,13 +44,13 @@
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblIDNV = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblTen = new System.Windows.Forms.Label();
             this.lblCD = new System.Windows.Forms.Label();
             this.lblCM = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.lblIDNV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,6 +80,7 @@
             this.btnQuanLi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuanLi.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLi.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnQuanLi.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLi.Image")));
             this.btnQuanLi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuanLi.Location = new System.Drawing.Point(9, 484);
             this.btnQuanLi.Name = "btnQuanLi";
@@ -246,6 +247,16 @@
             this.panel4.Size = new System.Drawing.Size(923, 91);
             this.panel4.TabIndex = 2;
             // 
+            // lblIDNV
+            // 
+            this.lblIDNV.AutoSize = true;
+            this.lblIDNV.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDNV.Location = new System.Drawing.Point(689, 13);
+            this.lblIDNV.Name = "lblIDNV";
+            this.lblIDNV.Size = new System.Drawing.Size(131, 23);
+            this.lblIDNV.TabIndex = 4;
+            this.lblIDNV.Text = "Hien Thi ID";
+            // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
@@ -299,16 +310,6 @@
             // 
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
-            // lblIDNV
-            // 
-            this.lblIDNV.AutoSize = true;
-            this.lblIDNV.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDNV.Location = new System.Drawing.Point(689, 13);
-            this.lblIDNV.Name = "lblIDNV";
-            this.lblIDNV.Size = new System.Drawing.Size(131, 23);
-            this.lblIDNV.TabIndex = 4;
-            this.lblIDNV.Text = "Hien Thi ID";
-            // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -319,9 +320,10 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Trang hiển thị";
+            this.Text = "QUẢN LÍ BÁN ĐỒ ĂN NHANH";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing_1);
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel1.ResumeLayout(false);

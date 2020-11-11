@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BTL_QuanLiFF.forms;
 
 namespace BTL_QuanLiFF.UserControls
 {
@@ -17,6 +18,7 @@ namespace BTL_QuanLiFF.UserControls
         public string Food_name = "";
         public string idKH = "";
         public string idNV = "";
+        FormCTHoaDon frmCTHD = new FormCTHoaDon();
 
         public ucDoAnUong()
         {
@@ -128,6 +130,10 @@ namespace BTL_QuanLiFF.UserControls
         {
             this.idNV = IDNV;
         }
-      
+
+        private void btnCTHoaDon_Click(object sender, EventArgs e)
+        {
+            frmCTHD.ShowDialog();
+        }
     }
 }

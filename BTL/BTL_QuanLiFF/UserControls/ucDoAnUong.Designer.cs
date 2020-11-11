@@ -165,13 +165,14 @@ namespace BTL_QuanLiFF.UserControls
             this.btnCTHoaDon.TabIndex = 15;
             this.btnCTHoaDon.Text = "CHI TIẾT HÓA ĐƠN";
             this.btnCTHoaDon.UseVisualStyleBackColor = true;
+            this.btnCTHoaDon.Click += new System.EventHandler(this.btnCTHoaDon_Click);
             // 
             // lblTT
             // 
             this.lblTT.AutoSize = true;
             this.lblTT.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTT.Location = new System.Drawing.Point(573, 504);
+            this.lblTT.Location = new System.Drawing.Point(579, 497);
             this.lblTT.Name = "lblTT";
             this.lblTT.Size = new System.Drawing.Size(160, 29);
             this.lblTT.TabIndex = 17;
@@ -273,11 +274,11 @@ namespace BTL_QuanLiFF.UserControls
             // lblTT2
             // 
             this.lblTT2.AutoSize = true;
-            this.lblTT2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTT2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTT2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTT2.Location = new System.Drawing.Point(739, 504);
+            this.lblTT2.Location = new System.Drawing.Point(740, 503);
             this.lblTT2.Name = "lblTT2";
-            this.lblTT2.Size = new System.Drawing.Size(160, 29);
+            this.lblTT2.Size = new System.Drawing.Size(129, 22);
             this.lblTT2.TabIndex = 27;
             this.lblTT2.Text = "TỔNG TIỀN : ";
             // 

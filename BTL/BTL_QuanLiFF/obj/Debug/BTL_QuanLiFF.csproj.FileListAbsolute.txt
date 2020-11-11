@@ -68,3 +68,5 @@ D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_Q
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucQuanLi.resources
 D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.forms.FormCTHoaDon.resources
 D:\MS_visual_studio\project\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucQuanLi.resources
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.forms.FormCTHoaDon.resources
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\Code\ClondeCode2\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucKhachHang.resources

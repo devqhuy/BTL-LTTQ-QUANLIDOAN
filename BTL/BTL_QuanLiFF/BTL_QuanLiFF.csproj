@@ -90,6 +90,12 @@
     <Compile Include="UserControls\ucQuanLi.Designer.cs">
       <DependentUpon>ucQuanLi.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl1.Designer.cs">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="forms\FormCTHoaDon.resx">
       <DependentUpon>FormCTHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\ucDoAnUong.resx">
       <DependentUpon>ucDoAnUong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucKhachHang.resx">
+      <DependentUpon>ucKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucQuanLi.resx">
       <DependentUpon>ucQuanLi.cs</DependentUpon>
