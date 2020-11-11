@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Common.cs" />
     <Compile Include="Classes\DataBaseProcess.cs" />
     <Compile Include="forms\FormCTHoaDon.cs">
       <SubType>Form</SubType>

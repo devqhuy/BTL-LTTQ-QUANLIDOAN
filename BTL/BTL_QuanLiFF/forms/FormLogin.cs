@@ -23,8 +23,10 @@ namespace BTL_QuanLiFF
         frmMenu frmMenu1;
         string username = "";
         string role = "";
+        string idNV = "";
 
-        
+
+
         public frmLogin()
         {
             InitializeComponent();
@@ -39,6 +41,13 @@ namespace BTL_QuanLiFF
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            validateLogin();
+
+            if(!IsValidEmail(txtTK.Text))
+            {
+                MessageBox.Show("Bạn cần nhập email");
+                return;
+            }
             
             if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true) 
             {
@@ -56,11 +65,12 @@ namespace BTL_QuanLiFF
                         "where email = '" + txtTK.Text +"'");
                     username = dt.Rows[0]["hoTenNV"].ToString() ;
 
-                    role = dt.Rows[0]["chucVu"].ToString();  
+                    role = dt.Rows[0]["chucVu"].ToString(); 
+                    idNV = dt.Rows[0]["idNV"].ToString();
 
                     txtMK.Text = "";
                     txtTK.Text = "";
-                    frmMenu1 = new frmMenu(username, role);
+                    frmMenu1 = new frmMenu(username, role , idNV);
                     
                     this.Hide();
                     frmMenu1.ShowDialog();
@@ -112,7 +122,8 @@ namespace BTL_QuanLiFF
             try
             {
                 var addr = new System.Net.Mail.MailAddress(email);
-                return true;
+                
+                return addr.Address == email;
             }
             catch
             {

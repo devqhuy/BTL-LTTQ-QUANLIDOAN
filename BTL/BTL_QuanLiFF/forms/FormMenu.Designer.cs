@@ -48,9 +48,9 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.lblCD = new System.Windows.Forms.Label();
             this.lblCM = new System.Windows.Forms.Label();
-            this.xuiBackgroundSleeper1 = new XanderUI.XUIBackgroundSleeper();
             this.panelControl = new System.Windows.Forms.Panel();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
+            this.lblIDNV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -220,10 +220,13 @@
             // 
             // lblTime
             // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.Orange;
-            this.lblTime.Location = new System.Drawing.Point(664, 18);
+            this.lblTime.Location = new System.Drawing.Point(687, 17);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(136, 31);
             this.lblTime.TabIndex = 1;
@@ -232,6 +235,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel4.Controls.Add(this.lblIDNV);
             this.panel4.Controls.Add(this.lblRole);
             this.panel4.Controls.Add(this.lblTen);
             this.panel4.Controls.Add(this.lblCD);
@@ -295,6 +299,16 @@
             // 
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
+            // lblIDNV
+            // 
+            this.lblIDNV.AutoSize = true;
+            this.lblIDNV.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDNV.Location = new System.Drawing.Point(689, 13);
+            this.lblIDNV.Name = "lblIDNV";
+            this.lblIDNV.Size = new System.Drawing.Size(131, 23);
+            this.lblIDNV.TabIndex = 4;
+            this.lblIDNV.Text = "Hien Thi ID";
+            // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -339,11 +353,11 @@
         private System.Windows.Forms.Label lblCM;
         private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Label lblRole;
-        private XanderUI.XUIBackgroundSleeper xuiBackgroundSleeper1;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.Button btnQuanLi;
+        private System.Windows.Forms.Label lblIDNV;
     }
 }

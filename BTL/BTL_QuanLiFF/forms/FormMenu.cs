@@ -24,6 +24,7 @@ namespace BTL_QuanLiFF.Forms
 
         public string username = "";
         public string role = "";
+        public string idNV = "";
        
         public bool bl = false;
       
@@ -48,12 +49,15 @@ namespace BTL_QuanLiFF.Forms
             timerTime.Start();
             lblTen.Text = username;
             lblRole.Text = role;
+            lblIDNV.Text = idNV;
+            
         }
 
-        public frmMenu(string name, string role) :this()
+        public frmMenu(string name, string role , string idNV) :this()
         {
             this.username = name;
             this.role = role;
+            this.idNV = idNV;
         }
 
         private void moveSidePanel(Control control)
@@ -73,7 +77,8 @@ namespace BTL_QuanLiFF.Forms
             moveSidePanel(btnDoAnUong);
             lblTieuDe.Text = "Lựa chọn đồ ăn uống";
             
-            addControlsToPanel(ucDoAn);   
+            addControlsToPanel(ucDoAn);
+            ucDoAn.getID(idNV);
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)

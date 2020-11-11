@@ -121,7 +121,7 @@
             // 
             // btnXem1
             // 
-            this.btnXem1.Location = new System.Drawing.Point(690, 34);
+            this.btnXem1.Location = new System.Drawing.Point(686, 31);
             this.btnXem1.Name = "btnXem1";
             this.btnXem1.Size = new System.Drawing.Size(118, 32);
             this.btnXem1.TabIndex = 2;
@@ -131,7 +131,7 @@
             // dtpTo1
             // 
             this.dtpTo1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo1.Location = new System.Drawing.Point(360, 32);
+            this.dtpTo1.Location = new System.Drawing.Point(352, 31);
             this.dtpTo1.Name = "dtpTo1";
             this.dtpTo1.Size = new System.Drawing.Size(200, 32);
             this.dtpTo1.TabIndex = 1;
@@ -139,7 +139,7 @@
             // dtpFrom1
             // 
             this.dtpFrom1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom1.Location = new System.Drawing.Point(68, 32);
+            this.dtpFrom1.Location = new System.Drawing.Point(40, 31);
             this.dtpFrom1.Name = "dtpFrom1";
             this.dtpFrom1.Size = new System.Drawing.Size(200, 32);
             this.dtpFrom1.TabIndex = 0;
@@ -256,9 +256,9 @@
             // 
             // dtpXem3
             // 
-            this.dtpXem3.Location = new System.Drawing.Point(684, 35);
+            this.dtpXem3.Location = new System.Drawing.Point(673, 35);
             this.dtpXem3.Name = "dtpXem3";
-            this.dtpXem3.Size = new System.Drawing.Size(118, 32);
+            this.dtpXem3.Size = new System.Drawing.Size(118, 35);
             this.dtpXem3.TabIndex = 2;
             this.dtpXem3.Text = "XEM";
             this.dtpXem3.UseVisualStyleBackColor = true;
@@ -266,7 +266,7 @@
             // dtpTo3
             // 
             this.dtpTo3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo3.Location = new System.Drawing.Point(365, 33);
+            this.dtpTo3.Location = new System.Drawing.Point(341, 35);
             this.dtpTo3.Name = "dtpTo3";
             this.dtpTo3.Size = new System.Drawing.Size(200, 32);
             this.dtpTo3.TabIndex = 1;
@@ -274,7 +274,7 @@
             // dtpFrom3
             // 
             this.dtpFrom3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom3.Location = new System.Drawing.Point(59, 33);
+            this.dtpFrom3.Location = new System.Drawing.Point(60, 35);
             this.dtpFrom3.Name = "dtpFrom3";
             this.dtpFrom3.Size = new System.Drawing.Size(200, 32);
             this.dtpFrom3.TabIndex = 0;

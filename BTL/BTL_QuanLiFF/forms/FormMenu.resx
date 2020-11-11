@@ -568,10 +568,7 @@
         Fn9DmkZeHD+DbxhdZn6mhBBCCCGEEEIIIYTEU1Dw/wFola4SbRazwQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="xuiBackgroundSleeper1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="timerTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>230, 17</value>
+    <value>39, 23</value>
   </metadata>
 </root>
