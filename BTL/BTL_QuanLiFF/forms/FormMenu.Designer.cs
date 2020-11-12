@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnQuanLi = new System.Windows.Forms.Button();
-            this.btnNhanVien = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.panelSlide = new System.Windows.Forms.Panel();
@@ -51,18 +51,22 @@
             this.lblCM = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.btnQuanLi);
-            this.panel1.Controls.Add(this.btnNhanVien);
+            this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnKhachHang);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.panelSlide);
@@ -91,22 +95,22 @@
             this.btnQuanLi.UseVisualStyleBackColor = true;
             this.btnQuanLi.Click += new System.EventHandler(this.btnQuanLi_Click);
             // 
-            // btnNhanVien
+            // btnTimKiem
             // 
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanVien.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhanVien.Location = new System.Drawing.Point(12, 318);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(199, 77);
-            this.btnNhanVien.TabIndex = 5;
-            this.btnNhanVien.Text = "NHÂN VIÊN ";
-            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.UseVisualStyleBackColor = true;
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.Location = new System.Drawing.Point(12, 318);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(199, 77);
+            this.btnTimKiem.TabIndex = 5;
+            this.btnTimKiem.Text = "TÌM KIẾM";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnKhachHang
             // 
@@ -299,6 +303,8 @@
             // 
             // panelControl
             // 
+            this.panelControl.Controls.Add(this.label1);
+            this.panelControl.Controls.Add(this.pictureBox2);
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl.ForeColor = System.Drawing.Color.Black;
             this.panelControl.Location = new System.Drawing.Point(211, 152);
@@ -309,6 +315,28 @@
             // timerTime
             // 
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(923, 551);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(337, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "BẮT ĐẦU THÔI !!!";
             // 
             // frmMenu
             // 
@@ -334,6 +362,9 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,7 +381,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnNhanVien;
+        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label lblCD;
         private System.Windows.Forms.Label lblCM;
         private System.Windows.Forms.Label lblTen;
@@ -361,5 +392,7 @@
         private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.Button btnQuanLi;
         private System.Windows.Forms.Label lblIDNV;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

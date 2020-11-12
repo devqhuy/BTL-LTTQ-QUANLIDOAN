@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_QuanLiFF.UserControls
 {
-    public partial class ucQuanLi : UserControl
+    public partial class ucTimKiem : UserControl
     {
-        public ucQuanLi()
+        public ucTimKiem()
         {
             InitializeComponent();
-        }
-
-        private void tabNguyenLieu_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

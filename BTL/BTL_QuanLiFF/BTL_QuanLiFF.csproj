@@ -93,6 +93,12 @@
     <Compile Include="UserControls\ucKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\ucTimKiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTimKiem.Designer.cs">
+      <DependentUpon>ucTimKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl1.Designer.cs">
       <DependentUpon>ucKhachHang.cs</DependentUpon>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucThongKe.resx">
       <DependentUpon>ucThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTimKiem.resx">
+      <DependentUpon>ucTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\BTL_QuanLiFF.exe.config" />
     <None Include="Properties\Settings.settings">

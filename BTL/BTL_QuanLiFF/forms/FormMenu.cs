@@ -22,6 +22,7 @@ namespace BTL_QuanLiFF.Forms
         ucDoAnUong ucDoAn = new ucDoAnUong();
         ucQuanLi ucQuan = new ucQuanLi();
         ucKhachHang ucKhach = new ucKhachHang();
+        ucTimKiem ucTim = new ucTimKiem();
 
         public string username = "";
         public string role = "";
@@ -85,8 +86,9 @@ namespace BTL_QuanLiFF.Forms
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnNhanVien);
+            moveSidePanel(btnTimKiem);
             lblTieuDe.Text = "Mục nhân viên";
+            addControlsToPanel(ucTim);
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
