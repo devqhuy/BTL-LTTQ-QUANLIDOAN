@@ -100,13 +100,6 @@ namespace BTL_QuanLiFF.Forms
             addControlsToPanel(ucDAU);   
         }
 
-        private void btnThoatMenu_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
-        }
-
         private void frmMenu_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,

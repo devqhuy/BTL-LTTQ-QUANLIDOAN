@@ -31,6 +31,7 @@ namespace BTL_QuanLiFF.UserControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblFood = new System.Windows.Forms.Label();
             this.lblFoodName = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
@@ -42,19 +43,21 @@ namespace BTL_QuanLiFF.UserControls
             this.btnADD = new System.Windows.Forms.Button();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.btnCTHoaDon = new System.Windows.Forms.Button();
-            this.lblTT = new System.Windows.Forms.Label();
             this.NUM = new System.Windows.Forms.NumericUpDown();
             this.cmbFoodName = new System.Windows.Forms.ComboBox();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.txtHD = new System.Windows.Forms.TextBox();
             this.lblHD = new System.Windows.Forms.Label();
             this.btnTao = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbKH = new System.Windows.Forms.ComboBox();
+            this.err2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblTT = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTT2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NUM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFood
@@ -136,6 +139,7 @@ namespace BTL_QuanLiFF.UserControls
             // 
             // btnADD
             // 
+            this.btnADD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnADD.Location = new System.Drawing.Point(27, 491);
             this.btnADD.Name = "btnADD";
@@ -158,6 +162,7 @@ namespace BTL_QuanLiFF.UserControls
             // 
             // btnCTHoaDon
             // 
+            this.btnCTHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCTHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCTHoaDon.Location = new System.Drawing.Point(27, 429);
             this.btnCTHoaDon.Name = "btnCTHoaDon";
@@ -166,17 +171,6 @@ namespace BTL_QuanLiFF.UserControls
             this.btnCTHoaDon.Text = "CHI TIẾT HÓA ĐƠN";
             this.btnCTHoaDon.UseVisualStyleBackColor = true;
             this.btnCTHoaDon.Click += new System.EventHandler(this.btnCTHoaDon_Click);
-            // 
-            // lblTT
-            // 
-            this.lblTT.AutoSize = true;
-            this.lblTT.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTT.Location = new System.Drawing.Point(579, 497);
-            this.lblTT.Name = "lblTT";
-            this.lblTT.Size = new System.Drawing.Size(160, 29);
-            this.lblTT.TabIndex = 17;
-            this.lblTT.Text = "TỔNG TIỀN : ";
             // 
             // NUM
             // 
@@ -232,15 +226,17 @@ namespace BTL_QuanLiFF.UserControls
             this.btnTao.UseVisualStyleBackColor = true;
             this.btnTao.Click += new System.EventHandler(this.btnTao_Click);
             // 
-            // button1
+            // btnXoa
             // 
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(180, 491);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 42);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Xóa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnXoa.Location = new System.Drawing.Point(180, 491);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(119, 42);
+            this.btnXoa.TabIndex = 23;
+            this.btnXoa.Text = "Nhập lại";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label1
             // 
@@ -261,6 +257,21 @@ namespace BTL_QuanLiFF.UserControls
             this.cmbKH.Size = new System.Drawing.Size(496, 31);
             this.cmbKH.TabIndex = 25;
             // 
+            // err2
+            // 
+            this.err2.ContainerControl = this;
+            // 
+            // lblTT
+            // 
+            this.lblTT.AutoSize = true;
+            this.lblTT.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblTT.Location = new System.Drawing.Point(575, 505);
+            this.lblTT.Name = "lblTT";
+            this.lblTT.Size = new System.Drawing.Size(160, 29);
+            this.lblTT.TabIndex = 17;
+            this.lblTT.Text = "TỔNG TIỀN : ";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -276,7 +287,7 @@ namespace BTL_QuanLiFF.UserControls
             this.lblTT2.AutoSize = true;
             this.lblTT2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTT2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTT2.Location = new System.Drawing.Point(740, 503);
+            this.lblTT2.Location = new System.Drawing.Point(745, 511);
             this.lblTT2.Name = "lblTT2";
             this.lblTT2.Size = new System.Drawing.Size(129, 22);
             this.lblTT2.TabIndex = 27;
@@ -290,7 +301,7 @@ namespace BTL_QuanLiFF.UserControls
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbKH);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnTao);
             this.Controls.Add(this.txtHD);
             this.Controls.Add(this.lblHD);
@@ -315,6 +326,7 @@ namespace BTL_QuanLiFF.UserControls
             this.Size = new System.Drawing.Size(923, 549);
             this.Load += new System.EventHandler(this.ucDoAnUong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NUM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,17 +344,18 @@ namespace BTL_QuanLiFF.UserControls
         private System.Windows.Forms.Button btnADD;
         private System.Windows.Forms.Label lblSoLuong;
         private System.Windows.Forms.Button btnCTHoaDon;
-        private System.Windows.Forms.Label lblTT;
         private System.Windows.Forms.NumericUpDown NUM;
         private System.Windows.Forms.ComboBox cmbFoodName;
         private System.Windows.Forms.TextBox txtMoTa;
         private System.Windows.Forms.TextBox txtHD;
         private System.Windows.Forms.Label lblHD;
         private System.Windows.Forms.Button btnTao;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbKH;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider err2;
         private System.Windows.Forms.Label lblTT2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTT;
     }
 }

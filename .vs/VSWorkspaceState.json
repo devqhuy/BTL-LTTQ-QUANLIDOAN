@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\BTL",
-    "\\BTL\\BTL_QuanLiFF"
+    "\\BTL\\BTL_QuanLiFF",
+    "\\BTL\\BTL_QuanLiFF\\Classes",
+    "\\BTL\\BTL_QuanLiFF\\forms",
+    "\\BTL\\BTL_QuanLiFF\\img",
+    "\\BTL\\BTL_QuanLiFF\\obj"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\BTL\\BTL_QuanLiFF\\obj",
   "PreviewInSolutionExplorer": false
 }
