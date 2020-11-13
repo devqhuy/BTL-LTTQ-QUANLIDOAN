@@ -200,7 +200,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(645, 123);
+            this.label7.Location = new System.Drawing.Point(645, 118);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 22);
             this.label7.TabIndex = 16;
@@ -210,7 +210,7 @@
             // 
             this.pictureBox2.Location = new System.Drawing.Point(649, 167);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 243);
+            this.pictureBox2.Size = new System.Drawing.Size(247, 243);
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
