@@ -152,11 +152,20 @@
   <ItemGroup>
     <Content Include="bin\Debug\BTL_QuanLiFF.exe" />
     <Content Include="bin\Debug\BTL_QuanLiFF.pdb" />
+    <Content Include="bin\Debug\Images\exitMenu.png" />
+    <Content Include="bin\Debug\Images\food.png" />
+    <Content Include="bin\Debug\Images\hamburger.png" />
+    <Content Include="bin\Debug\Images\KhachHang\kh01.jpg" />
+    <Content Include="bin\Debug\Images\KhachHang\kh02.jpg" />
+    <Content Include="bin\Debug\Images\KhachHang\kh03.jpg" />
+    <Content Include="bin\Debug\Images\KhachHang\laptop-user.jpg" />
+    <Content Include="bin\Debug\Images\remove-button.png" />
+    <Content Include="bin\Debug\Images\testimonials.png" />
+    <Content Include="bin\Debug\Images\waiter.png" />
     <Content Include="bin\Debug\XanderUI.dll" />
     <Content Include="img\hamburger.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\Image\" />
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

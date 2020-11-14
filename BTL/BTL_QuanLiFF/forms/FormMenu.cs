@@ -72,6 +72,7 @@ namespace BTL_QuanLiFF.Forms
         {
             moveSidePanel(btnKhachHang);
             lblTieuDe.Text = "Mục khách hàng";
+            
             addControlsToPanel(ucKhach);
         }
 
@@ -81,6 +82,7 @@ namespace BTL_QuanLiFF.Forms
             lblTieuDe.Text = "Lựa chọn đồ ăn uống";
             
             addControlsToPanel(ucDoAn);
+            
             ucDoAn.getID(idNV);
         }
 

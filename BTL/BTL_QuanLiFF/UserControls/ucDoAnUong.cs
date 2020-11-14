@@ -71,12 +71,13 @@ namespace BTL_QuanLiFF.UserControls
         public void LoadcmbKH()
         {
             DataTable dt = new DataTable();
-            dt = dtbase.DataReader("select * from KHACHHANG");
+            dt = dtbase.DataReader("select *  from KHACHHANG" +
+                " where status = 'HD'");
             try
             {
                 cmbKH.DataSource = dt;
                 cmbKH.DisplayMember = "idKH";
-                
+                cmbKH.ValueMember = "idKH";
             }
             catch (Exception ex)
             {

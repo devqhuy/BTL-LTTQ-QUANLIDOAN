@@ -1,5 +1,6 @@
 ﻿using BTL_QuanLiFF;
 using BTL_QuanLiFF.Forms;
+using BTL_QuanLiFF.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
