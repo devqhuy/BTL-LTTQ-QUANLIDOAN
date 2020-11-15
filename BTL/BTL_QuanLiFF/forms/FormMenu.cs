@@ -104,9 +104,10 @@ namespace BTL_QuanLiFF.Forms
 
         private void frmMenu_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo,
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
+            
         }
         //ham hien thi gio giac hien tai
         private void timerTime_Tick(object sender, EventArgs e)
@@ -118,6 +119,11 @@ namespace BTL_QuanLiFF.Forms
         private void btnQuanLi_Click(object sender, EventArgs e)
         {
             addControlsToPanel(ucQuan);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

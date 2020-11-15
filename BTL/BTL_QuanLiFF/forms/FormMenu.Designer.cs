@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnQuanLi = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
@@ -50,9 +51,9 @@
             this.lblCD = new System.Windows.Forms.Label();
             this.lblCM = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnQuanLi);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnKhachHang);
@@ -77,6 +79,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 703);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(9, 557);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 77);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "THOÁT CHƯƠNG TRÌNH";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnQuanLi
             // 
@@ -312,9 +331,16 @@
             this.panelControl.Size = new System.Drawing.Size(923, 551);
             this.panelControl.TabIndex = 3;
             // 
-            // timerTime
+            // label1
             // 
-            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(337, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "BẮT ĐẦU THÔI !!!";
             // 
             // pictureBox2
             // 
@@ -327,16 +353,9 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // timerTime
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(337, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BẮT ĐẦU THÔI !!!";
+            this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
             // frmMenu
             // 
@@ -394,5 +413,6 @@
         private System.Windows.Forms.Label lblIDNV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
