@@ -36,10 +36,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTK = new System.Windows.Forms.Label();
-            this.txtTK = new System.Windows.Forms.TextBox();
+            this.txtLoginEmail = new System.Windows.Forms.TextBox();
             this.lblMK = new System.Windows.Forms.Label();
-            this.txtMK = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.txtLoginMK = new System.Windows.Forms.TextBox();
+            this.btnLoginDangNhap = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.err1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
@@ -118,13 +118,15 @@
             this.lblTK.TabIndex = 4;
             this.lblTK.Text = "EMAIL:";
             // 
-            // txtTK
+            // txtLoginEmail
             // 
-            this.txtTK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTK.Location = new System.Drawing.Point(35, 370);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(518, 32);
-            this.txtTK.TabIndex = 5;
+            this.txtLoginEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLoginEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtLoginEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtLoginEmail.Location = new System.Drawing.Point(35, 370);
+            this.txtLoginEmail.Name = "txtLoginEmail";
+            this.txtLoginEmail.Size = new System.Drawing.Size(518, 32);
+            this.txtLoginEmail.TabIndex = 5;
             // 
             // lblMK
             // 
@@ -138,30 +140,32 @@
             this.lblMK.TabIndex = 6;
             this.lblMK.Text = "MẬT KHẨU :";
             // 
-            // txtMK
+            // txtLoginMK
             // 
-            this.txtMK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMK.Location = new System.Drawing.Point(35, 491);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(518, 32);
-            this.txtMK.TabIndex = 7;
-            this.txtMK.UseSystemPasswordChar = true;
+            this.txtLoginMK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLoginMK.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtLoginMK.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtLoginMK.Location = new System.Drawing.Point(35, 491);
+            this.txtLoginMK.Name = "txtLoginMK";
+            this.txtLoginMK.Size = new System.Drawing.Size(518, 32);
+            this.txtLoginMK.TabIndex = 7;
+            this.txtLoginMK.UseSystemPasswordChar = true;
             // 
-            // btnSubmit
+            // btnLoginDangNhap
             // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(35, 542);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(518, 72);
-            this.btnSubmit.TabIndex = 8;
-            this.btnSubmit.Text = "ĐĂNG NHẬP";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.btnLoginDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLoginDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
+            this.btnLoginDangNhap.FlatAppearance.BorderSize = 0;
+            this.btnLoginDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoginDangNhap.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginDangNhap.ForeColor = System.Drawing.Color.White;
+            this.btnLoginDangNhap.Location = new System.Drawing.Point(35, 542);
+            this.btnLoginDangNhap.Name = "btnLoginDangNhap";
+            this.btnLoginDangNhap.Size = new System.Drawing.Size(518, 72);
+            this.btnLoginDangNhap.TabIndex = 8;
+            this.btnLoginDangNhap.Text = "ĐĂNG NHẬP";
+            this.btnLoginDangNhap.UseVisualStyleBackColor = false;
+            this.btnLoginDangNhap.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // groupBox1
             // 
@@ -182,10 +186,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(582, 703);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.txtMK);
+            this.Controls.Add(this.btnLoginDangNhap);
+            this.Controls.Add(this.txtLoginMK);
             this.Controls.Add(this.lblMK);
-            this.Controls.Add(this.txtTK);
+            this.Controls.Add(this.txtLoginEmail);
             this.Controls.Add(this.lblTK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
@@ -214,10 +218,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTK;
-        private System.Windows.Forms.TextBox txtTK;
+        private System.Windows.Forms.TextBox txtLoginEmail;
         private System.Windows.Forms.Label lblMK;
-        private System.Windows.Forms.TextBox txtMK;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox txtLoginMK;
+        private System.Windows.Forms.Button btnLoginDangNhap;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ErrorProvider err1;
     }

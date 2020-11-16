@@ -32,22 +32,22 @@ namespace BTL_QuanLiFF.UserControls
         {
             this.LoadKH();
 
-            txtDoB.Enabled = false;
-            txtHT.Enabled = false;
-            txtSDT.Enabled = false;
-            txtDC.Enabled = false;
+            txtKHNgaySinh.Enabled = false;
+            txtKHHoTen.Enabled = false;
+            txtKHSoDT.Enabled = false;
+            txtKHDiaChi.Enabled = false;
 
-            btnLuu.Enabled = false;
-            btnSua.Enabled = false;
-            btnHuy.Enabled = false;
-            btnXoa.Enabled = false;
+            btnKHLuu.Enabled = false;
+            btnKHSua.Enabled = false;
+            btnKHHuy.Enabled = false;
+            btnKHXoa.Enabled = false;
             picAnh.Enabled = false;
 
-            cmbKH.Text = "";
-            txtHT.Text = "";
-            txtDC.Text = "";
-            txtSDT.Text = "";
-            txtDoB.Text = "";
+            cbKHMaKhachHang.Text = "";
+            txtKHHoTen.Text = "";
+            txtKHDiaChi.Text = "";
+            txtKHSoDT.Text = "";
+            txtKHNgaySinh.Text = "";
             picAnh.Image = null;
 
         }
@@ -60,9 +60,9 @@ namespace BTL_QuanLiFF.UserControls
                 " where status = 'HD'");
             try
             {
-                cmbKH.DataSource = dt;
-                cmbKH.DisplayMember = "idKH";
-                cmbKH.ValueMember = "idKH";
+                cbKHMaKhachHang.DataSource = dt;
+                cbKHMaKhachHang.DisplayMember = "idKH";
+                cbKHMaKhachHang.ValueMember = "idKH";
 
             }
             catch (Exception ex)
@@ -73,27 +73,27 @@ namespace BTL_QuanLiFF.UserControls
 
         private void cmbKH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            makh = this.cmbKH.GetItemText(this.cmbKH.SelectedValue);
+            makh = this.cbKHMaKhachHang.GetItemText(this.cbKHMaKhachHang.SelectedValue);
             os = "open";
 
-            txtDoB.Enabled = true;
-            txtHT.Enabled = true;
-            txtSDT.Enabled = true;
-            txtDC.Enabled = true;
+            txtKHNgaySinh.Enabled = true;
+            txtKHHoTen.Enabled = true;
+            txtKHSoDT.Enabled = true;
+            txtKHDiaChi.Enabled = true;
             picAnh.Enabled = true;
 
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-            btnHuy.Enabled = true;
+            btnKHSua.Enabled = true;
+            btnKHXoa.Enabled = true;
+            btnKHHuy.Enabled = true;
 
             DataTable dt = dtbase.DataReader("select * from KHACHHANG where idKH = '" +
                 makh + "'");
             if(dt.Rows.Count >0)
             {
-                txtHT.Text = dt.Rows[0]["hotenKH"].ToString();
-                txtDC.Text = dt.Rows[0]["diaChi"].ToString();
-                txtSDT.Text = dt.Rows[0]["soDT"].ToString();
-                txtDoB.Text = Convert.ToDateTime(dt.Rows[0]["ngaySinh"]).ToShortDateString();
+                txtKHHoTen.Text = dt.Rows[0]["hotenKH"].ToString();
+                txtKHDiaChi.Text = dt.Rows[0]["diaChi"].ToString();
+                txtKHSoDT.Text = dt.Rows[0]["soDT"].ToString();
+                txtKHNgaySinh.Text = Convert.ToDateTime(dt.Rows[0]["ngaySinh"]).ToShortDateString();
                 
                 img = dt.Rows[0]["Image"].ToString();
                 
@@ -112,26 +112,26 @@ namespace BTL_QuanLiFF.UserControls
         {
             
 
-            btnLuu.Enabled = true;
-            btnSua.Enabled = false;
-            btnXoa.Enabled = false;
-            btnHuy.Enabled = true;
+            btnKHLuu.Enabled = true;
+            btnKHSua.Enabled = false;
+            btnKHXoa.Enabled = false;
+            btnKHHuy.Enabled = true;
 
             string KHACHHANG = "KHACHHANG";
             string idKH = "idKH";
             idKH = cm.AutoCode(KHACHHANG, idKH, "KH0");
-            cmbKH.Text = idKH;
+            cbKHMaKhachHang.Text = idKH;
 
-            txtDoB.Enabled = true;
-            txtHT.Enabled = true;
-            txtSDT.Enabled = true;
-            txtDC.Enabled = true;
+            txtKHNgaySinh.Enabled = true;
+            txtKHHoTen.Enabled = true;
+            txtKHSoDT.Enabled = true;
+            txtKHDiaChi.Enabled = true;
             picAnh.Enabled = true;
 
-            txtHT.Text = "";
-            txtDC.Text = "";
-            txtSDT.Text = "";
-            txtDoB.Text = "";
+            txtKHHoTen.Text = "";
+            txtKHDiaChi.Text = "";
+            txtKHSoDT.Text = "";
+            txtKHNgaySinh.Text = "";
             picAnh.Image = null;
 
             os = "open";
@@ -139,9 +139,9 @@ namespace BTL_QuanLiFF.UserControls
 
         public bool check()
         {
-            if (txtHT.Text.Trim() == "")
+            if (txtKHHoTen.Text.Trim() == "")
             {
-                err3.SetError(txtHT, "Trường này là bắt buộc");
+                err3.SetError(txtKHHoTen, "Trường này là bắt buộc");
                 return false;
             }
             else
@@ -149,9 +149,9 @@ namespace BTL_QuanLiFF.UserControls
                 err3.Clear();
             }
             
-            if (txtDC.Text.Trim() == "")
+            if (txtKHDiaChi.Text.Trim() == "")
             {
-                err3.SetError(txtDC, "Trường này là bắt buộc");
+                err3.SetError(txtKHDiaChi, "Trường này là bắt buộc");
                 return false;
 
             }
@@ -160,17 +160,17 @@ namespace BTL_QuanLiFF.UserControls
                 err3.Clear();
             }
 
-            if (txtSDT.Text.Trim() == "")
+            if (txtKHSoDT.Text.Trim() == "")
             {
-                err3.SetError(txtSDT, "Trường này là bắt buộc");
+                err3.SetError(txtKHSoDT, "Trường này là bắt buộc");
                 return false;
             }
             else
             {
-                if (Regex.IsMatch(txtSDT.Text, @"\d") != true ||
-                        txtSDT.Text.Length > 10)
+                if (Regex.IsMatch(txtKHSoDT.Text, @"\d") != true ||
+                        txtKHSoDT.Text.Length > 10)
                 {
-                    err3.SetError(txtSDT, "Số điện thoại chỉ bao gồm số và không vượt quá 10");
+                    err3.SetError(txtKHSoDT, "Số điện thoại chỉ bao gồm số và không vượt quá 10");
                     return false;
                 }
                 else
@@ -179,16 +179,16 @@ namespace BTL_QuanLiFF.UserControls
                 }
                 err3.Clear();
             }
-            if (txtDoB.Text.Trim() == "")
+            if (txtKHNgaySinh.Text.Trim() == "")
             {
-                err3.SetError(txtDoB, "Trường này là bắt buộc");
+                err3.SetError(txtKHNgaySinh, "Trường này là bắt buộc");
                 return false;
             }
             else
             {
                 try
                 {
-                    Convert.ToDateTime(txtDoB.Text);
+                    Convert.ToDateTime(txtKHNgaySinh.Text);
                     err3.Clear();
                     
                 }catch(Exception ex)
@@ -209,22 +209,22 @@ namespace BTL_QuanLiFF.UserControls
                 try
                 {
                     dtbase.DataChange("INSERT INTO KHACHHANG VALUES('" +
-                        cmbKH.Text + "',N'" +
-                        txtHT.Text + "','" +
-                        txtDC.Text + "','" +
-                        txtSDT.Text + "','" +
-                        txtDoB.Text + "','" +
+                        cbKHMaKhachHang.Text + "',N'" +
+                        txtKHHoTen.Text + "','" +
+                        txtKHDiaChi.Text + "','" +
+                        txtKHSoDT.Text + "','" +
+                        txtKHNgaySinh.Text + "','" +
                         "HD','" + strImageFileName + "')");
                   
                     MessageBox.Show("Thêm khách hàng thành công", " Thông báo ",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.LoadKH();
-                    cmbKH.Text = "";
-                    txtHT.Text = "";
-                    txtDC.Text = "";
-                    txtSDT.Text = "";
-                    txtDoB.Text = "";
+                    cbKHMaKhachHang.Text = "";
+                    txtKHHoTen.Text = "";
+                    txtKHDiaChi.Text = "";
+                    txtKHSoDT.Text = "";
+                    txtKHNgaySinh.Text = "";
                     picAnh.Image = null;
 
 
@@ -268,26 +268,26 @@ namespace BTL_QuanLiFF.UserControls
                 try
                 {
                     dtbase.DataChange("update KHACHHANG " +
-                        "set hotenKH = N'" + txtHT.Text +
-                        "', diaChi = N'" + txtDC.Text + "', soDT = '" + txtSDT.Text + "'," +
-                        "ngaysinh = '" + txtDoB.Text + "',status = 'HD' ," + " image = '" + strImageFileName + "'" +
-                        "where idKH = '" + cmbKH.Text + "'");
+                        "set hotenKH = N'" + txtKHHoTen.Text +
+                        "', diaChi = N'" + txtKHDiaChi.Text + "', soDT = '" + txtKHSoDT.Text + "'," +
+                        "ngaysinh = '" + txtKHNgaySinh.Text + "',status = 'HD' ," + " image = '" + strImageFileName + "'" +
+                        "where idKH = '" + cbKHMaKhachHang.Text + "'");
 
-                    btnSua.Enabled = false;
-                    btnXoa.Enabled = false;
+                    btnKHSua.Enabled = false;
+                    btnKHXoa.Enabled = false;
                     MessageBox.Show("Sửa khách hàng thành công", " Thông báo ",
                            MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    cmbKH.Text = "";
-                    txtHT.Text = "";
-                    txtDC.Text = "";
-                    txtSDT.Text = "";
-                    txtDoB.Text = "";
+                    cbKHMaKhachHang.Text = "";
+                    txtKHHoTen.Text = "";
+                    txtKHDiaChi.Text = "";
+                    txtKHSoDT.Text = "";
+                    txtKHNgaySinh.Text = "";
                     picAnh.Image = null;
 
-                    btnSua.Enabled = false;
-                    btnXoa.Enabled = false;
-                    btnHuy.Enabled = false;
+                    btnKHSua.Enabled = false;
+                    btnKHXoa.Enabled = false;
+                    btnKHHuy.Enabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -300,25 +300,25 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            cmbKH.Enabled = true;
+            cbKHMaKhachHang.Enabled = true;
 
-            cmbKH.Text = "";
-            txtHT.Text = "";
-            txtDC.Text = "";
-            txtSDT.Text = "";
-            txtDoB.Text = "";
+            cbKHMaKhachHang.Text = "";
+            txtKHHoTen.Text = "";
+            txtKHDiaChi.Text = "";
+            txtKHSoDT.Text = "";
+            txtKHNgaySinh.Text = "";
             picAnh.Image = null;
 
-            btnLuu.Enabled = false;
-            btnSua.Enabled = false;
-            btnHuy.Enabled = false;
-            btnXoa.Enabled = false;
+            btnKHLuu.Enabled = false;
+            btnKHSua.Enabled = false;
+            btnKHHuy.Enabled = false;
+            btnKHXoa.Enabled = false;
 
 
-            txtDoB.Enabled = false;
-            txtHT.Enabled = false;
-            txtSDT.Enabled = false;
-            txtDC.Enabled = false;
+            txtKHNgaySinh.Enabled = false;
+            txtKHHoTen.Enabled = false;
+            txtKHSoDT.Enabled = false;
+            txtKHDiaChi.Enabled = false;
             picAnh.Enabled = false;
         }
 
@@ -326,40 +326,40 @@ namespace BTL_QuanLiFF.UserControls
         {
             try
             {
-                dtbase.DataChange("delete KHACHHANG where idKH = '" + cmbKH.Text + "'");
+                dtbase.DataChange("delete KHACHHANG where idKH = '" + cbKHMaKhachHang.Text + "'");
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             
 
-            cmbKH.Text = "";
-            txtHT.Text = "";
-            txtDC.Text = "";
-            txtSDT.Text = "";
-            txtDoB.Text = "";
+            cbKHMaKhachHang.Text = "";
+            txtKHHoTen.Text = "";
+            txtKHDiaChi.Text = "";
+            txtKHSoDT.Text = "";
+            txtKHNgaySinh.Text = "";
             picAnh.Image = null;
 
-            btnLuu.Enabled = false;
-            btnSua.Enabled = false;
-            btnHuy.Enabled = false;
-            btnXoa.Enabled = false;
+            btnKHLuu.Enabled = false;
+            btnKHSua.Enabled = false;
+            btnKHHuy.Enabled = false;
+            btnKHXoa.Enabled = false;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
 
-            dt = dtbase.DataReader("select * from KHACHHANG where hoTenKH like N'%" + txtSearch.Text
+            dt = dtbase.DataReader("select * from KHACHHANG where hoTenKH like N'%" + txtKHTimKiem.Text
                 +"%'");
 
             if(dt.Rows.Count >0)
             {
-                cmbKH.DataSource = dt;
+                cbKHMaKhachHang.DataSource = dt;
             }
             else
             {
-                cmbKH.DataSource = dtbase.DataReader("select * from KHACHHANG");
+                cbKHMaKhachHang.DataSource = dtbase.DataReader("select * from KHACHHANG");
             }
         }
 

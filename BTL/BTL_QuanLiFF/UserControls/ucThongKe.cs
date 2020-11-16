@@ -40,9 +40,9 @@ namespace BTL_QuanLiFF.UserControls
                 " where status = 'HD'");
             try
             {
-                cmbNV2.DataSource = dt;
-                cmbNV2.DisplayMember = "idNV";
-                cmbNV2.ValueMember = "idNV";
+                cbTKHDBTenNV.DataSource = dt;
+                cbTKHDBTenNV.DisplayMember = "idNV";
+                cbTKHDBTenNV.ValueMember = "idNV";
 
             }
             catch (Exception ex)
@@ -86,9 +86,9 @@ namespace BTL_QuanLiFF.UserControls
                 dgv3.Columns[5].Width = 200;
 
                 dt = dtbase.DataReader("select * from NGUYENLIEU");
-                cmbNL3.DataSource = dt;
-                cmbNL3.DisplayMember = "tenNL";
-                cmbNL3.ValueMember = "tenNL";
+                cbTKHDNTenNV.DataSource = dt;
+                cbTKHDNTenNV.DisplayMember = "tenNL";
+                cbTKHDNTenNV.ValueMember = "tenNL";
 
             }
 
@@ -110,8 +110,8 @@ namespace BTL_QuanLiFF.UserControls
             String to1 = "";
             String rdb = "";
 
-            from1 = dtpFrom1.Value.ToShortDateString();
-            to1 = dtpTo1.Value.ToShortDateString();
+            from1 = dtpTKBestSellFrom.Value.ToShortDateString();
+            to1 = dtpTKBestSellTo.Value.ToShortDateString();
 
             if (rdb11.Checked) rdb = "DESC";
             else rdb = "ASC";
@@ -140,13 +140,13 @@ namespace BTL_QuanLiFF.UserControls
             String rdb = "";
             String manv = "";
 
-            from2 = dtpFrom2.Value.ToShortDateString();
-            to2 = dtpTo2.Value.ToShortDateString();
+            from2 = dtpTKHDBFrom.Value.ToShortDateString();
+            to2 = dtpTKHDBTo.Value.ToShortDateString();
 
             if (rdb21.Checked) rdb = "DESC";
             else rdb = "ASC";
 
-            manv = cmbNV2.Text;
+            manv = cbTKHDBTenNV.Text;
 
             dt = dtbase.DataReader("select HOADONBAN.idHD , idSP, soLuong, " +
                 "hoTenNV, ngayTao, giaTien, tongTien " +
@@ -182,13 +182,13 @@ namespace BTL_QuanLiFF.UserControls
             String rdb = "";
             String manv = "";
 
-            from3 = dtpFrom3.Value.ToShortDateString();
-            to3 = dtpTo3.Value.ToShortDateString();
+            from3 = dtpTKHDNFrom.Value.ToShortDateString();
+            to3 = dtpTKHDNTo.Value.ToShortDateString();
 
             if (rdb21.Checked) rdb = "DESC";
             else rdb = "ASC";
 
-            manv = cmbNV2.Text;
+            manv = cbTKHDBTenNV.Text;
 
             dt = dtbase.DataReader("SELECT CTHOADONNHAP.idCT, NHANVIEN.hoTenNV , " +
                 "CTHOADONNHAP.idNCC, nguyenlieu.tenNL, ctnguyenlieu.soLuong, ngayTaoHD , sex , status " +

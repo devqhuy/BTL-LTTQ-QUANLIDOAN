@@ -28,27 +28,27 @@ namespace BTL_QuanLiFF.UserControls
 
         private void ucDoAnUong_Load(object sender, EventArgs e)
         {
-            txtIDFood.Enabled = false;
-            cmbFoodName.Enabled = true;
-            txtDonGia.Enabled = false;
-            txtMoTa.Enabled = false;
-            txtHD.Enabled = false;
-            cmbKH.Enabled = true;
+            txtDoAnUongMaMon.Enabled = false;
+            cbDoAnUongTenMon.Enabled = true;
+            txtDoAnUongDonGia.Enabled = false;
+            txtDoAnUongMoTa.Enabled = false;
+            txtKHMaHD.Enabled = false;
+            cbDoAnUongMaKH.Enabled = true;
             lblTT2.Text = "";
-            btnADD.Enabled = false;
-            btnCTHoaDon.Enabled = false;
-            btnXoa.Enabled = false;
+            btnDoAnUongThem.Enabled = false;
+            btnDoAnUongCTHD.Enabled = false;
+            btnDoAnUongNhapLai.Enabled = false;
 
             this.LoadComboBox();
             this.LoadcmbKH();
 
-            cmbKH.Text = "";
-            txtHD.Text = "";
-            txtIDFood.Text = "";
-            cmbFoodName.Text = "";
-            txtDonGia.Text = "0" ;
+            cbDoAnUongMaKH.Text = "";
+            txtKHMaHD.Text = "";
+            txtDoAnUongMaMon.Text = "";
+            cbDoAnUongTenMon.Text = "";
+            txtDoAnUongDonGia.Text = "0" ;
             NUM.Value = 0;
-            txtMoTa.Text = "";
+            txtDoAnUongMoTa.Text = "";
         }
 
 
@@ -58,9 +58,9 @@ namespace BTL_QuanLiFF.UserControls
             dt = dtbase.DataReader("select tenSP from SANPHAM");
             try
             {
-                cmbFoodName.DataSource = dt;
-                cmbFoodName.DisplayMember = "tenSP";
-                cmbFoodName.ValueMember = "tenSP";
+                cbDoAnUongTenMon.DataSource = dt;
+                cbDoAnUongTenMon.DisplayMember = "tenSP";
+                cbDoAnUongTenMon.ValueMember = "tenSP";
             }
             catch (Exception ex)
             {
@@ -75,9 +75,9 @@ namespace BTL_QuanLiFF.UserControls
                 " where status = 'HD'");
             try
             {
-                cmbKH.DataSource = dt;
-                cmbKH.DisplayMember = "idKH";
-                cmbKH.ValueMember = "idKH";
+                cbDoAnUongMaKH.DataSource = dt;
+                cbDoAnUongMaKH.DisplayMember = "idKH";
+                cbDoAnUongMaKH.ValueMember = "idKH";
             }
             catch (Exception ex)
             {
@@ -87,24 +87,24 @@ namespace BTL_QuanLiFF.UserControls
 
         private void cmbFoodName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Food_name = this.cmbFoodName.GetItemText(this.cmbFoodName.SelectedValue);
+            Food_name = this.cbDoAnUongTenMon.GetItemText(this.cbDoAnUongTenMon.SelectedValue);
             //MessageBox.Show(Food_name);
             DataTable dt = new DataTable();
             dt = dtbase.DataReader("select * from SANPHAM where tenSP = N'" +
                 Food_name + "'");
             if (dt.Rows.Count > 0)
             {
-                txtIDFood.Text = dt.Rows[0]["idSP"].ToString();
-                txtDonGia.Text = dt.Rows[0]["giaTienSP"].ToString();
-                txtMoTa.Text = dt.Rows[0]["moTaSP"].ToString();
+                txtDoAnUongMaMon.Text = dt.Rows[0]["idSP"].ToString();
+                txtDoAnUongDonGia.Text = dt.Rows[0]["giaTienSP"].ToString();
+                txtDoAnUongMoTa.Text = dt.Rows[0]["moTaSP"].ToString();
                 NUM.Value = 0;
-                txtNOTE.Text = "";
+                txtDoAnUongNote.Text = "";
             }
         }
 
         private void NUM_ValueChanged(object sender, EventArgs e)
         {
-            int gia = Convert.ToInt32(txtDonGia.Text);
+            int gia = Convert.ToInt32(txtDoAnUongDonGia.Text);
             int sl = Convert.ToInt32(NUM.Value);
 
             if(sales() == 0)
@@ -123,21 +123,21 @@ namespace BTL_QuanLiFF.UserControls
             string tableName = "HOADONBAN";
             string FildeName = "idHD";
             string startString = "HDB" + DateTime.Now.ToShortDateString();
-            txtHD.Text = cm.AutoCode(tableName,FildeName, startString );
+            txtKHMaHD.Text = cm.AutoCode(tableName,FildeName, startString );
 
-            btnCTHoaDon.Enabled = false;
+            btnDoAnUongCTHD.Enabled = false;
            
-            cmbKH.Enabled = true;
-            btnADD.Enabled = true;
-            btnXoa.Enabled = true; //xoa thong tin hoa don hien tai
+            cbDoAnUongMaKH.Enabled = true;
+            btnDoAnUongThem.Enabled = true;
+            btnDoAnUongNhapLai.Enabled = true; //xoa thong tin hoa don hien tai
 
-            txtIDFood.Text = "";
-            cmbKH.Text = "";
-            txtDonGia.Text = "0";
+            txtDoAnUongMaMon.Text = "";
+            cbDoAnUongMaKH.Text = "";
+            txtDoAnUongDonGia.Text = "0";
             NUM.Value = 0;
-            txtMoTa.Text = "";
-            cmbFoodName.Text = "";
-            txtNOTE.Text = "";
+            txtDoAnUongMoTa.Text = "";
+            cbDoAnUongTenMon.Text = "";
+            txtDoAnUongNote.Text = "";
             
         }
 
@@ -145,18 +145,18 @@ namespace BTL_QuanLiFF.UserControls
         {
             DataTable dt = new DataTable();
             bool status = this.check();
-            if (cmbKH.Text != "") cmbKH.Enabled = false;
+            if (cbDoAnUongMaKH.Text != "") cbDoAnUongMaKH.Enabled = false;
           
             if(status == true)
             {
                 err2.Clear();
-                dt = dtbase.DataReader("select idHD from HOADONBAN where idHD = '" + txtHD.Text + "'");
+                dt = dtbase.DataReader("select idHD from HOADONBAN where idHD = '" + txtKHMaHD.Text + "'");
                 if (dt.Rows.Count == 0)
                 {
                     try
                     {
-                        dtbase.DataChange("insert into HOADONBAN values ('" + txtHD.Text +
-                        "','" + idNV + "','" + this.cmbKH.GetItemText(this.cmbKH.SelectedValue) 
+                        dtbase.DataChange("insert into HOADONBAN values ('" + txtKHMaHD.Text +
+                        "','" + idNV + "','" + this.cbDoAnUongMaKH.GetItemText(this.cbDoAnUongMaKH.SelectedValue) 
                         + "'," + 1 + ")");
                     }catch(Exception ex)
                     {
@@ -170,13 +170,13 @@ namespace BTL_QuanLiFF.UserControls
                 {
                     dtbase.DataChange("insert into CTHOADONBAN(idHD, idSP, soluong, giaTien, ngayTao," +
                         "yeuCau)" +
-                    "values('" + txtHD.Text + "','" + txtIDFood.Text + "'," + NUM.Value + "," +
+                    "values('" + txtKHMaHD.Text + "','" + txtDoAnUongMaMon.Text + "'," + NUM.Value + "," +
                     Convert.ToInt32(lblTT2.Text) + ",'" + DateTime.Now.ToShortDateString() 
-                    + "', N'" + txtNOTE.Text + "')");
+                    + "', N'" + txtDoAnUongNote.Text + "')");
 
 
                     MessageBox.Show("Thêm hóa đơn thành công");
-                    btnCTHoaDon.Enabled = true;
+                    btnDoAnUongCTHD.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -196,12 +196,12 @@ namespace BTL_QuanLiFF.UserControls
         private void btnCTHoaDon_Click(object sender, EventArgs e)
         {
             DataTable dt = dtbase.DataReader("select * FROM CTHOADONBAN WHERE idHD = '" +
-                txtHD.Text + "'");
+                txtKHMaHD.Text + "'");
 
             if(dt.Rows.Count>0)
             {
-                idKH = cmbKH.Text;
-                frmCTHD = new FormCTHoaDon(txtHD.Text, idKH);
+                idKH = cbDoAnUongMaKH.Text;
+                frmCTHD = new FormCTHoaDon(txtKHMaHD.Text, idKH);
                 frmCTHD.ShowDialog();
             }
             else
@@ -214,26 +214,26 @@ namespace BTL_QuanLiFF.UserControls
 
         public bool check()
         {
-            if (cmbKH.Text.Trim() == "")
+            if (cbDoAnUongMaKH.Text.Trim() == "")
             {
-                err2.SetError(cmbKH, "Trường này là bắt buộc");
+                err2.SetError(cbDoAnUongMaKH, "Trường này là bắt buộc");
                 return false;
             }
 
-            if (txtHD.Text.Trim() == "")
+            if (txtKHMaHD.Text.Trim() == "")
             {
-                err2.SetError(txtHD, "Trường này là bắt buộc");
+                err2.SetError(txtKHMaHD, "Trường này là bắt buộc");
                 return false;
             }
 
-            if ( txtIDFood.Text.Trim() == "" )
+            if ( txtDoAnUongMaMon.Text.Trim() == "" )
             {
-                err2.SetError(txtIDFood, "Trường này là bắt buộc");
+                err2.SetError(txtDoAnUongMaMon, "Trường này là bắt buộc");
                 return false;
             }
             else
             {
-                btnADD.Enabled = true;
+                btnDoAnUongThem.Enabled = true;
             }
 
             if ( NUM.Value == 0)
@@ -242,9 +242,9 @@ namespace BTL_QuanLiFF.UserControls
                 return false;
             }
 
-            if (cmbFoodName.Text.Trim() == "")
+            if (cbDoAnUongTenMon.Text.Trim() == "")
             {
-                err2.SetError(cmbFoodName, "Số lượng không thể là 0");
+                err2.SetError(cbDoAnUongTenMon, "Số lượng không thể là 0");
                 return false;
             }
             return true;
@@ -252,11 +252,11 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            txtIDFood.Text = "";
-            cmbFoodName.Text = "";
-            txtDonGia.Text = "0";
+            txtDoAnUongMaMon.Text = "";
+            cbDoAnUongTenMon.Text = "";
+            txtDoAnUongDonGia.Text = "0";
             NUM.Value = 0;
-            txtMoTa.Text = "";
+            txtDoAnUongMoTa.Text = "";
         }
 
         public int sales()

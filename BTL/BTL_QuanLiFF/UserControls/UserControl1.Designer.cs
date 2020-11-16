@@ -36,21 +36,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbKH = new System.Windows.Forms.ComboBox();
-            this.txtHT = new System.Windows.Forms.TextBox();
-            this.txtDC = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtDoB = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.cbKHMaKhachHang = new System.Windows.Forms.ComboBox();
+            this.txtKHHoTen = new System.Windows.Forms.TextBox();
+            this.txtKHDiaChi = new System.Windows.Forms.TextBox();
+            this.txtKHSoDT = new System.Windows.Forms.TextBox();
+            this.txtKHNgaySinh = new System.Windows.Forms.TextBox();
+            this.btnKHThem = new System.Windows.Forms.Button();
+            this.btnKHSua = new System.Windows.Forms.Button();
+            this.btnKHXoa = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picAnh = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtKHTimKiem = new System.Windows.Forms.TextBox();
             this.err3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnKHLuu = new System.Windows.Forms.Button();
+            this.btnKHHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.err3)).BeginInit();
@@ -122,81 +122,89 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "NGÀY SINH";
             // 
-            // cmbKH
+            // cbKHMaKhachHang
             // 
-            this.cmbKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbKH.FormattingEnabled = true;
-            this.cmbKH.Location = new System.Drawing.Point(234, 115);
-            this.cmbKH.Name = "cmbKH";
-            this.cmbKH.Size = new System.Drawing.Size(354, 32);
-            this.cmbKH.TabIndex = 7;
-            this.cmbKH.SelectedIndexChanged += new System.EventHandler(this.cmbKH_SelectedIndexChanged);
+            this.cbKHMaKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbKHMaKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbKHMaKhachHang.FormattingEnabled = true;
+            this.cbKHMaKhachHang.Location = new System.Drawing.Point(234, 115);
+            this.cbKHMaKhachHang.Name = "cbKHMaKhachHang";
+            this.cbKHMaKhachHang.Size = new System.Drawing.Size(354, 32);
+            this.cbKHMaKhachHang.TabIndex = 7;
+            this.cbKHMaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cmbKH_SelectedIndexChanged);
             // 
-            // txtHT
+            // txtKHHoTen
             // 
-            this.txtHT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHT.Location = new System.Drawing.Point(234, 186);
-            this.txtHT.Name = "txtHT";
-            this.txtHT.Size = new System.Drawing.Size(354, 30);
-            this.txtHT.TabIndex = 8;
+            this.txtKHHoTen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtKHHoTen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtKHHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKHHoTen.Location = new System.Drawing.Point(234, 186);
+            this.txtKHHoTen.Name = "txtKHHoTen";
+            this.txtKHHoTen.Size = new System.Drawing.Size(354, 30);
+            this.txtKHHoTen.TabIndex = 8;
             // 
-            // txtDC
+            // txtKHDiaChi
             // 
-            this.txtDC.Location = new System.Drawing.Point(234, 252);
-            this.txtDC.Name = "txtDC";
-            this.txtDC.Size = new System.Drawing.Size(354, 30);
-            this.txtDC.TabIndex = 9;
+            this.txtKHDiaChi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtKHDiaChi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtKHDiaChi.Location = new System.Drawing.Point(234, 252);
+            this.txtKHDiaChi.Name = "txtKHDiaChi";
+            this.txtKHDiaChi.Size = new System.Drawing.Size(354, 30);
+            this.txtKHDiaChi.TabIndex = 9;
             // 
-            // txtSDT
+            // txtKHSoDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(234, 316);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(354, 30);
-            this.txtSDT.TabIndex = 10;
+            this.txtKHSoDT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtKHSoDT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtKHSoDT.Location = new System.Drawing.Point(234, 316);
+            this.txtKHSoDT.Name = "txtKHSoDT";
+            this.txtKHSoDT.Size = new System.Drawing.Size(354, 30);
+            this.txtKHSoDT.TabIndex = 10;
             // 
-            // txtDoB
+            // txtKHNgaySinh
             // 
-            this.txtDoB.Location = new System.Drawing.Point(234, 380);
-            this.txtDoB.Name = "txtDoB";
-            this.txtDoB.Size = new System.Drawing.Size(354, 30);
-            this.txtDoB.TabIndex = 11;
+            this.txtKHNgaySinh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtKHNgaySinh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtKHNgaySinh.Location = new System.Drawing.Point(234, 380);
+            this.txtKHNgaySinh.Name = "txtKHNgaySinh";
+            this.txtKHNgaySinh.Size = new System.Drawing.Size(354, 30);
+            this.txtKHNgaySinh.TabIndex = 11;
             // 
-            // btnThem
+            // btnKHThem
             // 
-            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThem.Location = new System.Drawing.Point(41, 457);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(162, 50);
-            this.btnThem.TabIndex = 12;
-            this.btnThem.Text = "THÊM";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnKHThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHThem.Location = new System.Drawing.Point(41, 457);
+            this.btnKHThem.Name = "btnKHThem";
+            this.btnKHThem.Size = new System.Drawing.Size(162, 50);
+            this.btnKHThem.TabIndex = 12;
+            this.btnKHThem.Text = "THÊM";
+            this.btnKHThem.UseVisualStyleBackColor = true;
+            this.btnKHThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnSua
+            // btnKHSua
             // 
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSua.Location = new System.Drawing.Point(209, 457);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(162, 50);
-            this.btnSua.TabIndex = 13;
-            this.btnSua.Text = "SỬA";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnKHSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHSua.Location = new System.Drawing.Point(209, 457);
+            this.btnKHSua.Name = "btnKHSua";
+            this.btnKHSua.Size = new System.Drawing.Size(162, 50);
+            this.btnKHSua.TabIndex = 13;
+            this.btnKHSua.Text = "SỬA";
+            this.btnKHSua.UseVisualStyleBackColor = true;
+            this.btnKHSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnXoa
+            // btnKHXoa
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnXoa.Location = new System.Drawing.Point(377, 457);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(162, 50);
-            this.btnXoa.TabIndex = 14;
-            this.btnXoa.Text = "XÓA";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnKHXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHXoa.Location = new System.Drawing.Point(377, 457);
+            this.btnKHXoa.Name = "btnKHXoa";
+            this.btnKHXoa.Size = new System.Drawing.Size(162, 50);
+            this.btnKHXoa.TabIndex = 14;
+            this.btnKHXoa.Text = "XÓA";
+            this.btnKHXoa.UseVisualStyleBackColor = true;
+            this.btnKHXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // pictureBox1
             // 
@@ -230,61 +238,63 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Tìm kiếm: ";
             // 
-            // txtSearch
+            // txtKHTimKiem
             // 
-            this.txtSearch.Location = new System.Drawing.Point(649, 44);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSearch.Size = new System.Drawing.Size(247, 30);
-            this.txtSearch.TabIndex = 19;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtKHTimKiem.Location = new System.Drawing.Point(649, 44);
+            this.txtKHTimKiem.Name = "txtKHTimKiem";
+            this.txtKHTimKiem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtKHTimKiem.Size = new System.Drawing.Size(247, 30);
+            this.txtKHTimKiem.TabIndex = 19;
+            this.txtKHTimKiem.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // err3
             // 
             this.err3.ContainerControl = this;
             // 
-            // btnLuu
+            // btnKHLuu
             // 
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnLuu.Location = new System.Drawing.Point(545, 457);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(162, 50);
-            this.btnLuu.TabIndex = 20;
-            this.btnLuu.Text = "LƯU";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.btnKHLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHLuu.Location = new System.Drawing.Point(545, 457);
+            this.btnKHLuu.Name = "btnKHLuu";
+            this.btnKHLuu.Size = new System.Drawing.Size(162, 50);
+            this.btnKHLuu.TabIndex = 20;
+            this.btnKHLuu.Text = "LƯU";
+            this.btnKHLuu.UseVisualStyleBackColor = true;
+            this.btnKHLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnHuy
+            // btnKHHuy
             // 
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnHuy.Location = new System.Drawing.Point(713, 457);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(162, 50);
-            this.btnHuy.TabIndex = 21;
-            this.btnHuy.Text = "HỦY";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.btnKHHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHHuy.Location = new System.Drawing.Point(713, 457);
+            this.btnKHHuy.Name = "btnKHHuy";
+            this.btnKHHuy.Size = new System.Drawing.Size(162, 50);
+            this.btnKHHuy.TabIndex = 21;
+            this.btnKHHuy.Text = "HỦY";
+            this.btnKHHuy.UseVisualStyleBackColor = true;
+            this.btnKHHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // ucKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtSearch);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btnKHHuy);
+            this.Controls.Add(this.btnKHLuu);
+            this.Controls.Add(this.txtKHTimKiem);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.picAnh);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.txtDoB);
-            this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtDC);
-            this.Controls.Add(this.txtHT);
-            this.Controls.Add(this.cmbKH);
+            this.Controls.Add(this.btnKHXoa);
+            this.Controls.Add(this.btnKHSua);
+            this.Controls.Add(this.btnKHThem);
+            this.Controls.Add(this.txtKHNgaySinh);
+            this.Controls.Add(this.txtKHSoDT);
+            this.Controls.Add(this.txtKHDiaChi);
+            this.Controls.Add(this.txtKHHoTen);
+            this.Controls.Add(this.cbKHMaKhachHang);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -312,20 +322,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbKH;
-        private System.Windows.Forms.TextBox txtHT;
-        private System.Windows.Forms.TextBox txtDC;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtDoB;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.ComboBox cbKHMaKhachHang;
+        private System.Windows.Forms.TextBox txtKHHoTen;
+        private System.Windows.Forms.TextBox txtKHDiaChi;
+        private System.Windows.Forms.TextBox txtKHSoDT;
+        private System.Windows.Forms.TextBox txtKHNgaySinh;
+        private System.Windows.Forms.Button btnKHThem;
+        private System.Windows.Forms.Button btnKHSua;
+        private System.Windows.Forms.Button btnKHXoa;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtKHTimKiem;
         public System.Windows.Forms.PictureBox picAnh;
         private System.Windows.Forms.ErrorProvider err3;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnKHLuu;
+        private System.Windows.Forms.Button btnKHHuy;
     }
 }

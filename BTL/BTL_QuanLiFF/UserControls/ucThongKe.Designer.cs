@@ -36,42 +36,42 @@
             this.rdb12 = new System.Windows.Forms.RadioButton();
             this.rdb11 = new System.Windows.Forms.RadioButton();
             this.lblSX1 = new System.Windows.Forms.Label();
-            this.btnIN1 = new System.Windows.Forms.Button();
+            this.btnTKBestSellInBaoCao = new System.Windows.Forms.Button();
             this.lblTo1 = new System.Windows.Forms.Label();
             this.lblFrom1 = new System.Windows.Forms.Label();
-            this.btnXem1 = new System.Windows.Forms.Button();
-            this.dtpTo1 = new System.Windows.Forms.DateTimePicker();
-            this.dtpFrom1 = new System.Windows.Forms.DateTimePicker();
+            this.btnTKBestSellXem = new System.Windows.Forms.Button();
+            this.dtpTKBestSellTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpTKBestSellFrom = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgv2 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnTKHDBNInBaoCao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbNV2 = new System.Windows.Forms.ComboBox();
+            this.cbTKHDBTenNV = new System.Windows.Forms.ComboBox();
             this.rdb22 = new System.Windows.Forms.RadioButton();
             this.rdb21 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnXem2 = new System.Windows.Forms.Button();
-            this.dtpTo2 = new System.Windows.Forms.DateTimePicker();
-            this.dtpFrom2 = new System.Windows.Forms.DateTimePicker();
+            this.btnTKHDBXem = new System.Windows.Forms.Button();
+            this.dtpTKHDBTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpTKHDBFrom = new System.Windows.Forms.DateTimePicker();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnBOTTOM3 = new System.Windows.Forms.Panel();
             this.dgv3 = new System.Windows.Forms.DataGridView();
             this.pnTOP3 = new System.Windows.Forms.Panel();
+            this.btnTKHDNInBaoCao = new System.Windows.Forms.Button();
             this.lblNL3 = new System.Windows.Forms.Label();
-            this.cmbNL3 = new System.Windows.Forms.ComboBox();
+            this.cbTKHDNTenNV = new System.Windows.Forms.ComboBox();
             this.rdb32 = new System.Windows.Forms.RadioButton();
             this.rdb31 = new System.Windows.Forms.RadioButton();
             this.lblSX3 = new System.Windows.Forms.Label();
             this.lblTo3 = new System.Windows.Forms.Label();
             this.lblFrom3 = new System.Windows.Forms.Label();
-            this.btnXem3 = new System.Windows.Forms.Button();
-            this.dtpTo3 = new System.Windows.Forms.DateTimePicker();
-            this.dtpFrom3 = new System.Windows.Forms.DateTimePicker();
-            this.btnIN2 = new System.Windows.Forms.Button();
-            this.btnIN3 = new System.Windows.Forms.Button();
+            this.btnTKHDNXem = new System.Windows.Forms.Button();
+            this.dtpTKHDNTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpTKHDNFrom = new System.Windows.Forms.DateTimePicker();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -138,12 +138,12 @@
             this.panel1.Controls.Add(this.rdb12);
             this.panel1.Controls.Add(this.rdb11);
             this.panel1.Controls.Add(this.lblSX1);
-            this.panel1.Controls.Add(this.btnIN1);
+            this.panel1.Controls.Add(this.btnTKBestSellInBaoCao);
             this.panel1.Controls.Add(this.lblTo1);
             this.panel1.Controls.Add(this.lblFrom1);
-            this.panel1.Controls.Add(this.btnXem1);
-            this.panel1.Controls.Add(this.dtpTo1);
-            this.panel1.Controls.Add(this.dtpFrom1);
+            this.panel1.Controls.Add(this.btnTKBestSellXem);
+            this.panel1.Controls.Add(this.dtpTKBestSellTo);
+            this.panel1.Controls.Add(this.dtpTKBestSellFrom);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -184,15 +184,15 @@
             this.lblSX1.TabIndex = 25;
             this.lblSX1.Text = "SẮP XẾP ( SỐ LƯỢNG):";
             // 
-            // btnIN1
+            // btnTKBestSellInBaoCao
             // 
-            this.btnIN1.Location = new System.Drawing.Point(644, 81);
-            this.btnIN1.Name = "btnIN1";
-            this.btnIN1.Size = new System.Drawing.Size(160, 32);
-            this.btnIN1.TabIndex = 19;
-            this.btnIN1.Text = "IN BÁO CÁO";
-            this.btnIN1.UseVisualStyleBackColor = true;
-            this.btnIN1.Click += new System.EventHandler(this.btnIN1_Click);
+            this.btnTKBestSellInBaoCao.Location = new System.Drawing.Point(644, 81);
+            this.btnTKBestSellInBaoCao.Name = "btnTKBestSellInBaoCao";
+            this.btnTKBestSellInBaoCao.Size = new System.Drawing.Size(160, 32);
+            this.btnTKBestSellInBaoCao.TabIndex = 19;
+            this.btnTKBestSellInBaoCao.Text = "IN BÁO CÁO";
+            this.btnTKBestSellInBaoCao.UseVisualStyleBackColor = true;
+            this.btnTKBestSellInBaoCao.Click += new System.EventHandler(this.btnIN1_Click);
             // 
             // lblTo1
             // 
@@ -214,33 +214,33 @@
             this.lblFrom1.TabIndex = 17;
             this.lblFrom1.Text = "From";
             // 
-            // btnXem1
+            // btnTKBestSellXem
             // 
-            this.btnXem1.Location = new System.Drawing.Point(644, 20);
-            this.btnXem1.Name = "btnXem1";
-            this.btnXem1.Size = new System.Drawing.Size(160, 32);
-            this.btnXem1.TabIndex = 2;
-            this.btnXem1.Text = "XEM";
-            this.btnXem1.UseVisualStyleBackColor = true;
-            this.btnXem1.Click += new System.EventHandler(this.btnXem1_Click);
+            this.btnTKBestSellXem.Location = new System.Drawing.Point(644, 24);
+            this.btnTKBestSellXem.Name = "btnTKBestSellXem";
+            this.btnTKBestSellXem.Size = new System.Drawing.Size(160, 32);
+            this.btnTKBestSellXem.TabIndex = 2;
+            this.btnTKBestSellXem.Text = "XEM";
+            this.btnTKBestSellXem.UseVisualStyleBackColor = true;
+            this.btnTKBestSellXem.Click += new System.EventHandler(this.btnXem1_Click);
             // 
-            // dtpTo1
+            // dtpTKBestSellTo
             // 
-            this.dtpTo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTo1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo1.Location = new System.Drawing.Point(408, 22);
-            this.dtpTo1.Name = "dtpTo1";
-            this.dtpTo1.Size = new System.Drawing.Size(200, 30);
-            this.dtpTo1.TabIndex = 1;
+            this.dtpTKBestSellTo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTKBestSellTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTKBestSellTo.Location = new System.Drawing.Point(408, 22);
+            this.dtpTKBestSellTo.Name = "dtpTKBestSellTo";
+            this.dtpTKBestSellTo.Size = new System.Drawing.Size(200, 30);
+            this.dtpTKBestSellTo.TabIndex = 1;
             // 
-            // dtpFrom1
+            // dtpTKBestSellFrom
             // 
-            this.dtpFrom1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFrom1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom1.Location = new System.Drawing.Point(113, 20);
-            this.dtpFrom1.Name = "dtpFrom1";
-            this.dtpFrom1.Size = new System.Drawing.Size(200, 30);
-            this.dtpFrom1.TabIndex = 0;
+            this.dtpTKBestSellFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTKBestSellFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTKBestSellFrom.Location = new System.Drawing.Point(113, 20);
+            this.dtpTKBestSellFrom.Name = "dtpTKBestSellFrom";
+            this.dtpTKBestSellFrom.Size = new System.Drawing.Size(200, 30);
+            this.dtpTKBestSellFrom.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -276,22 +276,32 @@
             // panel5
             // 
             this.panel5.AutoScroll = true;
-            this.panel5.Controls.Add(this.btnIN2);
+            this.panel5.Controls.Add(this.btnTKHDBNInBaoCao);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.cmbNV2);
+            this.panel5.Controls.Add(this.cbTKHDBTenNV);
             this.panel5.Controls.Add(this.rdb22);
             this.panel5.Controls.Add(this.rdb21);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.btnXem2);
-            this.panel5.Controls.Add(this.dtpTo2);
-            this.panel5.Controls.Add(this.dtpFrom2);
+            this.panel5.Controls.Add(this.btnTKHDBXem);
+            this.panel5.Controls.Add(this.dtpTKHDBTo);
+            this.panel5.Controls.Add(this.dtpTKHDBFrom);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(876, 119);
             this.panel5.TabIndex = 0;
+            // 
+            // btnTKHDBNInBaoCao
+            // 
+            this.btnTKHDBNInBaoCao.Location = new System.Drawing.Point(637, 66);
+            this.btnTKHDBNInBaoCao.Name = "btnTKHDBNInBaoCao";
+            this.btnTKHDBNInBaoCao.Size = new System.Drawing.Size(191, 33);
+            this.btnTKHDBNInBaoCao.TabIndex = 27;
+            this.btnTKHDBNInBaoCao.Text = "IN BÁO CÁO";
+            this.btnTKHDBNInBaoCao.UseVisualStyleBackColor = true;
+            this.btnTKHDBNInBaoCao.Click += new System.EventHandler(this.btnIN2_Click);
             // 
             // label1
             // 
@@ -302,13 +312,13 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "TÊN NV:";
             // 
-            // cmbNV2
+            // cbTKHDBTenNV
             // 
-            this.cmbNV2.FormattingEnabled = true;
-            this.cmbNV2.Location = new System.Drawing.Point(158, 127);
-            this.cmbNV2.Name = "cmbNV2";
-            this.cmbNV2.Size = new System.Drawing.Size(381, 31);
-            this.cmbNV2.TabIndex = 25;
+            this.cbTKHDBTenNV.FormattingEnabled = true;
+            this.cbTKHDBTenNV.Location = new System.Drawing.Point(158, 127);
+            this.cbTKHDBTenNV.Name = "cbTKHDBTenNV";
+            this.cbTKHDBTenNV.Size = new System.Drawing.Size(381, 31);
+            this.cbTKHDBTenNV.TabIndex = 25;
             // 
             // rdb22
             // 
@@ -364,33 +374,33 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "TỪ";
             // 
-            // btnXem2
+            // btnTKHDBXem
             // 
-            this.btnXem2.Location = new System.Drawing.Point(637, 18);
-            this.btnXem2.Name = "btnXem2";
-            this.btnXem2.Size = new System.Drawing.Size(191, 35);
-            this.btnXem2.TabIndex = 17;
-            this.btnXem2.Text = "XEM";
-            this.btnXem2.UseVisualStyleBackColor = true;
-            this.btnXem2.Click += new System.EventHandler(this.btnXem2_Click);
+            this.btnTKHDBXem.Location = new System.Drawing.Point(637, 18);
+            this.btnTKHDBXem.Name = "btnTKHDBXem";
+            this.btnTKHDBXem.Size = new System.Drawing.Size(191, 35);
+            this.btnTKHDBXem.TabIndex = 17;
+            this.btnTKHDBXem.Text = "XEM";
+            this.btnTKHDBXem.UseVisualStyleBackColor = true;
+            this.btnTKHDBXem.Click += new System.EventHandler(this.btnXem2_Click);
             // 
-            // dtpTo2
+            // dtpTKHDBTo
             // 
-            this.dtpTo2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTo2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo2.Location = new System.Drawing.Point(348, 21);
-            this.dtpTo2.Name = "dtpTo2";
-            this.dtpTo2.Size = new System.Drawing.Size(200, 30);
-            this.dtpTo2.TabIndex = 16;
+            this.dtpTKHDBTo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTKHDBTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTKHDBTo.Location = new System.Drawing.Point(348, 21);
+            this.dtpTKHDBTo.Name = "dtpTKHDBTo";
+            this.dtpTKHDBTo.Size = new System.Drawing.Size(200, 30);
+            this.dtpTKHDBTo.TabIndex = 16;
             // 
-            // dtpFrom2
+            // dtpTKHDBFrom
             // 
-            this.dtpFrom2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFrom2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom2.Location = new System.Drawing.Point(84, 21);
-            this.dtpFrom2.Name = "dtpFrom2";
-            this.dtpFrom2.Size = new System.Drawing.Size(200, 30);
-            this.dtpFrom2.TabIndex = 15;
+            this.dtpTKHDBFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTKHDBFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTKHDBFrom.Location = new System.Drawing.Point(84, 21);
+            this.dtpTKHDBFrom.Name = "dtpTKHDBFrom";
+            this.dtpTKHDBFrom.Size = new System.Drawing.Size(200, 30);
+            this.dtpTKHDBFrom.TabIndex = 15;
             // 
             // tabPage3
             // 
@@ -427,41 +437,50 @@
             // pnTOP3
             // 
             this.pnTOP3.AutoScroll = true;
-            this.pnTOP3.Controls.Add(this.btnIN3);
+            this.pnTOP3.Controls.Add(this.btnTKHDNInBaoCao);
             this.pnTOP3.Controls.Add(this.lblNL3);
-            this.pnTOP3.Controls.Add(this.cmbNL3);
+            this.pnTOP3.Controls.Add(this.cbTKHDNTenNV);
             this.pnTOP3.Controls.Add(this.rdb32);
             this.pnTOP3.Controls.Add(this.rdb31);
             this.pnTOP3.Controls.Add(this.lblSX3);
             this.pnTOP3.Controls.Add(this.lblTo3);
             this.pnTOP3.Controls.Add(this.lblFrom3);
-            this.pnTOP3.Controls.Add(this.btnXem3);
-            this.pnTOP3.Controls.Add(this.dtpTo3);
-            this.pnTOP3.Controls.Add(this.dtpFrom3);
+            this.pnTOP3.Controls.Add(this.btnTKHDNXem);
+            this.pnTOP3.Controls.Add(this.dtpTKHDNTo);
+            this.pnTOP3.Controls.Add(this.dtpTKHDNFrom);
             this.pnTOP3.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTOP3.Location = new System.Drawing.Point(3, 3);
             this.pnTOP3.Name = "pnTOP3";
             this.pnTOP3.Size = new System.Drawing.Size(870, 120);
             this.pnTOP3.TabIndex = 0;
             // 
+            // btnTKHDNInBaoCao
+            // 
+            this.btnTKHDNInBaoCao.Location = new System.Drawing.Point(630, 69);
+            this.btnTKHDNInBaoCao.Name = "btnTKHDNInBaoCao";
+            this.btnTKHDNInBaoCao.Size = new System.Drawing.Size(191, 35);
+            this.btnTKHDNInBaoCao.TabIndex = 20;
+            this.btnTKHDNInBaoCao.Text = "IN BÁO CÁO";
+            this.btnTKHDNInBaoCao.UseVisualStyleBackColor = true;
+            // 
             // lblNL3
             // 
             this.lblNL3.AutoSize = true;
             this.lblNL3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNL3.Location = new System.Drawing.Point(32, 131);
+            this.lblNL3.Location = new System.Drawing.Point(32, 125);
             this.lblNL3.Name = "lblNL3";
             this.lblNL3.Size = new System.Drawing.Size(85, 22);
             this.lblNL3.TabIndex = 14;
             this.lblNL3.Text = "TÊN NV:";
             // 
-            // cmbNL3
+            // cbTKHDNTenNV
             // 
-            this.cmbNL3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNL3.FormattingEnabled = true;
-            this.cmbNL3.Location = new System.Drawing.Point(142, 123);
-            this.cmbNL3.Name = "cmbNL3";
-            this.cmbNL3.Size = new System.Drawing.Size(381, 30);
-            this.cmbNL3.TabIndex = 13;
+            this.cbTKHDNTenNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTKHDNTenNV.FormattingEnabled = true;
+            this.cbTKHDNTenNV.Location = new System.Drawing.Point(142, 117);
+            this.cbTKHDNTenNV.Name = "cbTKHDNTenNV";
+            this.cbTKHDNTenNV.Size = new System.Drawing.Size(381, 30);
+            this.cbTKHDNTenNV.TabIndex = 13;
             // 
             // rdb32
             // 
@@ -517,52 +536,33 @@
             this.lblFrom3.TabIndex = 6;
             this.lblFrom3.Text = "TỪ";
             // 
-            // btnXem3
+            // btnTKHDNXem
             // 
-            this.btnXem3.Location = new System.Drawing.Point(630, 20);
-            this.btnXem3.Name = "btnXem3";
-            this.btnXem3.Size = new System.Drawing.Size(191, 35);
-            this.btnXem3.TabIndex = 5;
-            this.btnXem3.Text = "XEM";
-            this.btnXem3.UseVisualStyleBackColor = true;
-            this.btnXem3.Click += new System.EventHandler(this.btnXem3_Click);
+            this.btnTKHDNXem.Location = new System.Drawing.Point(630, 20);
+            this.btnTKHDNXem.Name = "btnTKHDNXem";
+            this.btnTKHDNXem.Size = new System.Drawing.Size(191, 35);
+            this.btnTKHDNXem.TabIndex = 5;
+            this.btnTKHDNXem.Text = "XEM";
+            this.btnTKHDNXem.UseVisualStyleBackColor = true;
+            this.btnTKHDNXem.Click += new System.EventHandler(this.btnXem3_Click);
             // 
-            // dtpTo3
+            // dtpTKHDNTo
             // 
-            this.dtpTo3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTo3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTo3.Location = new System.Drawing.Point(341, 23);
-            this.dtpTo3.Name = "dtpTo3";
-            this.dtpTo3.Size = new System.Drawing.Size(200, 30);
-            this.dtpTo3.TabIndex = 4;
+            this.dtpTKHDNTo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTKHDNTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTKHDNTo.Location = new System.Drawing.Point(341, 23);
+            this.dtpTKHDNTo.Name = "dtpTKHDNTo";
+            this.dtpTKHDNTo.Size = new System.Drawing.Size(200, 30);
+            this.dtpTKHDNTo.TabIndex = 4;
             // 
-            // dtpFrom3
+            // dtpTKHDNFrom
             // 
-            this.dtpFrom3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFrom3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFrom3.Location = new System.Drawing.Point(77, 23);
-            this.dtpFrom3.Name = "dtpFrom3";
-            this.dtpFrom3.Size = new System.Drawing.Size(200, 30);
-            this.dtpFrom3.TabIndex = 3;
-            // 
-            // btnIN2
-            // 
-            this.btnIN2.Location = new System.Drawing.Point(637, 66);
-            this.btnIN2.Name = "btnIN2";
-            this.btnIN2.Size = new System.Drawing.Size(191, 33);
-            this.btnIN2.TabIndex = 27;
-            this.btnIN2.Text = "IN BÁO CÁO";
-            this.btnIN2.UseVisualStyleBackColor = true;
-            this.btnIN2.Click += new System.EventHandler(this.btnIN2_Click);
-            // 
-            // btnIN3
-            // 
-            this.btnIN3.Location = new System.Drawing.Point(630, 69);
-            this.btnIN3.Name = "btnIN3";
-            this.btnIN3.Size = new System.Drawing.Size(191, 35);
-            this.btnIN3.TabIndex = 20;
-            this.btnIN3.Text = "IN BÁO CÁO";
-            this.btnIN3.UseVisualStyleBackColor = true;
+            this.dtpTKHDNFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTKHDNFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTKHDNFrom.Location = new System.Drawing.Point(77, 23);
+            this.dtpTKHDNFrom.Name = "dtpTKHDNFrom";
+            this.dtpTKHDNFrom.Size = new System.Drawing.Size(200, 30);
+            this.dtpTKHDNFrom.TabIndex = 3;
             // 
             // ucThongKe
             // 
@@ -599,9 +599,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnXem1;
-        private System.Windows.Forms.DateTimePicker dtpTo1;
-        private System.Windows.Forms.DateTimePicker dtpFrom1;
+        private System.Windows.Forms.Button btnTKBestSellXem;
+        private System.Windows.Forms.DateTimePicker dtpTKBestSellTo;
+        private System.Windows.Forms.DateTimePicker dtpTKBestSellFrom;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
@@ -615,28 +615,28 @@
         private System.Windows.Forms.Label lblSX3;
         private System.Windows.Forms.Label lblTo3;
         private System.Windows.Forms.Label lblFrom3;
-        private System.Windows.Forms.Button btnXem3;
-        private System.Windows.Forms.DateTimePicker dtpTo3;
-        private System.Windows.Forms.DateTimePicker dtpFrom3;
-        private System.Windows.Forms.ComboBox cmbNL3;
+        private System.Windows.Forms.Button btnTKHDNXem;
+        private System.Windows.Forms.DateTimePicker dtpTKHDNTo;
+        private System.Windows.Forms.DateTimePicker dtpTKHDNFrom;
+        private System.Windows.Forms.ComboBox cbTKHDNTenNV;
         private System.Windows.Forms.Label lblNL3;
         private System.Windows.Forms.Label lblTo1;
         private System.Windows.Forms.Label lblFrom1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbNV2;
+        private System.Windows.Forms.ComboBox cbTKHDBTenNV;
         private System.Windows.Forms.RadioButton rdb22;
         private System.Windows.Forms.RadioButton rdb21;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnXem2;
-        private System.Windows.Forms.DateTimePicker dtpTo2;
-        private System.Windows.Forms.DateTimePicker dtpFrom2;
-        private System.Windows.Forms.Button btnIN1;
+        private System.Windows.Forms.Button btnTKHDBXem;
+        private System.Windows.Forms.DateTimePicker dtpTKHDBTo;
+        private System.Windows.Forms.DateTimePicker dtpTKHDBFrom;
+        private System.Windows.Forms.Button btnTKBestSellInBaoCao;
         private System.Windows.Forms.RadioButton rdb12;
         private System.Windows.Forms.RadioButton rdb11;
         private System.Windows.Forms.Label lblSX1;
-        private System.Windows.Forms.Button btnIN2;
-        private System.Windows.Forms.Button btnIN3;
+        private System.Windows.Forms.Button btnTKHDBNInBaoCao;
+        private System.Windows.Forms.Button btnTKHDNInBaoCao;
     }
 }

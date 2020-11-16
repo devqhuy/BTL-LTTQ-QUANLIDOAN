@@ -36,25 +36,25 @@ namespace BTL_QuanLiFF
         private void frmLogin_Load(object sender, EventArgs e)
         {
           
-            txtTK.Focus();
+            txtLoginEmail.Focus();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             validateLogin();
 
-            if(!IsValidEmail(txtTK.Text))
+            if(!IsValidEmail(txtLoginEmail.Text))
             {
                 MessageBox.Show("Bạn cần nhập email");
                 return;
             }
             
-            if(validateLogin() == true  & IsValidEmail(txtTK.Text) == true) 
+            if(validateLogin() == true  & IsValidEmail(txtLoginEmail.Text) == true) 
             {
                 DataTable dt = new DataTable();
                 dt = dtbase.DataReader("select email, matKhau from TAIKHOAN where" +
-                    " email = '" + txtTK.Text +
-                    "' and matKhau = '" + txtMK.Text + "'");
+                    " email = '" + txtLoginEmail.Text +
+                    "' and matKhau = '" + txtLoginMK.Text + "'");
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("Dang nhap thanh cong");
@@ -62,14 +62,14 @@ namespace BTL_QuanLiFF
                         "from taikhoan " +
                         "inner join nhanvien " +
                         "on nhanvien.idNV = TAIKHOAN.idNV " +
-                        "where email = '" + txtTK.Text +"'");
+                        "where email = '" + txtLoginEmail.Text +"'");
                     username = dt.Rows[0]["hoTenNV"].ToString() ;
 
                     role = dt.Rows[0]["chucVu"].ToString(); 
                     idNV = dt.Rows[0]["idNV"].ToString();
 
-                    txtMK.Text = "";
-                    txtTK.Text = "";
+                    txtLoginMK.Text = "";
+                    txtLoginEmail.Text = "";
                     frmMenu1 = new frmMenu(username, role , idNV);
                     
                     this.Hide();
@@ -80,36 +80,36 @@ namespace BTL_QuanLiFF
                 else
                 {
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
-                    txtTK.Focus();
+                    txtLoginEmail.Focus();
                 }
             }
         }
 
         public bool validateLogin()
         {
-            if(txtTK.Text.Trim() == "")
+            if(txtLoginEmail.Text.Trim() == "")
             {
-                err1.SetError(txtTK, "Bạn cần nhập vào tài khoản");
+                err1.SetError(txtLoginEmail, "Bạn cần nhập vào tài khoản");
                 return false;
             }
             else
             {
-                if (!IsValidEmail(txtTK.Text))
+                if (!IsValidEmail(txtLoginEmail.Text))
                 {
-                    err1.SetError(txtTK, "Bạn cần nhập đúng định dạng email");
+                    err1.SetError(txtLoginEmail, "Bạn cần nhập đúng định dạng email");
                 }
                 else return true;
             }
 
-            if (txtMK.Text.Trim() == "")
+            if (txtLoginMK.Text.Trim() == "")
             {
-                err1.SetError(txtMK, "Bạn cần nhập vào mật khẩu");
+                err1.SetError(txtLoginMK, "Bạn cần nhập vào mật khẩu");
                 return false;
             }
 
-            if(txtTK.Text.Trim() != "" & txtMK.Text.Trim() != "")
+            if(txtLoginEmail.Text.Trim() != "" & txtLoginMK.Text.Trim() != "")
             {
-                btnSubmit.Enabled = true;
+                btnLoginDangNhap.Enabled = true;
                 err1.Clear();
                 return true;
             }

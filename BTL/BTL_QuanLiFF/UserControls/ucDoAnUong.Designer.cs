@@ -32,26 +32,27 @@ namespace BTL_QuanLiFF.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDoAnUong));
             this.lblFood = new System.Windows.Forms.Label();
             this.lblFoodName = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
             this.lblNOTE = new System.Windows.Forms.Label();
             this.lblMoTa = new System.Windows.Forms.Label();
-            this.txtIDFood = new System.Windows.Forms.TextBox();
-            this.txtDonGia = new System.Windows.Forms.TextBox();
-            this.txtNOTE = new System.Windows.Forms.TextBox();
-            this.btnADD = new System.Windows.Forms.Button();
+            this.txtDoAnUongMaMon = new System.Windows.Forms.TextBox();
+            this.txtDoAnUongDonGia = new System.Windows.Forms.TextBox();
+            this.txtDoAnUongNote = new System.Windows.Forms.TextBox();
+            this.btnDoAnUongThem = new System.Windows.Forms.Button();
             this.lblSoLuong = new System.Windows.Forms.Label();
-            this.btnCTHoaDon = new System.Windows.Forms.Button();
+            this.btnDoAnUongCTHD = new System.Windows.Forms.Button();
             this.NUM = new System.Windows.Forms.NumericUpDown();
-            this.cmbFoodName = new System.Windows.Forms.ComboBox();
-            this.txtMoTa = new System.Windows.Forms.TextBox();
-            this.txtHD = new System.Windows.Forms.TextBox();
+            this.cbDoAnUongTenMon = new System.Windows.Forms.ComboBox();
+            this.txtDoAnUongMoTa = new System.Windows.Forms.TextBox();
+            this.txtKHMaHD = new System.Windows.Forms.TextBox();
             this.lblHD = new System.Windows.Forms.Label();
-            this.btnTao = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnDoAnUongHDMoi = new System.Windows.Forms.Button();
+            this.btnDoAnUongNhapLai = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbKH = new System.Windows.Forms.ComboBox();
+            this.cbDoAnUongMaKH = new System.Windows.Forms.ComboBox();
             this.err2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblTT = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -115,39 +116,43 @@ namespace BTL_QuanLiFF.UserControls
             this.lblMoTa.TabIndex = 6;
             this.lblMoTa.Text = "MÔ TẢ";
             // 
-            // txtIDFood
+            // txtDoAnUongMaMon
             // 
-            this.txtIDFood.Location = new System.Drawing.Point(403, 124);
-            this.txtIDFood.Name = "txtIDFood";
-            this.txtIDFood.Size = new System.Drawing.Size(496, 32);
-            this.txtIDFood.TabIndex = 8;
+            this.txtDoAnUongMaMon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtDoAnUongMaMon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtDoAnUongMaMon.Location = new System.Drawing.Point(403, 124);
+            this.txtDoAnUongMaMon.Name = "txtDoAnUongMaMon";
+            this.txtDoAnUongMaMon.Size = new System.Drawing.Size(496, 32);
+            this.txtDoAnUongMaMon.TabIndex = 8;
             // 
-            // txtDonGia
+            // txtDoAnUongDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(403, 221);
-            this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(496, 32);
-            this.txtDonGia.TabIndex = 9;
+            this.txtDoAnUongDonGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtDoAnUongDonGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtDoAnUongDonGia.Location = new System.Drawing.Point(403, 221);
+            this.txtDoAnUongDonGia.Name = "txtDoAnUongDonGia";
+            this.txtDoAnUongDonGia.Size = new System.Drawing.Size(496, 32);
+            this.txtDoAnUongDonGia.TabIndex = 9;
             // 
-            // txtNOTE
+            // txtDoAnUongNote
             // 
-            this.txtNOTE.Location = new System.Drawing.Point(403, 375);
-            this.txtNOTE.Multiline = true;
-            this.txtNOTE.Name = "txtNOTE";
-            this.txtNOTE.Size = new System.Drawing.Size(496, 96);
-            this.txtNOTE.TabIndex = 10;
+            this.txtDoAnUongNote.Location = new System.Drawing.Point(403, 375);
+            this.txtDoAnUongNote.Multiline = true;
+            this.txtDoAnUongNote.Name = "txtDoAnUongNote";
+            this.txtDoAnUongNote.Size = new System.Drawing.Size(496, 96);
+            this.txtDoAnUongNote.TabIndex = 10;
             // 
-            // btnADD
+            // btnDoAnUongThem
             // 
-            this.btnADD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnADD.Location = new System.Drawing.Point(27, 491);
-            this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(105, 42);
-            this.btnADD.TabIndex = 12;
-            this.btnADD.Text = "Thêm";
-            this.btnADD.UseVisualStyleBackColor = true;
-            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
+            this.btnDoAnUongThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoAnUongThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDoAnUongThem.Location = new System.Drawing.Point(27, 491);
+            this.btnDoAnUongThem.Name = "btnDoAnUongThem";
+            this.btnDoAnUongThem.Size = new System.Drawing.Size(105, 42);
+            this.btnDoAnUongThem.TabIndex = 12;
+            this.btnDoAnUongThem.Text = "Thêm";
+            this.btnDoAnUongThem.UseVisualStyleBackColor = true;
+            this.btnDoAnUongThem.Click += new System.EventHandler(this.btnADD_Click);
             // 
             // lblSoLuong
             // 
@@ -160,17 +165,17 @@ namespace BTL_QuanLiFF.UserControls
             this.lblSoLuong.TabIndex = 13;
             this.lblSoLuong.Text = "SỐ LƯỢNG";
             // 
-            // btnCTHoaDon
+            // btnDoAnUongCTHD
             // 
-            this.btnCTHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCTHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCTHoaDon.Location = new System.Drawing.Point(27, 429);
-            this.btnCTHoaDon.Name = "btnCTHoaDon";
-            this.btnCTHoaDon.Size = new System.Drawing.Size(272, 42);
-            this.btnCTHoaDon.TabIndex = 15;
-            this.btnCTHoaDon.Text = "CHI TIẾT HÓA ĐƠN";
-            this.btnCTHoaDon.UseVisualStyleBackColor = true;
-            this.btnCTHoaDon.Click += new System.EventHandler(this.btnCTHoaDon_Click);
+            this.btnDoAnUongCTHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoAnUongCTHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDoAnUongCTHD.Location = new System.Drawing.Point(27, 429);
+            this.btnDoAnUongCTHD.Name = "btnDoAnUongCTHD";
+            this.btnDoAnUongCTHD.Size = new System.Drawing.Size(272, 42);
+            this.btnDoAnUongCTHD.TabIndex = 15;
+            this.btnDoAnUongCTHD.Text = "CHI TIẾT HÓA ĐƠN";
+            this.btnDoAnUongCTHD.UseVisualStyleBackColor = true;
+            this.btnDoAnUongCTHD.Click += new System.EventHandler(this.btnCTHoaDon_Click);
             // 
             // NUM
             // 
@@ -180,29 +185,35 @@ namespace BTL_QuanLiFF.UserControls
             this.NUM.TabIndex = 18;
             this.NUM.ValueChanged += new System.EventHandler(this.NUM_ValueChanged);
             // 
-            // cmbFoodName
+            // cbDoAnUongTenMon
             // 
-            this.cmbFoodName.FormattingEnabled = true;
-            this.cmbFoodName.Location = new System.Drawing.Point(403, 170);
-            this.cmbFoodName.Name = "cmbFoodName";
-            this.cmbFoodName.Size = new System.Drawing.Size(496, 31);
-            this.cmbFoodName.TabIndex = 19;
-            this.cmbFoodName.SelectedIndexChanged += new System.EventHandler(this.cmbFoodName_SelectedIndexChanged);
+            this.cbDoAnUongTenMon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbDoAnUongTenMon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbDoAnUongTenMon.FormattingEnabled = true;
+            this.cbDoAnUongTenMon.Location = new System.Drawing.Point(403, 170);
+            this.cbDoAnUongTenMon.Name = "cbDoAnUongTenMon";
+            this.cbDoAnUongTenMon.Size = new System.Drawing.Size(496, 31);
+            this.cbDoAnUongTenMon.TabIndex = 19;
+            this.cbDoAnUongTenMon.SelectedIndexChanged += new System.EventHandler(this.cmbFoodName_SelectedIndexChanged);
             // 
-            // txtMoTa
+            // txtDoAnUongMoTa
             // 
-            this.txtMoTa.Location = new System.Drawing.Point(403, 325);
-            this.txtMoTa.Multiline = true;
-            this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(496, 33);
-            this.txtMoTa.TabIndex = 16;
+            this.txtDoAnUongMoTa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtDoAnUongMoTa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtDoAnUongMoTa.Location = new System.Drawing.Point(403, 325);
+            this.txtDoAnUongMoTa.Multiline = true;
+            this.txtDoAnUongMoTa.Name = "txtDoAnUongMoTa";
+            this.txtDoAnUongMoTa.Size = new System.Drawing.Size(496, 33);
+            this.txtDoAnUongMoTa.TabIndex = 16;
             // 
-            // txtHD
+            // txtKHMaHD
             // 
-            this.txtHD.Location = new System.Drawing.Point(403, 77);
-            this.txtHD.Name = "txtHD";
-            this.txtHD.Size = new System.Drawing.Size(496, 32);
-            this.txtHD.TabIndex = 21;
+            this.txtKHMaHD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtKHMaHD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtKHMaHD.Location = new System.Drawing.Point(403, 77);
+            this.txtKHMaHD.Name = "txtKHMaHD";
+            this.txtKHMaHD.Size = new System.Drawing.Size(496, 32);
+            this.txtKHMaHD.TabIndex = 21;
             // 
             // lblHD
             // 
@@ -215,28 +226,28 @@ namespace BTL_QuanLiFF.UserControls
             this.lblHD.TabIndex = 20;
             this.lblHD.Text = "ID HOÁ ĐƠN";
             // 
-            // btnTao
+            // btnDoAnUongHDMoi
             // 
-            this.btnTao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnTao.Location = new System.Drawing.Point(403, 491);
-            this.btnTao.Name = "btnTao";
-            this.btnTao.Size = new System.Drawing.Size(164, 42);
-            this.btnTao.TabIndex = 22;
-            this.btnTao.Text = "HÓA ĐƠN MỚI";
-            this.btnTao.UseVisualStyleBackColor = true;
-            this.btnTao.Click += new System.EventHandler(this.btnTao_Click);
+            this.btnDoAnUongHDMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDoAnUongHDMoi.Location = new System.Drawing.Point(403, 491);
+            this.btnDoAnUongHDMoi.Name = "btnDoAnUongHDMoi";
+            this.btnDoAnUongHDMoi.Size = new System.Drawing.Size(164, 42);
+            this.btnDoAnUongHDMoi.TabIndex = 22;
+            this.btnDoAnUongHDMoi.Text = "HÓA ĐƠN MỚI";
+            this.btnDoAnUongHDMoi.UseVisualStyleBackColor = true;
+            this.btnDoAnUongHDMoi.Click += new System.EventHandler(this.btnTao_Click);
             // 
-            // btnXoa
+            // btnDoAnUongNhapLai
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnXoa.Location = new System.Drawing.Point(180, 491);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(119, 42);
-            this.btnXoa.TabIndex = 23;
-            this.btnXoa.Text = "Nhập lại";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnDoAnUongNhapLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoAnUongNhapLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDoAnUongNhapLai.Location = new System.Drawing.Point(180, 491);
+            this.btnDoAnUongNhapLai.Name = "btnDoAnUongNhapLai";
+            this.btnDoAnUongNhapLai.Size = new System.Drawing.Size(119, 42);
+            this.btnDoAnUongNhapLai.TabIndex = 23;
+            this.btnDoAnUongNhapLai.Text = "Nhập lại";
+            this.btnDoAnUongNhapLai.UseVisualStyleBackColor = true;
+            this.btnDoAnUongNhapLai.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label1
             // 
@@ -249,13 +260,15 @@ namespace BTL_QuanLiFF.UserControls
             this.label1.TabIndex = 24;
             this.label1.Text = "ID KHÁCH HÀNG";
             // 
-            // cmbKH
+            // cbDoAnUongMaKH
             // 
-            this.cmbKH.FormattingEnabled = true;
-            this.cmbKH.Location = new System.Drawing.Point(403, 30);
-            this.cmbKH.Name = "cmbKH";
-            this.cmbKH.Size = new System.Drawing.Size(496, 31);
-            this.cmbKH.TabIndex = 25;
+            this.cbDoAnUongMaKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbDoAnUongMaKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbDoAnUongMaKH.FormattingEnabled = true;
+            this.cbDoAnUongMaKH.Location = new System.Drawing.Point(403, 30);
+            this.cbDoAnUongMaKH.Name = "cbDoAnUongMaKH";
+            this.cbDoAnUongMaKH.Size = new System.Drawing.Size(496, 31);
+            this.cbDoAnUongMaKH.TabIndex = 25;
             // 
             // err2
             // 
@@ -297,24 +310,26 @@ namespace BTL_QuanLiFF.UserControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.lblTT2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbKH);
+            this.Controls.Add(this.cbDoAnUongMaKH);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnTao);
-            this.Controls.Add(this.txtHD);
+            this.Controls.Add(this.btnDoAnUongNhapLai);
+            this.Controls.Add(this.btnDoAnUongHDMoi);
+            this.Controls.Add(this.txtKHMaHD);
             this.Controls.Add(this.lblHD);
-            this.Controls.Add(this.cmbFoodName);
+            this.Controls.Add(this.cbDoAnUongTenMon);
             this.Controls.Add(this.NUM);
             this.Controls.Add(this.lblTT);
-            this.Controls.Add(this.txtMoTa);
-            this.Controls.Add(this.btnCTHoaDon);
+            this.Controls.Add(this.txtDoAnUongMoTa);
+            this.Controls.Add(this.btnDoAnUongCTHD);
             this.Controls.Add(this.lblSoLuong);
-            this.Controls.Add(this.btnADD);
-            this.Controls.Add(this.txtNOTE);
-            this.Controls.Add(this.txtDonGia);
-            this.Controls.Add(this.txtIDFood);
+            this.Controls.Add(this.btnDoAnUongThem);
+            this.Controls.Add(this.txtDoAnUongNote);
+            this.Controls.Add(this.txtDoAnUongDonGia);
+            this.Controls.Add(this.txtDoAnUongMaMon);
             this.Controls.Add(this.lblMoTa);
             this.Controls.Add(this.lblNOTE);
             this.Controls.Add(this.lblDonGia);
@@ -338,21 +353,21 @@ namespace BTL_QuanLiFF.UserControls
         private System.Windows.Forms.Label lblDonGia;
         private System.Windows.Forms.Label lblNOTE;
         private System.Windows.Forms.Label lblMoTa;
-        private System.Windows.Forms.TextBox txtIDFood;
-        private System.Windows.Forms.TextBox txtDonGia;
-        private System.Windows.Forms.TextBox txtNOTE;
-        private System.Windows.Forms.Button btnADD;
+        private System.Windows.Forms.TextBox txtDoAnUongMaMon;
+        private System.Windows.Forms.TextBox txtDoAnUongDonGia;
+        private System.Windows.Forms.TextBox txtDoAnUongNote;
+        private System.Windows.Forms.Button btnDoAnUongThem;
         private System.Windows.Forms.Label lblSoLuong;
-        private System.Windows.Forms.Button btnCTHoaDon;
+        private System.Windows.Forms.Button btnDoAnUongCTHD;
         private System.Windows.Forms.NumericUpDown NUM;
-        private System.Windows.Forms.ComboBox cmbFoodName;
-        private System.Windows.Forms.TextBox txtMoTa;
-        private System.Windows.Forms.TextBox txtHD;
+        private System.Windows.Forms.ComboBox cbDoAnUongTenMon;
+        private System.Windows.Forms.TextBox txtDoAnUongMoTa;
+        private System.Windows.Forms.TextBox txtKHMaHD;
         private System.Windows.Forms.Label lblHD;
-        private System.Windows.Forms.Button btnTao;
-        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnDoAnUongHDMoi;
+        private System.Windows.Forms.Button btnDoAnUongNhapLai;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbKH;
+        private System.Windows.Forms.ComboBox cbDoAnUongMaKH;
         private System.Windows.Forms.ErrorProvider err2;
         private System.Windows.Forms.Label lblTT2;
         private System.Windows.Forms.Label label2;
