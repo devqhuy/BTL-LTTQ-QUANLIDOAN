@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnQuanLi = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
@@ -66,7 +65,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnQuanLi);
             this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnKhachHang);
@@ -77,25 +75,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(211, 703);
+            this.panel1.Size = new System.Drawing.Size(211, 695);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(9, 557);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 77);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "THOÁT CHƯƠNG TRÌNH";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnQuanLi
             // 
@@ -228,7 +209,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(211, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(923, 61);
+            this.panel3.Size = new System.Drawing.Size(921, 61);
             this.panel3.TabIndex = 1;
             // 
             // lblTieuDe
@@ -267,7 +248,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(211, 61);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(923, 91);
+            this.panel4.Size = new System.Drawing.Size(921, 91);
             this.panel4.TabIndex = 2;
             // 
             // lblIDNV
@@ -328,7 +309,7 @@
             this.panelControl.ForeColor = System.Drawing.Color.Black;
             this.panelControl.Location = new System.Drawing.Point(211, 152);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(923, 551);
+            this.panelControl.Size = new System.Drawing.Size(921, 543);
             this.panelControl.TabIndex = 3;
             // 
             // label1
@@ -348,7 +329,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(923, 551);
+            this.pictureBox2.Size = new System.Drawing.Size(921, 543);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -360,7 +341,7 @@
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1134, 703);
+            this.ClientSize = new System.Drawing.Size(1132, 695);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -368,6 +349,8 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(1150, 742);
+            this.MinimumSize = new System.Drawing.Size(1150, 742);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÍ BÁN ĐỒ ĂN NHANH";
@@ -413,6 +396,5 @@
         private System.Windows.Forms.Label lblIDNV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
     }
 }

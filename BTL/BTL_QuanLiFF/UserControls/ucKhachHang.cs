@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace BTL_QuanLiFF.UserControls
 {
@@ -17,6 +18,7 @@ namespace BTL_QuanLiFF.UserControls
         Classes.Common cm = new Classes.Common();
         private string makh = "";
         public string path = System.IO.Directory.GetCurrentDirectory().ToString();
+        public string path2 = "";
         string strImageFileName;
         String img = "";
         string os = "open";
@@ -94,13 +96,14 @@ namespace BTL_QuanLiFF.UserControls
                 txtDoB.Text = Convert.ToDateTime(dt.Rows[0]["ngaySinh"]).ToShortDateString();
                 
                 img = dt.Rows[0]["Image"].ToString();
+                
                 try
                 {
                     picAnh.Image = Image.FromFile(path +
                 "\\Images\\KhachHang\\" + img);
                 }catch(Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Loi ANH");
                 }
             }
         }
@@ -108,6 +111,7 @@ namespace BTL_QuanLiFF.UserControls
         private void btnThem_Click(object sender, EventArgs e)
         {
             
+
             btnLuu.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
@@ -210,7 +214,7 @@ namespace BTL_QuanLiFF.UserControls
                         txtDC.Text + "','" +
                         txtSDT.Text + "','" +
                         txtDoB.Text + "','" +
-                        "HD','" + img + "')");
+                        "HD','" + strImageFileName + "')");
                   
                     MessageBox.Show("Thêm khách hàng thành công", " Thông báo ",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -242,28 +246,16 @@ namespace BTL_QuanLiFF.UserControls
                 OpenFileDialog dlgOpen = new OpenFileDialog();
                 dlgOpen.Title = "Hiển thị ảnh người dùng";
                 dlgOpen.Filter = "JPEG Images|*.jpg|All Files|*.*";
+                
                 if (dlgOpen.ShowDialog() == DialogResult.OK)
                 {
                     picAnh.Image = Image.FromFile(dlgOpen.FileName);
-                    //E:\BaiGiang\Anh\H1.jpg
+                    
                     Anh = dlgOpen.FileName.ToString().Split('\\');
                     strImageFileName = Anh[Anh.Length - 1];
-                }
-            }
-            else
-            {
-                SaveFileDialog Sdlg = new SaveFileDialog();
-                Sdlg.InitialDirectory = path;
-                Sdlg.Title = "Tải ảnh người dùng";
-                Sdlg.DefaultExt = ".jpg";
-                Sdlg.Filter = "txt (*.txt)|*.txt | JPEG Images|*.jpg | All files (*.*)|*.*";
-                Sdlg.FilterIndex = 2;
-               
-                if (Sdlg.ShowDialog() == DialogResult.OK)
-                {
-                    String[] Anh;
-                    Anh = Sdlg.FileName.ToString().Split('\\');
-                    img = Anh[Anh.Length - 1];
+                   
+                    System.IO.File.Copy(dlgOpen.FileName, path + @"\Images\KhachHang\" + strImageFileName);
+                    
                 }
             }
             
@@ -278,8 +270,8 @@ namespace BTL_QuanLiFF.UserControls
                     dtbase.DataChange("update KHACHHANG " +
                         "set hotenKH = N'" + txtHT.Text +
                         "', diaChi = N'" + txtDC.Text + "', soDT = '" + txtSDT.Text + "'," +
-                        "ngaysinh = '" + txtDoB.Text + "',status = 'HD' ," + " image = '" + img + "'" +
-                        "where idKH = 'KH06'");
+                        "ngaysinh = '" + txtDoB.Text + "',status = 'HD' ," + " image = '" + strImageFileName + "'" +
+                        "where idKH = '" + cmbKH.Text + "'");
 
                     btnSua.Enabled = false;
                     btnXoa.Enabled = false;
@@ -369,8 +361,7 @@ namespace BTL_QuanLiFF.UserControls
             {
                 cmbKH.DataSource = dtbase.DataReader("select * from KHACHHANG");
             }
-
-          
         }
+
     }
 }

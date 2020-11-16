@@ -52,7 +52,6 @@ namespace BTL_QuanLiFF.Forms
             lblTen.Text = username;
             lblRole.Text = role;
             lblIDNV.Text = idNV;
-            
         }
 
         public frmMenu(string name, string role , string idNV) :this()
@@ -118,12 +117,9 @@ namespace BTL_QuanLiFF.Forms
 
         private void btnQuanLi_Click(object sender, EventArgs e)
         {
+            moveSidePanel(btnQuanLi);
+            lblTieuDe.Text = "Quản lí";
             addControlsToPanel(ucQuan);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

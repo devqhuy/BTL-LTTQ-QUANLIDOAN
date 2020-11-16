@@ -211,7 +211,7 @@
             // picAnh
             // 
             this.picAnh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picAnh.Location = new System.Drawing.Point(604, 115);
+            this.picAnh.Location = new System.Drawing.Point(604, 113);
             this.picAnh.Name = "picAnh";
             this.picAnh.Size = new System.Drawing.Size(292, 295);
             this.picAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
