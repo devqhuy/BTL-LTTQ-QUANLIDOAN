@@ -28,22 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQuanLi));
-            this.tpQLKH = new System.Windows.Forms.TabPage();
-            this.btnQLKHXoa = new System.Windows.Forms.Button();
-            this.btnQLKHSua = new System.Windows.Forms.Button();
-            this.btnQLKHThem = new System.Windows.Forms.Button();
-            this.dtgvQLKH = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtQLKHNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtQLKHTenKH = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbQLKHMaKH = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tpQLNL = new System.Windows.Forms.TabPage();
             this.btnQLNLXoa = new System.Windows.Forms.Button();
             this.btnQLNLSua = new System.Windows.Forms.Button();
@@ -62,44 +48,38 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpQLNV = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtQLNVGioiTinh = new System.Windows.Forms.TextBox();
+            this.txtDoB = new System.Windows.Forms.TextBox();
             this.txtQLNVChucVu = new System.Windows.Forms.TextBox();
             this.txtQLNVSoDT = new System.Windows.Forms.TextBox();
-            this.txtQLNVEmail = new System.Windows.Forms.TextBox();
             this.txtQLNVHoTen = new System.Windows.Forms.TextBox();
             this.cmb = new System.Windows.Forms.ComboBox();
             this.btnQLNVThem = new System.Windows.Forms.Button();
             this.btnQLNVXoa = new System.Windows.Forms.Button();
             this.btnQLNVSua = new System.Windows.Forms.Button();
-            this.lblDSNhanVien = new System.Windows.Forms.Label();
-            this.picQLNVAnh = new System.Windows.Forms.PictureBox();
             this.dtgvQLNVDSNhanVien = new System.Windows.Forms.DataGridView();
-            this.lblGioiTinh = new System.Windows.Forms.Label();
             this.lblChucVu = new System.Windows.Forms.Label();
             this.lblSoDT = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lblIDNhanVien = new System.Windows.Forms.Label();
             this.tabNhanVien = new System.Windows.Forms.TabControl();
             this.tpQuanLiHDN = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.dtgvQLHDN = new System.Windows.Forms.DataGridView();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtQLHDNTongTien = new System.Windows.Forms.TextBox();
+            this.txtQLHDNSoLuong = new System.Windows.Forms.TextBox();
+            this.dtQLHDNNgayTao = new System.Windows.Forms.DateTimePicker();
+            this.cbQLHDNMaNCC = new System.Windows.Forms.ComboBox();
+            this.cbQLHDNMaNV = new System.Windows.Forms.ComboBox();
+            this.cbQLHDNMaCT = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.cbQLHDNMaCT = new System.Windows.Forms.ComboBox();
-            this.cbQLHDNMaNV = new System.Windows.Forms.ComboBox();
-            this.cbQLHDNMaNCC = new System.Windows.Forms.ComboBox();
-            this.dtQLHDNNgayTao = new System.Windows.Forms.DateTimePicker();
-            this.txtQLHDNSoLuong = new System.Windows.Forms.TextBox();
-            this.txtQLHDNTongTien = new System.Windows.Forms.TextBox();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.dtgvQLHDN = new System.Windows.Forms.DataGridView();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tpQLHDB = new System.Windows.Forms.TabPage();
             this.btnQLHDBXoa = new System.Windows.Forms.Button();
             this.btnQLHDBSua = new System.Windows.Forms.Button();
@@ -115,170 +95,23 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.tpQLKH.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvQLKH)).BeginInit();
+            this.btnLuu1 = new System.Windows.Forms.Button();
+            this.txtAnh = new System.Windows.Forms.TextBox();
+            this.lblAnh = new System.Windows.Forms.Label();
+            this.err4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.rdbNam = new System.Windows.Forms.RadioButton();
+            this.rdbNu = new System.Windows.Forms.RadioButton();
             this.tpQLNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLNL)).BeginInit();
             this.tpQLNV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picQLNVAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLNVDSNhanVien)).BeginInit();
             this.tabNhanVien.SuspendLayout();
             this.tpQuanLiHDN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLHDN)).BeginInit();
             this.tpQLHDB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLHDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tpQLKH
-            // 
-            this.tpQLKH.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tpQLKH.BackgroundImage")));
-            this.tpQLKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tpQLKH.Controls.Add(this.btnQLKHXoa);
-            this.tpQLKH.Controls.Add(this.btnQLKHSua);
-            this.tpQLKH.Controls.Add(this.btnQLKHThem);
-            this.tpQLKH.Controls.Add(this.dtgvQLKH);
-            this.tpQLKH.Controls.Add(this.label11);
-            this.tpQLKH.Controls.Add(this.dtQLKHNgaySinh);
-            this.tpQLKH.Controls.Add(this.textBox2);
-            this.tpQLKH.Controls.Add(this.textBox1);
-            this.tpQLKH.Controls.Add(this.txtQLKHTenKH);
-            this.tpQLKH.Controls.Add(this.label9);
-            this.tpQLKH.Controls.Add(this.label10);
-            this.tpQLKH.Controls.Add(this.label8);
-            this.tpQLKH.Controls.Add(this.cbQLKHMaKH);
-            this.tpQLKH.Controls.Add(this.label7);
-            this.tpQLKH.Location = new System.Drawing.Point(4, 31);
-            this.tpQLKH.Name = "tpQLKH";
-            this.tpQLKH.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQLKH.Size = new System.Drawing.Size(909, 510);
-            this.tpQLKH.TabIndex = 2;
-            this.tpQLKH.Text = "QUẢN LÍ KHÁCH HÀNG";
-            this.tpQLKH.UseVisualStyleBackColor = true;
-            // 
-            // btnQLKHXoa
-            // 
-            this.btnQLKHXoa.Location = new System.Drawing.Point(657, 436);
-            this.btnQLKHXoa.Name = "btnQLKHXoa";
-            this.btnQLKHXoa.Size = new System.Drawing.Size(139, 43);
-            this.btnQLKHXoa.TabIndex = 13;
-            this.btnQLKHXoa.Text = "XÓA";
-            this.btnQLKHXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnQLKHSua
-            // 
-            this.btnQLKHSua.Location = new System.Drawing.Point(495, 436);
-            this.btnQLKHSua.Name = "btnQLKHSua";
-            this.btnQLKHSua.Size = new System.Drawing.Size(139, 43);
-            this.btnQLKHSua.TabIndex = 12;
-            this.btnQLKHSua.Text = "SỬA";
-            this.btnQLKHSua.UseVisualStyleBackColor = true;
-            // 
-            // btnQLKHThem
-            // 
-            this.btnQLKHThem.Location = new System.Drawing.Point(336, 436);
-            this.btnQLKHThem.Name = "btnQLKHThem";
-            this.btnQLKHThem.Size = new System.Drawing.Size(139, 43);
-            this.btnQLKHThem.TabIndex = 11;
-            this.btnQLKHThem.Text = "THÊM";
-            this.btnQLKHThem.UseVisualStyleBackColor = true;
-            // 
-            // dtgvQLKH
-            // 
-            this.dtgvQLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvQLKH.Location = new System.Drawing.Point(91, 216);
-            this.dtgvQLKH.Name = "dtgvQLKH";
-            this.dtgvQLKH.RowHeadersWidth = 51;
-            this.dtgvQLKH.RowTemplate.Height = 24;
-            this.dtgvQLKH.Size = new System.Drawing.Size(705, 192);
-            this.dtgvQLKH.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(62, 172);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 22);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "NGÀY SINH";
-            // 
-            // dtQLKHNgaySinh
-            // 
-            this.dtQLKHNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtQLKHNgaySinh.Location = new System.Drawing.Point(190, 166);
-            this.dtQLKHNgaySinh.Name = "dtQLKHNgaySinh";
-            this.dtQLKHNgaySinh.Size = new System.Drawing.Size(200, 30);
-            this.dtQLKHNgaySinh.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(614, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 30);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox1.Location = new System.Drawing.Point(614, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 30);
-            this.textBox1.TabIndex = 6;
-            // 
-            // txtQLKHTenKH
-            // 
-            this.txtQLKHTenKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtQLKHTenKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLKHTenKH.Location = new System.Drawing.Point(190, 98);
-            this.txtQLKHTenKH.Name = "txtQLKHTenKH";
-            this.txtQLKHTenKH.Size = new System.Drawing.Size(177, 30);
-            this.txtQLKHTenKH.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(491, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 22);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "ĐỊA CHỈ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(491, 31);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 22);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "SỐ ĐT";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(62, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 22);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "TÊN KH";
-            // 
-            // cbQLKHMaKH
-            // 
-            this.cbQLKHMaKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbQLKHMaKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbQLKHMaKH.FormattingEnabled = true;
-            this.cbQLKHMaKH.Location = new System.Drawing.Point(190, 27);
-            this.cbQLKHMaKH.Name = "cbQLKHMaKH";
-            this.cbQLKHMaKH.Size = new System.Drawing.Size(177, 30);
-            this.cbQLKHMaKH.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(62, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 22);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "MÃ KH";
             // 
             // tpQLNL
             // 
@@ -303,9 +136,9 @@
             this.tpQLNL.Location = new System.Drawing.Point(4, 31);
             this.tpQLNL.Name = "tpQLNL";
             this.tpQLNL.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQLNL.Size = new System.Drawing.Size(909, 510);
+            this.tpQLNL.Size = new System.Drawing.Size(909, 494);
             this.tpQLNL.TabIndex = 1;
-            this.tpQLNL.Text = "QUẢN LÍ NGUYÊN LIỆU";
+            this.tpQLNL.Text = "QL Nguyên Liệu";
             this.tpQLNL.UseVisualStyleBackColor = true;
             this.tpQLNL.Click += new System.EventHandler(this.tabNguyenLieu_Click);
             // 
@@ -338,6 +171,7 @@
             // 
             // dtgvQLNL
             // 
+            this.dtgvQLNL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvQLNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvQLNL.Location = new System.Drawing.Point(60, 233);
             this.dtgvQLNL.Name = "dtgvQLNL";
@@ -456,59 +290,48 @@
             // 
             // tpQLNV
             // 
-            this.tpQLNV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tpQLNV.BackgroundImage")));
             this.tpQLNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tpQLNV.Controls.Add(this.textBox3);
-            this.tpQLNV.Controls.Add(this.txtQLNVGioiTinh);
+            this.tpQLNV.Controls.Add(this.rdbNu);
+            this.tpQLNV.Controls.Add(this.rdbNam);
+            this.tpQLNV.Controls.Add(this.txtAnh);
+            this.tpQLNV.Controls.Add(this.lblAnh);
+            this.tpQLNV.Controls.Add(this.btnLuu1);
+            this.tpQLNV.Controls.Add(this.txtDoB);
             this.tpQLNV.Controls.Add(this.txtQLNVChucVu);
             this.tpQLNV.Controls.Add(this.txtQLNVSoDT);
-            this.tpQLNV.Controls.Add(this.txtQLNVEmail);
             this.tpQLNV.Controls.Add(this.txtQLNVHoTen);
             this.tpQLNV.Controls.Add(this.cmb);
             this.tpQLNV.Controls.Add(this.btnQLNVThem);
             this.tpQLNV.Controls.Add(this.btnQLNVXoa);
             this.tpQLNV.Controls.Add(this.btnQLNVSua);
-            this.tpQLNV.Controls.Add(this.lblDSNhanVien);
-            this.tpQLNV.Controls.Add(this.picQLNVAnh);
             this.tpQLNV.Controls.Add(this.dtgvQLNVDSNhanVien);
-            this.tpQLNV.Controls.Add(this.lblGioiTinh);
             this.tpQLNV.Controls.Add(this.lblChucVu);
             this.tpQLNV.Controls.Add(this.lblSoDT);
-            this.tpQLNV.Controls.Add(this.lblEmail);
             this.tpQLNV.Controls.Add(this.lblNgaySinh);
             this.tpQLNV.Controls.Add(this.lblHoTen);
             this.tpQLNV.Controls.Add(this.lblIDNhanVien);
             this.tpQLNV.Location = new System.Drawing.Point(4, 31);
             this.tpQLNV.Name = "tpQLNV";
             this.tpQLNV.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQLNV.Size = new System.Drawing.Size(909, 510);
+            this.tpQLNV.Size = new System.Drawing.Size(909, 494);
             this.tpQLNV.TabIndex = 0;
-            this.tpQLNV.Text = "QUẢN LÍ NHÂN VIÊN";
+            this.tpQLNV.Text = "QL Nhân viên";
             this.tpQLNV.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtDoB
             // 
-            this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox3.Location = new System.Drawing.Point(217, 102);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 30);
-            this.textBox3.TabIndex = 24;
-            // 
-            // txtQLNVGioiTinh
-            // 
-            this.txtQLNVGioiTinh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtQLNVGioiTinh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLNVGioiTinh.Location = new System.Drawing.Point(654, 149);
-            this.txtQLNVGioiTinh.Name = "txtQLNVGioiTinh";
-            this.txtQLNVGioiTinh.Size = new System.Drawing.Size(200, 30);
-            this.txtQLNVGioiTinh.TabIndex = 23;
+            this.txtDoB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtDoB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtDoB.Location = new System.Drawing.Point(183, 114);
+            this.txtDoB.Name = "txtDoB";
+            this.txtDoB.Size = new System.Drawing.Size(200, 30);
+            this.txtDoB.TabIndex = 24;
             // 
             // txtQLNVChucVu
             // 
             this.txtQLNVChucVu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtQLNVChucVu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLNVChucVu.Location = new System.Drawing.Point(654, 99);
+            this.txtQLNVChucVu.Location = new System.Drawing.Point(643, 70);
             this.txtQLNVChucVu.Name = "txtQLNVChucVu";
             this.txtQLNVChucVu.Size = new System.Drawing.Size(200, 30);
             this.txtQLNVChucVu.TabIndex = 22;
@@ -517,25 +340,16 @@
             // 
             this.txtQLNVSoDT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtQLNVSoDT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLNVSoDT.Location = new System.Drawing.Point(656, 48);
+            this.txtQLNVSoDT.Location = new System.Drawing.Point(643, 26);
             this.txtQLNVSoDT.Name = "txtQLNVSoDT";
             this.txtQLNVSoDT.Size = new System.Drawing.Size(200, 30);
             this.txtQLNVSoDT.TabIndex = 21;
-            // 
-            // txtQLNVEmail
-            // 
-            this.txtQLNVEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtQLNVEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLNVEmail.Location = new System.Drawing.Point(654, 6);
-            this.txtQLNVEmail.Name = "txtQLNVEmail";
-            this.txtQLNVEmail.Size = new System.Drawing.Size(200, 30);
-            this.txtQLNVEmail.TabIndex = 20;
             // 
             // txtQLNVHoTen
             // 
             this.txtQLNVHoTen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtQLNVHoTen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLNVHoTen.Location = new System.Drawing.Point(217, 53);
+            this.txtQLNVHoTen.Location = new System.Drawing.Point(183, 69);
             this.txtQLNVHoTen.Name = "txtQLNVHoTen";
             this.txtQLNVHoTen.Size = new System.Drawing.Size(200, 30);
             this.txtQLNVHoTen.TabIndex = 16;
@@ -545,26 +359,28 @@
             this.cmb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmb.FormattingEnabled = true;
-            this.cmb.Location = new System.Drawing.Point(217, 10);
+            this.cmb.Location = new System.Drawing.Point(183, 26);
             this.cmb.Name = "cmb";
             this.cmb.Size = new System.Drawing.Size(200, 30);
             this.cmb.TabIndex = 19;
+            this.cmb.SelectedIndexChanged += new System.EventHandler(this.cmb_SelectedIndexChanged);
             // 
             // btnQLNVThem
             // 
             this.btnQLNVThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnQLNVThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btnQLNVThem.Location = new System.Drawing.Point(104, 448);
+            this.btnQLNVThem.Location = new System.Drawing.Point(110, 439);
             this.btnQLNVThem.Name = "btnQLNVThem";
             this.btnQLNVThem.Size = new System.Drawing.Size(134, 48);
             this.btnQLNVThem.TabIndex = 14;
             this.btnQLNVThem.Text = "THÊM";
             this.btnQLNVThem.UseVisualStyleBackColor = false;
+            this.btnQLNVThem.Click += new System.EventHandler(this.btnQLNVThem_Click);
             // 
             // btnQLNVXoa
             // 
             this.btnQLNVXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnQLNVXoa.Location = new System.Drawing.Point(506, 448);
+            this.btnQLNVXoa.Location = new System.Drawing.Point(467, 439);
             this.btnQLNVXoa.Name = "btnQLNVXoa";
             this.btnQLNVXoa.Size = new System.Drawing.Size(134, 48);
             this.btnQLNVXoa.TabIndex = 13;
@@ -574,55 +390,27 @@
             // btnQLNVSua
             // 
             this.btnQLNVSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnQLNVSua.Location = new System.Drawing.Point(314, 448);
+            this.btnQLNVSua.Location = new System.Drawing.Point(295, 439);
             this.btnQLNVSua.Name = "btnQLNVSua";
             this.btnQLNVSua.Size = new System.Drawing.Size(134, 48);
             this.btnQLNVSua.TabIndex = 12;
             this.btnQLNVSua.Text = "SỬA";
             this.btnQLNVSua.UseVisualStyleBackColor = false;
             // 
-            // lblDSNhanVien
-            // 
-            this.lblDSNhanVien.AutoSize = true;
-            this.lblDSNhanVien.Location = new System.Drawing.Point(55, 157);
-            this.lblDSNhanVien.Name = "lblDSNhanVien";
-            this.lblDSNhanVien.Size = new System.Drawing.Size(171, 22);
-            this.lblDSNhanVien.TabIndex = 11;
-            this.lblDSNhanVien.Text = "Danh sách nhân viên";
-            // 
-            // picQLNVAnh
-            // 
-            this.picQLNVAnh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picQLNVAnh.Location = new System.Drawing.Point(643, 197);
-            this.picQLNVAnh.Name = "picQLNVAnh";
-            this.picQLNVAnh.Size = new System.Drawing.Size(211, 245);
-            this.picQLNVAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picQLNVAnh.TabIndex = 10;
-            this.picQLNVAnh.TabStop = false;
-            // 
             // dtgvQLNVDSNhanVien
             // 
             this.dtgvQLNVDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvQLNVDSNhanVien.Location = new System.Drawing.Point(59, 197);
+            this.dtgvQLNVDSNhanVien.Location = new System.Drawing.Point(55, 188);
             this.dtgvQLNVDSNhanVien.Name = "dtgvQLNVDSNhanVien";
             this.dtgvQLNVDSNhanVien.RowHeadersWidth = 51;
             this.dtgvQLNVDSNhanVien.RowTemplate.Height = 24;
-            this.dtgvQLNVDSNhanVien.Size = new System.Drawing.Size(578, 245);
+            this.dtgvQLNVDSNhanVien.Size = new System.Drawing.Size(788, 245);
             this.dtgvQLNVDSNhanVien.TabIndex = 9;
-            // 
-            // lblGioiTinh
-            // 
-            this.lblGioiTinh.AutoSize = true;
-            this.lblGioiTinh.Location = new System.Drawing.Point(535, 152);
-            this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(102, 22);
-            this.lblGioiTinh.TabIndex = 7;
-            this.lblGioiTinh.Text = "GIỚI TÍNH";
             // 
             // lblChucVu
             // 
             this.lblChucVu.AutoSize = true;
-            this.lblChucVu.Location = new System.Drawing.Point(543, 102);
+            this.lblChucVu.Location = new System.Drawing.Point(531, 78);
             this.lblChucVu.Name = "lblChucVu";
             this.lblChucVu.Size = new System.Drawing.Size(97, 22);
             this.lblChucVu.TabIndex = 6;
@@ -631,25 +419,16 @@
             // lblSoDT
             // 
             this.lblSoDT.AutoSize = true;
-            this.lblSoDT.Location = new System.Drawing.Point(543, 56);
+            this.lblSoDT.Location = new System.Drawing.Point(531, 34);
             this.lblSoDT.Name = "lblSoDT";
             this.lblSoDT.Size = new System.Drawing.Size(66, 22);
             this.lblSoDT.TabIndex = 5;
             this.lblSoDT.Text = "SỐ ĐT";
             // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(543, 10);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(70, 22);
-            this.lblEmail.TabIndex = 4;
-            this.lblEmail.Text = "EMAIL";
-            // 
             // lblNgaySinh
             // 
             this.lblNgaySinh.AutoSize = true;
-            this.lblNgaySinh.Location = new System.Drawing.Point(62, 102);
+            this.lblNgaySinh.Location = new System.Drawing.Point(63, 122);
             this.lblNgaySinh.Name = "lblNgaySinh";
             this.lblNgaySinh.Size = new System.Drawing.Size(115, 22);
             this.lblNgaySinh.TabIndex = 2;
@@ -658,7 +437,7 @@
             // lblHoTen
             // 
             this.lblHoTen.AutoSize = true;
-            this.lblHoTen.Location = new System.Drawing.Point(71, 56);
+            this.lblHoTen.Location = new System.Drawing.Point(63, 77);
             this.lblHoTen.Name = "lblHoTen";
             this.lblHoTen.Size = new System.Drawing.Size(81, 22);
             this.lblHoTen.TabIndex = 1;
@@ -667,7 +446,7 @@
             // lblIDNhanVien
             // 
             this.lblIDNhanVien.AutoSize = true;
-            this.lblIDNhanVien.Location = new System.Drawing.Point(71, 18);
+            this.lblIDNhanVien.Location = new System.Drawing.Point(63, 34);
             this.lblIDNhanVien.Name = "lblIDNhanVien";
             this.lblIDNhanVien.Size = new System.Drawing.Size(58, 22);
             this.lblIDNhanVien.TabIndex = 0;
@@ -677,14 +456,14 @@
             // 
             this.tabNhanVien.Controls.Add(this.tpQLNV);
             this.tabNhanVien.Controls.Add(this.tpQLNL);
-            this.tabNhanVien.Controls.Add(this.tpQLKH);
             this.tabNhanVien.Controls.Add(this.tpQuanLiHDN);
             this.tabNhanVien.Controls.Add(this.tpQLHDB);
-            this.tabNhanVien.Location = new System.Drawing.Point(3, 3);
+            this.tabNhanVien.Location = new System.Drawing.Point(3, 19);
             this.tabNhanVien.Name = "tabNhanVien";
             this.tabNhanVien.SelectedIndex = 0;
-            this.tabNhanVien.Size = new System.Drawing.Size(917, 545);
+            this.tabNhanVien.Size = new System.Drawing.Size(917, 529);
             this.tabNhanVien.TabIndex = 0;
+            this.tabNhanVien.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabNhanVien_Selected);
             // 
             // tpQuanLiHDN
             // 
@@ -709,37 +488,103 @@
             this.tpQuanLiHDN.Location = new System.Drawing.Point(4, 31);
             this.tpQuanLiHDN.Name = "tpQuanLiHDN";
             this.tpQuanLiHDN.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuanLiHDN.Size = new System.Drawing.Size(909, 510);
+            this.tpQuanLiHDN.Size = new System.Drawing.Size(909, 494);
             this.tpQuanLiHDN.TabIndex = 3;
-            this.tpQuanLiHDN.Text = "QUẢN LÍ HÓA ĐƠN NHẬP";
+            this.tpQuanLiHDN.Text = "QL HĐN";
             this.tpQuanLiHDN.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // btnXoa
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(53, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 22);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "MÃ HĐN";
+            this.btnXoa.Location = new System.Drawing.Point(729, 451);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(129, 44);
+            this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "XÓA";
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // btnSua
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(53, 83);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 22);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "MÃ NV";
+            this.btnSua.Location = new System.Drawing.Point(520, 451);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(129, 44);
+            this.btnSua.TabIndex = 14;
+            this.btnSua.Text = "SỬA";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // dtgvQLHDN
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(53, 141);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 22);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "MÃ NCC";
+            this.dtgvQLHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvQLHDN.Location = new System.Drawing.Point(57, 196);
+            this.dtgvQLHDN.Name = "dtgvQLHDN";
+            this.dtgvQLHDN.RowHeadersWidth = 51;
+            this.dtgvQLHDN.RowTemplate.Height = 24;
+            this.dtgvQLHDN.Size = new System.Drawing.Size(801, 226);
+            this.dtgvQLHDN.TabIndex = 13;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(305, 451);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(129, 44);
+            this.btnThem.TabIndex = 12;
+            this.btnThem.Text = "THÊM";
+            this.btnThem.UseVisualStyleBackColor = true;
+            // 
+            // txtQLHDNTongTien
+            // 
+            this.txtQLHDNTongTien.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtQLHDNTongTien.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtQLHDNTongTien.Location = new System.Drawing.Point(658, 138);
+            this.txtQLHDNTongTien.Name = "txtQLHDNTongTien";
+            this.txtQLHDNTongTien.Size = new System.Drawing.Size(200, 30);
+            this.txtQLHDNTongTien.TabIndex = 11;
+            // 
+            // txtQLHDNSoLuong
+            // 
+            this.txtQLHDNSoLuong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtQLHDNSoLuong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtQLHDNSoLuong.Location = new System.Drawing.Point(658, 83);
+            this.txtQLHDNSoLuong.Name = "txtQLHDNSoLuong";
+            this.txtQLHDNSoLuong.Size = new System.Drawing.Size(200, 30);
+            this.txtQLHDNSoLuong.TabIndex = 10;
+            // 
+            // dtQLHDNNgayTao
+            // 
+            this.dtQLHDNNgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtQLHDNNgayTao.Location = new System.Drawing.Point(658, 24);
+            this.dtQLHDNNgayTao.Name = "dtQLHDNNgayTao";
+            this.dtQLHDNNgayTao.Size = new System.Drawing.Size(200, 30);
+            this.dtQLHDNNgayTao.TabIndex = 9;
+            // 
+            // cbQLHDNMaNCC
+            // 
+            this.cbQLHDNMaNCC.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbQLHDNMaNCC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbQLHDNMaNCC.FormattingEnabled = true;
+            this.cbQLHDNMaNCC.Location = new System.Drawing.Point(186, 141);
+            this.cbQLHDNMaNCC.Name = "cbQLHDNMaNCC";
+            this.cbQLHDNMaNCC.Size = new System.Drawing.Size(185, 30);
+            this.cbQLHDNMaNCC.TabIndex = 8;
+            // 
+            // cbQLHDNMaNV
+            // 
+            this.cbQLHDNMaNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbQLHDNMaNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbQLHDNMaNV.FormattingEnabled = true;
+            this.cbQLHDNMaNV.Location = new System.Drawing.Point(186, 79);
+            this.cbQLHDNMaNV.Name = "cbQLHDNMaNV";
+            this.cbQLHDNMaNV.Size = new System.Drawing.Size(185, 30);
+            this.cbQLHDNMaNV.TabIndex = 7;
+            // 
+            // cbQLHDNMaCT
+            // 
+            this.cbQLHDNMaCT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbQLHDNMaCT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbQLHDNMaCT.FormattingEnabled = true;
+            this.cbQLHDNMaCT.Location = new System.Drawing.Point(186, 24);
+            this.cbQLHDNMaCT.Name = "cbQLHDNMaCT";
+            this.cbQLHDNMaCT.Size = new System.Drawing.Size(185, 30);
+            this.cbQLHDNMaCT.TabIndex = 6;
             // 
             // label15
             // 
@@ -768,98 +613,32 @@
             this.label17.TabIndex = 3;
             this.label17.Text = "NGÀY TẠO HĐ";
             // 
-            // cbQLHDNMaCT
+            // label14
             // 
-            this.cbQLHDNMaCT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbQLHDNMaCT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbQLHDNMaCT.FormattingEnabled = true;
-            this.cbQLHDNMaCT.Location = new System.Drawing.Point(186, 24);
-            this.cbQLHDNMaCT.Name = "cbQLHDNMaCT";
-            this.cbQLHDNMaCT.Size = new System.Drawing.Size(185, 30);
-            this.cbQLHDNMaCT.TabIndex = 6;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(53, 141);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 22);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "MÃ NCC";
             // 
-            // cbQLHDNMaNV
+            // label13
             // 
-            this.cbQLHDNMaNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbQLHDNMaNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbQLHDNMaNV.FormattingEnabled = true;
-            this.cbQLHDNMaNV.Location = new System.Drawing.Point(186, 79);
-            this.cbQLHDNMaNV.Name = "cbQLHDNMaNV";
-            this.cbQLHDNMaNV.Size = new System.Drawing.Size(185, 30);
-            this.cbQLHDNMaNV.TabIndex = 7;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(53, 83);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(73, 22);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "MÃ NV";
             // 
-            // cbQLHDNMaNCC
+            // label12
             // 
-            this.cbQLHDNMaNCC.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbQLHDNMaNCC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbQLHDNMaNCC.FormattingEnabled = true;
-            this.cbQLHDNMaNCC.Location = new System.Drawing.Point(186, 141);
-            this.cbQLHDNMaNCC.Name = "cbQLHDNMaNCC";
-            this.cbQLHDNMaNCC.Size = new System.Drawing.Size(185, 30);
-            this.cbQLHDNMaNCC.TabIndex = 8;
-            // 
-            // dtQLHDNNgayTao
-            // 
-            this.dtQLHDNNgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtQLHDNNgayTao.Location = new System.Drawing.Point(658, 24);
-            this.dtQLHDNNgayTao.Name = "dtQLHDNNgayTao";
-            this.dtQLHDNNgayTao.Size = new System.Drawing.Size(200, 30);
-            this.dtQLHDNNgayTao.TabIndex = 9;
-            // 
-            // txtQLHDNSoLuong
-            // 
-            this.txtQLHDNSoLuong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtQLHDNSoLuong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLHDNSoLuong.Location = new System.Drawing.Point(658, 83);
-            this.txtQLHDNSoLuong.Name = "txtQLHDNSoLuong";
-            this.txtQLHDNSoLuong.Size = new System.Drawing.Size(200, 30);
-            this.txtQLHDNSoLuong.TabIndex = 10;
-            // 
-            // txtQLHDNTongTien
-            // 
-            this.txtQLHDNTongTien.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtQLHDNTongTien.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtQLHDNTongTien.Location = new System.Drawing.Point(658, 138);
-            this.txtQLHDNTongTien.Name = "txtQLHDNTongTien";
-            this.txtQLHDNTongTien.Size = new System.Drawing.Size(200, 30);
-            this.txtQLHDNTongTien.TabIndex = 11;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(305, 451);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(129, 44);
-            this.btnThem.TabIndex = 12;
-            this.btnThem.Text = "THÊM";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // dtgvQLHDN
-            // 
-            this.dtgvQLHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvQLHDN.Location = new System.Drawing.Point(57, 196);
-            this.dtgvQLHDN.Name = "dtgvQLHDN";
-            this.dtgvQLHDN.RowHeadersWidth = 51;
-            this.dtgvQLHDN.RowTemplate.Height = 24;
-            this.dtgvQLHDN.Size = new System.Drawing.Size(801, 226);
-            this.dtgvQLHDN.TabIndex = 13;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(520, 451);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(129, 44);
-            this.btnSua.TabIndex = 14;
-            this.btnSua.Text = "SỬA";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(729, 451);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(129, 44);
-            this.btnXoa.TabIndex = 15;
-            this.btnXoa.Text = "XÓA";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(53, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 22);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "MÃ HĐN";
             // 
             // tpQLHDB
             // 
@@ -882,9 +661,9 @@
             this.tpQLHDB.Location = new System.Drawing.Point(4, 31);
             this.tpQLHDB.Name = "tpQLHDB";
             this.tpQLHDB.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQLHDB.Size = new System.Drawing.Size(909, 510);
+            this.tpQLHDB.Size = new System.Drawing.Size(909, 494);
             this.tpQLHDB.TabIndex = 4;
-            this.tpQLHDB.Text = "QUẢN LÍ HÓA ĐƠN BÁN";
+            this.tpQLHDB.Text = "QL HĐB";
             this.tpQLHDB.UseVisualStyleBackColor = true;
             // 
             // btnQLHDBXoa
@@ -1015,6 +794,62 @@
             this.label23.TabIndex = 16;
             this.label23.Text = "MÃ HĐB";
             // 
+            // btnLuu1
+            // 
+            this.btnLuu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLuu1.Location = new System.Drawing.Point(675, 439);
+            this.btnLuu1.Name = "btnLuu1";
+            this.btnLuu1.Size = new System.Drawing.Size(134, 48);
+            this.btnLuu1.TabIndex = 25;
+            this.btnLuu1.Text = "LƯU";
+            this.btnLuu1.UseVisualStyleBackColor = false;
+            this.btnLuu1.Click += new System.EventHandler(this.btnLuu1_Click);
+            // 
+            // txtAnh
+            // 
+            this.txtAnh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtAnh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtAnh.Location = new System.Drawing.Point(643, 114);
+            this.txtAnh.Name = "txtAnh";
+            this.txtAnh.Size = new System.Drawing.Size(200, 30);
+            this.txtAnh.TabIndex = 27;
+            // 
+            // lblAnh
+            // 
+            this.lblAnh.AutoSize = true;
+            this.lblAnh.Location = new System.Drawing.Point(531, 122);
+            this.lblAnh.Name = "lblAnh";
+            this.lblAnh.Size = new System.Drawing.Size(52, 22);
+            this.lblAnh.TabIndex = 26;
+            this.lblAnh.Text = "ẢNH";
+            this.lblAnh.Click += new System.EventHandler(this.lblAnh_Click);
+            // 
+            // err4
+            // 
+            this.err4.ContainerControl = this;
+            // 
+            // rdbNam
+            // 
+            this.rdbNam.AutoSize = true;
+            this.rdbNam.Location = new System.Drawing.Point(643, 156);
+            this.rdbNam.Name = "rdbNam";
+            this.rdbNam.Size = new System.Drawing.Size(68, 26);
+            this.rdbNam.TabIndex = 28;
+            this.rdbNam.TabStop = true;
+            this.rdbNam.Text = "Nam";
+            this.rdbNam.UseVisualStyleBackColor = true;
+            // 
+            // rdbNu
+            // 
+            this.rdbNu.AutoSize = true;
+            this.rdbNu.Location = new System.Drawing.Point(787, 156);
+            this.rdbNu.Name = "rdbNu";
+            this.rdbNu.Size = new System.Drawing.Size(56, 26);
+            this.rdbNu.TabIndex = 29;
+            this.rdbNu.TabStop = true;
+            this.rdbNu.Text = "Nữ";
+            this.rdbNu.UseVisualStyleBackColor = true;
+            // 
             // ucQuanLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -1025,15 +860,11 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "ucQuanLi";
             this.Size = new System.Drawing.Size(923, 551);
-            this.tpQLKH.ResumeLayout(false);
-            this.tpQLKH.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvQLKH)).EndInit();
             this.tpQLNL.ResumeLayout(false);
             this.tpQLNL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLNL)).EndInit();
             this.tpQLNV.ResumeLayout(false);
             this.tpQLNV.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picQLNVAnh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLNVDSNhanVien)).EndInit();
             this.tabNhanVien.ResumeLayout(false);
             this.tpQuanLiHDN.ResumeLayout(false);
@@ -1042,27 +873,12 @@
             this.tpQLHDB.ResumeLayout(false);
             this.tpQLHDB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLHDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabPage tpQLKH;
-        private System.Windows.Forms.Button btnQLKHXoa;
-        private System.Windows.Forms.Button btnQLKHSua;
-        private System.Windows.Forms.Button btnQLKHThem;
-        private System.Windows.Forms.DataGridView dtgvQLKH;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dtQLKHNgaySinh;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtQLKHTenKH;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbQLKHMaKH;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tpQLNL;
         private System.Windows.Forms.Button btnQLNLXoa;
         private System.Windows.Forms.Button btnQLNLSua;
@@ -1081,27 +897,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tpQLNV;
-        private System.Windows.Forms.TextBox txtQLNVGioiTinh;
         private System.Windows.Forms.TextBox txtQLNVChucVu;
         private System.Windows.Forms.TextBox txtQLNVSoDT;
-        private System.Windows.Forms.TextBox txtQLNVEmail;
         private System.Windows.Forms.TextBox txtQLNVHoTen;
         private System.Windows.Forms.ComboBox cmb;
         private System.Windows.Forms.Button btnQLNVThem;
         private System.Windows.Forms.Button btnQLNVXoa;
         private System.Windows.Forms.Button btnQLNVSua;
-        private System.Windows.Forms.Label lblDSNhanVien;
-        private System.Windows.Forms.PictureBox picQLNVAnh;
         private System.Windows.Forms.DataGridView dtgvQLNVDSNhanVien;
-        private System.Windows.Forms.Label lblGioiTinh;
         private System.Windows.Forms.Label lblChucVu;
         private System.Windows.Forms.Label lblSoDT;
-        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.Label lblHoTen;
         private System.Windows.Forms.Label lblIDNhanVien;
         private System.Windows.Forms.TabControl tabNhanVien;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDoB;
         private System.Windows.Forms.TabPage tpQuanLiHDN;
         private System.Windows.Forms.TextBox txtQLHDNTongTien;
         private System.Windows.Forms.TextBox txtQLHDNSoLuong;
@@ -1134,5 +944,11 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button btnLuu1;
+        private System.Windows.Forms.TextBox txtAnh;
+        private System.Windows.Forms.Label lblAnh;
+        private System.Windows.Forms.ErrorProvider err4;
+        private System.Windows.Forms.RadioButton rdbNu;
+        private System.Windows.Forms.RadioButton rdbNam;
     }
 }

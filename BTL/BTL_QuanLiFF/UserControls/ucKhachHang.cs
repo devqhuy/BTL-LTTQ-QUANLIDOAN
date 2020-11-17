@@ -231,6 +231,7 @@ namespace BTL_QuanLiFF.UserControls
                 }
                 catch( Exception ex)
                 {
+                    System.IO.File.Delete(path + @"\Images\KhachHang\" + strImageFileName);
                     MessageBox.Show(ex.Message);
                 }
             }

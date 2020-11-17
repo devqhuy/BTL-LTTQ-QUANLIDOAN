@@ -49,7 +49,7 @@ namespace BTL_QuanLiFF
                 return;
             }
             
-            if(validateLogin() == true  & IsValidEmail(txtLoginEmail.Text) == true) 
+            if(validateLogin() == true  && IsValidEmail(txtLoginEmail.Text) == true) 
             {
                 DataTable dt = new DataTable();
                 dt = dtbase.DataReader("select email, matKhau from TAIKHOAN where" +
