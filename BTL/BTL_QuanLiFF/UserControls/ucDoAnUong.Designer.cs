@@ -32,7 +32,6 @@ namespace BTL_QuanLiFF.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDoAnUong));
             this.lblFood = new System.Windows.Forms.Label();
             this.lblFoodName = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
@@ -310,7 +309,6 @@ namespace BTL_QuanLiFF.UserControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.lblTT2);
             this.Controls.Add(this.label2);

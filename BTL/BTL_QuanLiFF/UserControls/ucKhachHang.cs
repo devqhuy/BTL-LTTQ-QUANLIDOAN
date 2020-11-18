@@ -325,26 +325,32 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Bạn có muốn xóa người dùng này không???", "Thông báo", MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                dtbase.DataChange("delete KHACHHANG where idKH = '" + cbKHMaKhachHang.Text + "'");
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    dtbase.DataChange("delete KHACHHANG where idKH = '" + cbKHMaKhachHang.Text + "'");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+                cbKHMaKhachHang.Text = "";
+                txtKHHoTen.Text = "";
+                txtKHDiaChi.Text = "";
+                txtKHSoDT.Text = "";
+                txtKHNgaySinh.Text = "";
+                picAnh.Image = null;
+
+                btnKHLuu.Enabled = false;
+                btnKHSua.Enabled = false;
+                btnKHHuy.Enabled = false;
+                btnKHXoa.Enabled = false;
+
             }
-            
-
-            cbKHMaKhachHang.Text = "";
-            txtKHHoTen.Text = "";
-            txtKHDiaChi.Text = "";
-            txtKHSoDT.Text = "";
-            txtKHNgaySinh.Text = "";
-            picAnh.Image = null;
-
-            btnKHLuu.Enabled = false;
-            btnKHSua.Enabled = false;
-            btnKHHuy.Enabled = false;
-            btnKHXoa.Enabled = false;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnQuanLi = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.panelSlide = new System.Windows.Forms.Panel();
@@ -66,7 +65,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.btnQuanLi);
-            this.panel1.Controls.Add(this.btnTimKiem);
             this.panel1.Controls.Add(this.btnKhachHang);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.panelSlide);
@@ -86,7 +84,7 @@
             this.btnQuanLi.ForeColor = System.Drawing.SystemColors.Control;
             this.btnQuanLi.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLi.Image")));
             this.btnQuanLi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnQuanLi.Location = new System.Drawing.Point(9, 484);
+            this.btnQuanLi.Location = new System.Drawing.Point(10, 401);
             this.btnQuanLi.Name = "btnQuanLi";
             this.btnQuanLi.Size = new System.Drawing.Size(199, 77);
             this.btnQuanLi.TabIndex = 6;
@@ -94,23 +92,6 @@
             this.btnQuanLi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLi.UseVisualStyleBackColor = true;
             this.btnQuanLi.Click += new System.EventHandler(this.btnQuanLi_Click);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiem.Location = new System.Drawing.Point(12, 318);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(199, 77);
-            this.btnTimKiem.TabIndex = 5;
-            this.btnTimKiem.Text = "TÌM KIẾM";
-            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnKhachHang
             // 
@@ -137,7 +118,7 @@
             this.btnThongKe.ForeColor = System.Drawing.SystemColors.Control;
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongKe.Location = new System.Drawing.Point(9, 401);
+            this.btnThongKe.Location = new System.Drawing.Point(9, 318);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(199, 77);
             this.btnThongKe.TabIndex = 3;
@@ -383,7 +364,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label lblCD;
         private System.Windows.Forms.Label lblCM;
         private System.Windows.Forms.Label lblTen;

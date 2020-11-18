@@ -36,8 +36,7 @@ namespace BTL_QuanLiFF.UserControls
         {
 
             DataTable dt = new DataTable();
-            dt = dtbase.DataReader("select idNV from NHANVIEN" +
-                " where status = 'HD'");
+            dt = dtbase.DataReader("select idNV from NHANVIEN" );
             try
             {
                 cbTKHDBTenNV.DataSource = dt;
@@ -74,7 +73,7 @@ namespace BTL_QuanLiFF.UserControls
             else if( e.TabPage == tabPage3)
             {
                 dgv3.DataSource = dtbase.DataReader("SELECT CTHOADONNHAP.idCT, NHANVIEN.hoTenNV , " +
-                "CTHOADONNHAP.idNCC, nguyenlieu.tenNL, ctnguyenlieu.soLuong, ngayTaoHD , sex , status " +
+                "CTHOADONNHAP.idNCC, nguyenlieu.tenNL, ctnguyenlieu.soLuong, ngayTaoHD , sex  " +
                 "FROM CTHOADONNHAP " +
                 "INNER JOIN CTNGUYENLIEU ON CTNGUYENLIEU.idCT = CTHOADONNHAP.idCT " +
                 "INNER JOIN NGUYENLIEU ON NGUYENLIEU.idNL = CTNGUYENLIEU.idNL " +
@@ -91,11 +90,6 @@ namespace BTL_QuanLiFF.UserControls
                 cbTKHDNTenNV.ValueMember = "tenNL";
 
             }
-
-        }
-
-        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
 
@@ -191,7 +185,7 @@ namespace BTL_QuanLiFF.UserControls
             manv = cbTKHDBTenNV.Text;
 
             dt = dtbase.DataReader("SELECT CTHOADONNHAP.idCT, NHANVIEN.hoTenNV , " +
-                "CTHOADONNHAP.idNCC, nguyenlieu.tenNL, ctnguyenlieu.soLuong, ngayTaoHD , sex , status " +
+                "CTHOADONNHAP.idNCC, nguyenlieu.tenNL, ctnguyenlieu.soLuong, ngayTaoHD , sex  " +
                 "FROM CTHOADONNHAP " +
                 "INNER JOIN CTNGUYENLIEU ON CTNGUYENLIEU.idCT = CTHOADONNHAP.idCT " +
                 "INNER JOIN NGUYENLIEU ON NGUYENLIEU.idNL = CTNGUYENLIEU.idNL " +

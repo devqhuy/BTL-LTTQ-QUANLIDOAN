@@ -85,13 +85,6 @@ namespace BTL_QuanLiFF.Forms
             ucDoAn.getID(idNV);
         }
 
-        private void btnNhanVien_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnTimKiem);
-            lblTieuDe.Text = "Mục nhân viên";
-            addControlsToPanel(ucTim);
-        }
-
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             lblTieuDe.Text = "Mục thống kê";
@@ -118,7 +111,7 @@ namespace BTL_QuanLiFF.Forms
         private void btnQuanLi_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnQuanLi);
-            lblTieuDe.Text = "Quản lí";
+            lblTieuDe.Text = "Mục quản lí";
             addControlsToPanel(ucQuan);
         }
     }
