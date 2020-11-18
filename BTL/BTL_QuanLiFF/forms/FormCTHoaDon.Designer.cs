@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCTHoaDon));
             this.grbTT = new System.Windows.Forms.GroupBox();
             this.txtTimKiemNgayBan = new System.Windows.Forms.TextBox();
             this.txtTimKiemMaKH = new System.Windows.Forms.TextBox();
@@ -327,6 +326,7 @@
             this.txtTimKiemSoLuong.Name = "txtTimKiemSoLuong";
             this.txtTimKiemSoLuong.Size = new System.Drawing.Size(145, 30);
             this.txtTimKiemSoLuong.TabIndex = 16;
+            this.txtTimKiemSoLuong.TextChanged += new System.EventHandler(this.txtTimKiemSoLuong_TextChanged);
             // 
             // label11
             // 
@@ -410,6 +410,7 @@
             this.btnTimKiemCapNhat.TabIndex = 20;
             this.btnTimKiemCapNhat.Text = "CẬP NHẬT";
             this.btnTimKiemCapNhat.UseVisualStyleBackColor = true;
+            this.btnTimKiemCapNhat.Click += new System.EventHandler(this.btnTimKiemCapNhat_Click);
             // 
             // btnTimKiemHuyDon
             // 
@@ -425,7 +426,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1189, 793);
             this.Controls.Add(this.btnTimKiemHuyDon);

@@ -106,14 +106,16 @@ namespace BTL_QuanLiFF.UserControls
         {
             int gia = Convert.ToInt32(txtDoAnUongDonGia.Text);
             int sl = Convert.ToInt32(NUM.Value);
-
-            if(sales() == 0)
+            double gg = sales(txtDoAnUongMaMon.Text);
+            if ( gg == 0)
             {
                 lblTT2.Text = Convert.ToString(gia * sl);
             }
             else
             {
-                lblTT2.Text = Convert.ToString(gia * sl * 1.0 * sales() / 100);
+                lblTT2.Text = Convert.ToString(gia * sl * 1.0 * (1-gg) );
+
+               
             }
             
         }
@@ -143,6 +145,13 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnADD_Click(object sender, EventArgs e)
         {
+            double gg = sales(txtDoAnUongMaMon.Text);
+            if (gg != 0)
+            {
+                MessageBox.Show("Sản phẩm " + txtDoAnUongMaMon.Text + "được giảm giá " + gg + "%",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             DataTable dt = new DataTable();
             bool status = this.check();
             if (cbDoAnUongMaKH.Text != "") cbDoAnUongMaKH.Enabled = false;
@@ -169,10 +178,11 @@ namespace BTL_QuanLiFF.UserControls
                 try
                 {
                     dtbase.DataChange("insert into CTHOADONBAN(idHD, idSP, soluong, giaTien, ngayTao," +
-                        "yeuCau)" +
+                        "yeuCau, KM)" +
                     "values('" + txtKHMaHD.Text + "','" + txtDoAnUongMaMon.Text + "'," + NUM.Value + "," +
                     Convert.ToInt32(lblTT2.Text) + ",'" + DateTime.Now.ToShortDateString() 
-                    + "', N'" + txtDoAnUongNote.Text + "')");
+                    + "', N'" + txtDoAnUongNote.Text + "' , " + this.sales(txtDoAnUongMaMon.Text)/100 +
+                    "')");
 
 
                     MessageBox.Show("Thêm hóa đơn thành công");
@@ -201,7 +211,7 @@ namespace BTL_QuanLiFF.UserControls
             if(dt.Rows.Count>0)
             {
                 idKH = cbDoAnUongMaKH.Text;
-                frmCTHD = new FormCTHoaDon(txtKHMaHD.Text, idKH);
+                frmCTHD = new FormCTHoaDon(txtKHMaHD.Text, idKH );
                 frmCTHD.ShowDialog();
             }
             else
@@ -259,9 +269,29 @@ namespace BTL_QuanLiFF.UserControls
             txtDoAnUongMoTa.Text = "";
         }
 
-        public int sales()
+        public double sales(string masp)
         {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt = dtbase.DataReader("select * from KHUYENMAI where idSP = '" + masp + "'");
+            }catch (Exception Ex)
+            {
+                Ex.ToString();
+            }
+           
+            if (dt.Rows.Count >0)
+            {
+                string masp1 = dt.Rows[0]["idSP"].ToString();
+                string makm1 = dt.Rows[0]["idKM"].ToString();
+                DateTime bd1 = Convert.ToDateTime(dt.Rows[0]["ngayBatDau"].ToString());
+                DateTime kt1 = Convert.ToDateTime(dt.Rows[0]["ngayKetThuc"].ToString());
+                double gg1 = Convert.ToDouble(dt.Rows[0]["giamGia"].ToString()) / 100.0;
+
+                return gg1;
+            }
             return 0;
+            
         }
     }
 }

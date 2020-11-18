@@ -110,7 +110,7 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
+            cbKHMaKhachHang.Enabled = false;
 
             btnKHLuu.Enabled = true;
             btnKHSua.Enabled = false;
@@ -237,6 +237,7 @@ namespace BTL_QuanLiFF.UserControls
             }
 
             os = "open";
+            cbKHMaKhachHang.Enabled = true;
         }
 
         private void picAnh_Click(object sender, EventArgs e)
@@ -330,7 +331,8 @@ namespace BTL_QuanLiFF.UserControls
             {
                 try
                 {
-                    dtbase.DataChange("delete KHACHHANG where idKH = '" + cbKHMaKhachHang.Text + "'");
+                    dtbase.DataChange("update KHACHHANG set status = 'KHD' where idKH = '" + cbKHMaKhachHang.Text + "'");
+                    this.LoadKH();
                 }
                 catch (Exception ex)
                 {

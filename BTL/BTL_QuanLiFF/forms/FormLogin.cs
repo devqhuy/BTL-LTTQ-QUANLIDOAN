@@ -35,7 +35,6 @@ namespace BTL_QuanLiFF
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-          
             txtLoginEmail.Focus();
         }
 

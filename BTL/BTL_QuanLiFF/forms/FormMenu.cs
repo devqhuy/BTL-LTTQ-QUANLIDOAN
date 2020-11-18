@@ -87,11 +87,20 @@ namespace BTL_QuanLiFF.Forms
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            lblTieuDe.Text = "Mục thống kê";
+            if(role == "Quản lý")
+            {
+                lblTieuDe.Text = "Mục thống kê";
 
-            moveSidePanel(btnThongKe);
-            
-            addControlsToPanel(ucDAU);   
+                moveSidePanel(btnThongKe);
+
+                addControlsToPanel(ucDAU);
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào mục này", " Thông báo ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+              
         }
 
         private void frmMenu_FormClosing_1(object sender, FormClosingEventArgs e)
@@ -110,9 +119,18 @@ namespace BTL_QuanLiFF.Forms
 
         private void btnQuanLi_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnQuanLi);
-            lblTieuDe.Text = "Mục quản lí";
-            addControlsToPanel(ucQuan);
+            if (role == "Quản lý")
+            {
+                moveSidePanel(btnQuanLi);
+                lblTieuDe.Text = "Mục quản lí";
+                addControlsToPanel(ucQuan);
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào mục này", " Thông báo ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }
