@@ -9,6 +9,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Excel = Microsoft.Office.Interop.Excel;
+
+
 namespace BTL_QuanLiFF.forms
 {
     public partial class FormCTHoaDon : Form
@@ -44,6 +47,15 @@ namespace BTL_QuanLiFF.forms
 
             txtTimKiemMaHD.Text = MaHD;
             txtTimKiemMaKH.Text = MaKH;
+
+
+            dt = dtbase.DataReader("SELECT tongTien " +
+             "FROM CTHOADONBAN " +
+             "INNER JOIN HOADONBAN ON CTHOADONBAN.idHD = HOADONBAN.idHD " +
+             "WHERE CTHOADONBAN.idHD = '" + MaHD + "'");
+
+            txtTimKiemTongTien.Text = dt.Rows[0]["tongTien"].ToString();
+
             dt = dtbase.DataReader("SELECT CTHOADONBAN.idHD, SANPHAM.idSP, SANPHAM.tenSP ,idNV, idKH, soLuong, " +
                 "SANPHAM.giaTienSP, ngayTao, giaTien , yeuCau " +
                 "FROM CTHOADONBAN " +
@@ -53,6 +65,7 @@ namespace BTL_QuanLiFF.forms
             txtTimKiemNgayBan.Text = Convert.ToDateTime(dt.Rows[0]["ngayTao"]).ToShortDateString();
 
 
+            dtgvTimKiem.DataSource = dt;
             this.edit();
 
             DataTable dt3 = dtbase.DataReader("select * from KHACHHANG where idKH = '" +
@@ -186,14 +199,6 @@ namespace BTL_QuanLiFF.forms
                               "INNER JOIN SANPHAM ON CTHOADONBAN.idSP = SANPHAM.idSP " +
                               "WHERE CTHOADONBAN.idHD = '" + MaHD + "'");
                 dtgvTimKiem.DataSource = dt;
-
-                long t = 0;
-                for (int i = 0; i < dt.Rows.Count - 2; i++)
-                {
-                    t += Convert.ToInt64(dt.Rows[i]["giaTien"].ToString());
-                }
-                txtTimKiemTongTien.Text = Convert.ToString(t);
-
                 this.edit();
 
                 dt = dtbase.DataReader("SELECT tongTien " +
@@ -202,6 +207,9 @@ namespace BTL_QuanLiFF.forms
                "WHERE CTHOADONBAN.idHD = '" + MaHD + "'");
 
                 txtTimKiemTongTien.Text = dt.Rows[0]["tongTien"].ToString();
+
+               
+
 
             }
             catch (Exception Ex)
@@ -236,6 +244,7 @@ namespace BTL_QuanLiFF.forms
                                    "INNER JOIN HOADONBAN ON CTHOADONBAN.idHD = HOADONBAN.idHD " +
                                    "INNER JOIN SANPHAM ON CTHOADONBAN.idSP = SANPHAM.idSP " +
                                    "WHERE CTHOADONBAN.idHD = '" + MaHD + "'");
+                    //this.edit();
                 }
                 catch (Exception Ex)
                 {
@@ -283,6 +292,154 @@ namespace BTL_QuanLiFF.forms
             dtgvTimKiem.Columns[7].HeaderText = "Ngày tạo";
             dtgvTimKiem.Columns[8].HeaderText = "Tổng tiền";
             dtgvTimKiem.Columns[9].HeaderText = "Yêu cầu thêm";
+        }
+
+        private void btnTimKiemInHoaDon_Click(object sender, EventArgs e)
+        {
+            if (dtgvTimKiem.Rows.Count > 0) //TH có dữ liệu để ghi
+            {
+                //Khai báo và khởi tạo các đối tượng
+                Excel.Application exApp = new Excel.Application();
+                Excel.Workbook exBook =
+                exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+                Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
+                
+
+                //Định dạng chung
+                Excel.Range hoadon = (Excel.Range)exSheet.Cells[1, 3];
+                exSheet.get_Range("C1:H1").Merge(true);
+                exSheet.Range["C1", "F1"].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                
+                hoadon.Font.Size = 20;
+                hoadon.Font.Bold = true;
+                hoadon.Font.Color = Color.FromArgb(219, 82, 13);
+                hoadon.Value = "CỬA HÀNG FAST FOOD ĐẠT HUY";
+
+                Excel.Range dcCuaHang = (Excel.Range)exSheet.Cells[2, 5];
+                exSheet.get_Range("E2:F2").Merge(true);
+                exSheet.Range["E2", "F2"].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                dcCuaHang.Font.Size = 12;
+                dcCuaHang.Font.Bold = true;
+                dcCuaHang.Font.Color = Color.Black;
+                dcCuaHang.Value = "Địa chỉ: Xxx - xXx - XXX - xXX";
+
+                Excel.Range dtCuaHang = (Excel.Range)exSheet.Cells[3, 5];
+                exSheet.get_Range("E3:F3").Merge(true);
+                exSheet.Range["E3", "F3"].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                dtCuaHang.Font.Size = 12;
+                dtCuaHang.Font.Bold = true;
+                dtCuaHang.Font.Color = Color.Black;
+                dtCuaHang.Value = "Điện thoại: xxxxxxxxxx";
+
+                Excel.Range header = (Excel.Range)exSheet.Cells[6, 2];
+                exSheet.get_Range("B6:G6").Merge(true);
+                header.Font.Size = 20;
+                header.Font.Bold = true;
+                header.Font.Color = Color.FromArgb(255, 218, 135);
+                header.Value = "DANH SÁCH CÁC MẶT HÀNG";
+                //Định dạng tiêu đề bảng
+
+                exSheet.get_Range("A7:G7").Font.Bold = true;
+                exSheet.get_Range("A7:G7").HorizontalAlignment =
+                        Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                exSheet.get_Range("A8").Value = "STT";
+
+                exSheet.get_Range("B8").Value = "Mã HĐ "; 
+                exSheet.get_Range("B8").ColumnWidth = 20;
+
+                exSheet.get_Range("C8").Value = "Mã NV ";
+                exSheet.get_Range("C8").ColumnWidth = 10;
+                exSheet.get_Range("D8").Value = "Tên NV ";
+                exSheet.get_Range("D8").ColumnWidth = 20;
+
+                exSheet.get_Range("E8").Value = "Mã KH";
+                exSheet.get_Range("E8").ColumnWidth = 10;
+                exSheet.get_Range("F8").Value = "Tên KH";
+                exSheet.get_Range("F8").ColumnWidth = 20;
+
+                exSheet.get_Range("G8").Value = "Mã SP";
+                exSheet.get_Range("G8").ColumnWidth = 10;
+                exSheet.get_Range("H8").Value = "Tên SP";
+                exSheet.get_Range("H8").ColumnWidth = 20;
+
+                exSheet.get_Range("I8").Value = "Ngày tạo";
+                exSheet.get_Range("I8").ColumnWidth = 15;
+
+                exSheet.get_Range("J8").Value = "Đơn giá";
+                exSheet.get_Range("J8").ColumnWidth = 10;
+                exSheet.get_Range("K8").Value = "Số lượng";
+                exSheet.get_Range("K8").ColumnWidth = 10;
+
+                exSheet.get_Range("M8").Value = "Tổng tiền";
+                exSheet.get_Range("M8").ColumnWidth = 20;
+
+                exSheet.get_Range("L8").Value = "Yêu cầu thêm";
+                exSheet.get_Range("L8").ColumnWidth = 12;
+
+                //In dữ liệu
+                DataTable dt = dtbase.DataReader("select cthoadonban.idHD, " +
+                    "nhanvien.idNV, nhanvien.hoTenNV," +
+                    "khachhang.idKH, khachhang.hoTenKH, " +
+                    "sanpham.idsp, sanpham.tensp," +
+                    "sanpham.giaTienSP, cthoadonban.soLuong, " +
+                    "cthoadonban.giaTien , " +
+                    "cthoadonban.yeuCau , cthoadonban.ngayTao from cthoadonban " +
+                    "inner join hoadonban on cthoadonban.idhd= hoadonban.idhd " +
+                    "inner join sanpham on cthoadonban.idsp = sanpham.idsp " +
+                    "inner join khachhang on khachhang.idKH = hoadonban.idKH " +
+                    "inner join nhanvien on nhanvien.idNV = hoadonban.idNV " +
+                    "where cthoadonban.idHD = '" + txtTimKiemMaHD.Text +"'");
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    exSheet.get_Range("A" + (i + 9).ToString() + ":M" + (i + 9).ToString()).Font.Bold = false;
+                    exSheet.get_Range("A" + (i + 9).ToString()).Value = (i + 1).ToString();
+
+                    exSheet.get_Range("B" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["idHD"].ToString();
+                    exSheet.get_Range("C" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["idNV"].ToString();
+                    exSheet.get_Range("D" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["hoTenNV"].ToString();
+                    exSheet.get_Range("E" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["idKH"].ToString();
+                    exSheet.get_Range("F" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["hoTenKH"].ToString();
+
+                    exSheet.get_Range("G" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["idsp"].ToString();
+                    exSheet.get_Range("H" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["tenSP"].ToString();
+                    exSheet.get_Range("I" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["ngayTao"].ToString();
+                    exSheet.get_Range("J" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["giaTienSP"].ToString();
+                    exSheet.get_Range("K" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["soLuong"].ToString();
+                    exSheet.get_Range("M" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["giaTien"].ToString();
+                    exSheet.get_Range("L" + (i + 9).ToString()).Value =
+                                dt.Rows[i]["yeuCau"].ToString();
+                 
+
+                }
+                exSheet.Name = "Hang";
+                exBook.Activate(); //Kích hoạt file Excel
+                                   //Thiết lập các thuộc tính của SaveFileDialog
+                                   
+                dlgSave.Filter = "Excel Document(*.xls)|*.xls |Word Document(*.doc)| *.doc | All files(*.*) | *.* ";
+                dlgSave.FilterIndex = 1;
+                dlgSave.AddExtension = true;
+                dlgSave.DefaultExt = ".xlsx";
+                if (dlgSave.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    exBook.SaveAs(dlgSave.FileName.ToString());//Lưu file Excel
+                exApp.Quit();//Thoát khỏi ứng dụng
+
+                this.Close();
+                                   
+            }
+            else
+                MessageBox.Show("Không có danh sách hàng để in");
+
         }
     }
 }

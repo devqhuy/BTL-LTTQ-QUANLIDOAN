@@ -63,6 +63,7 @@
             this.btnTimKiemXoa = new System.Windows.Forms.Button();
             this.btnTimKiemCapNhat = new System.Windows.Forms.Button();
             this.btnTimKiemHuyDon = new System.Windows.Forms.Button();
+            this.dlgSave = new System.Windows.Forms.SaveFileDialog();
             this.grbTT.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTimKiem)).BeginInit();
@@ -381,6 +382,7 @@
             this.btnTimKiemInHoaDon.TabIndex = 17;
             this.btnTimKiemInHoaDon.Text = "IN HÓA ĐƠN";
             this.btnTimKiemInHoaDon.UseVisualStyleBackColor = true;
+            this.btnTimKiemInHoaDon.Click += new System.EventHandler(this.btnTimKiemInHoaDon_Click);
             // 
             // btnTimKiemThoat
             // 
@@ -493,5 +495,6 @@
         private System.Windows.Forms.Button btnTimKiemHuyDon;
         private System.Windows.Forms.TextBox txtTimKiemKhuyenMai;
         private System.Windows.Forms.Label lblKM;
+        private System.Windows.Forms.SaveFileDialog dlgSave;
     }
 }

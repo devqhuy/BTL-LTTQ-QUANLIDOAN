@@ -19,6 +19,7 @@ namespace BTL_QuanLiFF.UserControls
         public string path2 = "";
         string strImageFileName;
         String gt = "";
+        String idKM = "";
 
         public ucQuanLi()
         {
@@ -29,7 +30,6 @@ namespace BTL_QuanLiFF.UserControls
         {
             if (1==1)
             {
-
                 dtgvQLNVDSNhanVien.DataSource = dtbase.DataReader("select * from NHANVIEN");
 
                 dtgvQLNVDSNhanVien.Columns[0].Width = 100;
@@ -54,7 +54,7 @@ namespace BTL_QuanLiFF.UserControls
                 btnLuu1.Enabled = false;
                 btnHuy.Enabled = false;
 
-                this.customDgv();
+                this.customDgv1();
 
             }
         }
@@ -105,6 +105,7 @@ namespace BTL_QuanLiFF.UserControls
 
             btnQLNVSua.Enabled = false;
             btnQLNVXoa.Enabled = false;
+            btnHuy.Enabled = true;
 
             if (rdbNam.Checked == true) gt = "Nam";
             else gt = "Nữ";
@@ -203,19 +204,6 @@ namespace BTL_QuanLiFF.UserControls
 
         }
 
-        public bool IsValidEmail(string email)
-        {
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
 
         private void btnLuu1_Click(object sender, EventArgs e)
         {
@@ -264,7 +252,7 @@ namespace BTL_QuanLiFF.UserControls
                 }
             }
             dtgvQLNVDSNhanVien.DataSource = dtbase.DataReader("select * from nhanvien");
-            this.customDgv();
+            this.customDgv1();
 
             cmb.DataSource = dtbase.DataReader("select idNV from NHANVIEN");
             cmb.DisplayMember = "idNV";
@@ -319,9 +307,14 @@ namespace BTL_QuanLiFF.UserControls
             cmb.Text = dtgvQLNVDSNhanVien.CurrentRow.Cells[0].Value.ToString();
         }
 
-        public void customDgv()
+        public void customDgv1()
         {
             dtgvQLNVDSNhanVien.Columns["sex"].HeaderText = "Giới tính";
+        }
+
+        public void customDgv2()
+        {
+
         }
 
         private void btnQLNVSua_Click(object sender, EventArgs e)
@@ -355,7 +348,7 @@ namespace BTL_QuanLiFF.UserControls
                 MessageBox.Show(Ex.Message, "Lỗi");
             }
             dtgvQLNVDSNhanVien.DataSource = dtbase.DataReader("select * from nhanvien");
-            this.customDgv();
+            this.customDgv1();
 
             cmb.DataSource = dtbase.DataReader("select idNV from NHANVIEN");
             cmb.DisplayMember = "idNV";
@@ -385,7 +378,7 @@ namespace BTL_QuanLiFF.UserControls
                      MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             cmb.DataSource = dtbase.DataReader("Select * from NhanVien");
-            this.customDgv();
+            this.customDgv1();
 
             txtQLNVHoTen.Enabled = false;
             txtDoB.Enabled = false;
@@ -407,6 +400,197 @@ namespace BTL_QuanLiFF.UserControls
             txtAnh.Text = "";
         }
 
-       
+        private void tabNhanVien_Selected(object sender, TabControlEventArgs e)
+        {
+            if(e.TabPage == tpQLNV)
+            {
+                dtgvQLNVDSNhanVien.DataSource = dtbase.DataReader("select * from NHANVIEN");
+
+                dtgvQLNVDSNhanVien.Columns[0].Width = 100;
+                dtgvQLNVDSNhanVien.Columns[1].Width = 200;
+
+                cmb.Enabled = true;
+                txtQLNVHoTen.Enabled = false;
+                txtDoB.Enabled = false;
+
+                txtQLNVSoDT.Enabled = false;
+                txtQLNVChucVu.Enabled = false;
+                txtAnh.Enabled = false;
+                rdbNam.Checked = true;
+
+                cmb.DataSource = dtbase.DataReader("select idNV from NHANVIEN");
+                cmb.DisplayMember = "idNV";
+                cmb.ValueMember = "idNV";
+
+                btnQLNVSua.Enabled = false;
+                btnQLNVXoa.Enabled = false;
+                btnLuu1.Enabled = false;
+                btnHuy.Enabled = false;
+
+                this.customDgv1();
+            }
+
+            if(e.TabPage == tpKM)
+            {
+                this.Load2();
+            }
+        }
+
+        public void Load2()
+        {
+            try
+            {
+                dgv2.DataSource = dtbase.DataReader("select * from KHUYENMAI");
+
+                cmbSP2.DataSource = dtbase.DataReader("select idSP from SANPHAM");
+                cmbSP2.DisplayMember = "idSP";
+                cmbSP2.ValueMember = "idSP";
+
+                cmbSP2.Enabled = false;
+                txtGG.Enabled = false;
+                dtpFrom2.Enabled = false;
+                dtpTo2.Enabled = false;
+
+                btnLuu2.Enabled = false;
+                btnSua2.Enabled = false;
+                btnHuy2.Enabled = false;
+
+            }
+            catch(Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+            
+
+            this.customDgv2();
+        }
+
+        private void btnThem2_Click(object sender, EventArgs e)
+        {
+            idKM = cm.AutoCode("KHUYENMAI", "idKM", "KM0");
+            
+            cmbSP2.Enabled = true;
+            txtGG.Enabled = true;
+            dtpFrom2.Enabled = true;
+            dtpTo2.Enabled = true;
+
+            btnLuu2.Enabled = true;
+            btnSua2.Enabled = false;
+            btnHuy2.Enabled = true;
+            btnThem2.Enabled = true;
+        }
+
+        public bool check2()
+        {
+            if (txtGG.Text.Trim() == "")
+            {
+                err4.SetError(txtGG, "Trường này là bắt buộc");
+                return false;
+            }
+            else
+            {
+                try
+                {
+                    int gg2 = Convert.ToInt32(txtGG.Text);
+                    err4.Clear();
+                    
+
+                    if(gg2 < 0 || gg2 > 100)
+                    {
+                        err4.SetError(txtGG, "Giam gia tu 0 - 100 %");
+                        return false;
+                    }
+                    return true;
+
+                }catch(Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message, "Loi");
+                    return false;
+                }
+            }
+        }
+
+        private void btnLuu2_Click(object sender, EventArgs e)
+        {
+
+            if (check2() == true && btnThem2.Enabled == true)
+            {
+               
+                try
+                {
+                    int gg2 = Convert.ToInt32(txtGG.Text);
+
+                    dtbase.DataChange("insert into KHUYENMAI values('" + idKM + "','" + cmbSP2.Text + "','" +
+                        dtpFrom2.Text + "','" + dtpTo2.Text + "', " + gg2 + ")");
+
+                    MessageBox.Show("Thêm khuyến mại thành công", " Thông báo ",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Load2();
+
+                    idKM = "";
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void btnHuy2_Click(object sender, EventArgs e)
+        {
+            this.Load2();
+            idKM = "";
+        }
+
+        private void dgv2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cmbSP2.Enabled = true;
+            txtGG.Enabled = true;
+            dtpFrom2.Enabled = true;
+            dtpTo2.Enabled = true;
+
+            try
+            {
+                idKM = dgv2.CurrentRow.Cells[0].Value.ToString();
+                cmbSP2.Text = dgv2.CurrentRow.Cells[1].Value.ToString();
+                txtGG.Text = dgv2.CurrentRow.Cells[4].Value.ToString();
+                dtpFrom2.Text = dgv2.CurrentRow.Cells[2].Value.ToString();
+                dtpTo2.Text = dgv2.CurrentRow.Cells[3].Value.ToString();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+
+            btnLuu1.Enabled = true;
+            btnSua2.Enabled = true;
+            btnThem2.Enabled = true;
+        }
+
+        private void btnSua2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string fr2 = dtpFrom2.Value.ToShortDateString();
+                string t2 = dtpTo2.Value.ToShortDateString();
+
+                MessageBox.Show(" fr: " + fr2 + " to: " + t2);
+
+                dtbase.DataChange("update KHUYENMAI set idSP = '" + cmbSP2.Text + "', ngayBatDau = '" + 
+                    (fr2) + "', ngayKetThuc = '" +
+                    (t2) + "',  giamGia = " + Convert.ToInt32(txtGG.Text) + 
+                    " where idKM = '" + idKM + "'");
+
+                MessageBox.Show("Sửa khuyến mại thành công", " Thông báo ",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Load2();
+
+                idKM = "";
+            }catch(Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "Lỗi");
+            }
+        }
     }
 }

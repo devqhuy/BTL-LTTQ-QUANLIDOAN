@@ -118,8 +118,8 @@ namespace BTL_QuanLiFF.Forms
         }
 
         private void btnQuanLi_Click(object sender, EventArgs e)
-        {
-            if (role == "Quản lý")
+        {   
+           if (role == "Quản lý")
             {
                 moveSidePanel(btnQuanLi);
                 lblTieuDe.Text = "Mục quản lí";

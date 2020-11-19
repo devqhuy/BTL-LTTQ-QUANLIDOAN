@@ -164,9 +164,9 @@ namespace BTL_QuanLiFF.UserControls
                 {
                     try
                     {
-                        dtbase.DataChange("insert into HOADONBAN values ('" + txtKHMaHD.Text +
+                        dtbase.DataChange("insert into HOADONBAN (idHD, idNV, idKH , tongTien ) values ('" + txtKHMaHD.Text +
                         "','" + idNV + "','" + this.cbDoAnUongMaKH.GetItemText(this.cbDoAnUongMaKH.SelectedValue) 
-                        + "'," + 1 + ")");
+                        + "',  0 )");
                     }catch(Exception ex)
                     {
                         MessageBox.Show(ex.Message, "Exception Message", MessageBoxButtons.OK,
@@ -182,7 +182,7 @@ namespace BTL_QuanLiFF.UserControls
                     "values('" + txtKHMaHD.Text + "','" + txtDoAnUongMaMon.Text + "'," + NUM.Value + "," +
                     Convert.ToInt32(lblTT2.Text) + ",'" + DateTime.Now.ToShortDateString() 
                     + "', N'" + txtDoAnUongNote.Text + "' , " + this.sales(txtDoAnUongMaMon.Text)/100 +
-                    "')");
+                    " )");
 
 
                     MessageBox.Show("Thêm hóa đơn thành công");

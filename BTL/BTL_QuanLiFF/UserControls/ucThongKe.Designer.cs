@@ -36,7 +36,6 @@
             this.rdb12 = new System.Windows.Forms.RadioButton();
             this.rdb11 = new System.Windows.Forms.RadioButton();
             this.lblSX1 = new System.Windows.Forms.Label();
-            this.btnTKBestSellInBaoCao = new System.Windows.Forms.Button();
             this.lblTo1 = new System.Windows.Forms.Label();
             this.lblFrom1 = new System.Windows.Forms.Label();
             this.btnTKBestSellXem = new System.Windows.Forms.Button();
@@ -46,7 +45,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgv2 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnTKHDBNInBaoCao = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTKHDBTenNV = new System.Windows.Forms.ComboBox();
             this.rdb22 = new System.Windows.Forms.RadioButton();
@@ -61,7 +59,6 @@
             this.pnBOTTOM3 = new System.Windows.Forms.Panel();
             this.dgv3 = new System.Windows.Forms.DataGridView();
             this.pnTOP3 = new System.Windows.Forms.Panel();
-            this.btnTKHDNInBaoCao = new System.Windows.Forms.Button();
             this.lblNL3 = new System.Windows.Forms.Label();
             this.cbTKHDNTenNV = new System.Windows.Forms.ComboBox();
             this.rdb32 = new System.Windows.Forms.RadioButton();
@@ -137,7 +134,6 @@
             this.panel1.Controls.Add(this.rdb12);
             this.panel1.Controls.Add(this.rdb11);
             this.panel1.Controls.Add(this.lblSX1);
-            this.panel1.Controls.Add(this.btnTKBestSellInBaoCao);
             this.panel1.Controls.Add(this.lblTo1);
             this.panel1.Controls.Add(this.lblFrom1);
             this.panel1.Controls.Add(this.btnTKBestSellXem);
@@ -182,16 +178,6 @@
             this.lblSX1.Size = new System.Drawing.Size(215, 22);
             this.lblSX1.TabIndex = 25;
             this.lblSX1.Text = "SẮP XẾP ( SỐ LƯỢNG):";
-            // 
-            // btnTKBestSellInBaoCao
-            // 
-            this.btnTKBestSellInBaoCao.Location = new System.Drawing.Point(644, 81);
-            this.btnTKBestSellInBaoCao.Name = "btnTKBestSellInBaoCao";
-            this.btnTKBestSellInBaoCao.Size = new System.Drawing.Size(160, 32);
-            this.btnTKBestSellInBaoCao.TabIndex = 19;
-            this.btnTKBestSellInBaoCao.Text = "IN BÁO CÁO";
-            this.btnTKBestSellInBaoCao.UseVisualStyleBackColor = true;
-            this.btnTKBestSellInBaoCao.Click += new System.EventHandler(this.btnIN1_Click);
             // 
             // lblTo1
             // 
@@ -275,7 +261,6 @@
             // panel5
             // 
             this.panel5.AutoScroll = true;
-            this.panel5.Controls.Add(this.btnTKHDBNInBaoCao);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.cbTKHDBTenNV);
             this.panel5.Controls.Add(this.rdb22);
@@ -291,16 +276,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(876, 119);
             this.panel5.TabIndex = 0;
-            // 
-            // btnTKHDBNInBaoCao
-            // 
-            this.btnTKHDBNInBaoCao.Location = new System.Drawing.Point(637, 66);
-            this.btnTKHDBNInBaoCao.Name = "btnTKHDBNInBaoCao";
-            this.btnTKHDBNInBaoCao.Size = new System.Drawing.Size(191, 33);
-            this.btnTKHDBNInBaoCao.TabIndex = 27;
-            this.btnTKHDBNInBaoCao.Text = "IN BÁO CÁO";
-            this.btnTKHDBNInBaoCao.UseVisualStyleBackColor = true;
-            this.btnTKHDBNInBaoCao.Click += new System.EventHandler(this.btnIN2_Click);
             // 
             // label1
             // 
@@ -436,7 +411,6 @@
             // pnTOP3
             // 
             this.pnTOP3.AutoScroll = true;
-            this.pnTOP3.Controls.Add(this.btnTKHDNInBaoCao);
             this.pnTOP3.Controls.Add(this.lblNL3);
             this.pnTOP3.Controls.Add(this.cbTKHDNTenNV);
             this.pnTOP3.Controls.Add(this.rdb32);
@@ -452,15 +426,6 @@
             this.pnTOP3.Name = "pnTOP3";
             this.pnTOP3.Size = new System.Drawing.Size(870, 120);
             this.pnTOP3.TabIndex = 0;
-            // 
-            // btnTKHDNInBaoCao
-            // 
-            this.btnTKHDNInBaoCao.Location = new System.Drawing.Point(630, 69);
-            this.btnTKHDNInBaoCao.Name = "btnTKHDNInBaoCao";
-            this.btnTKHDNInBaoCao.Size = new System.Drawing.Size(191, 35);
-            this.btnTKHDNInBaoCao.TabIndex = 20;
-            this.btnTKHDNInBaoCao.Text = "IN BÁO CÁO";
-            this.btnTKHDNInBaoCao.UseVisualStyleBackColor = true;
             // 
             // lblNL3
             // 
@@ -631,11 +596,8 @@
         private System.Windows.Forms.Button btnTKHDBXem;
         private System.Windows.Forms.DateTimePicker dtpTKHDBTo;
         private System.Windows.Forms.DateTimePicker dtpTKHDBFrom;
-        private System.Windows.Forms.Button btnTKBestSellInBaoCao;
         private System.Windows.Forms.RadioButton rdb12;
         private System.Windows.Forms.RadioButton rdb11;
         private System.Windows.Forms.Label lblSX1;
-        private System.Windows.Forms.Button btnTKHDBNInBaoCao;
-        private System.Windows.Forms.Button btnTKHDNInBaoCao;
     }
 }
