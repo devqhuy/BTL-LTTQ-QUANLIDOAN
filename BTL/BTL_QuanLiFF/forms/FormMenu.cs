@@ -124,12 +124,18 @@ namespace BTL_QuanLiFF.Forms
                 moveSidePanel(btnQuanLi);
                 lblTieuDe.Text = "Mục quản lí";
                 addControlsToPanel(ucQuan);
+                ucQuan.getNV(idNV);
             }
             else
             {
                 MessageBox.Show("Bạn không có quyền truy cập vào mục này", " Thông báo ",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

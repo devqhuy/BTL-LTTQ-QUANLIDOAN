@@ -20,6 +20,11 @@ namespace BTL_QuanLiFF.UserControls
         string strImageFileName;
         String gt = "";
         String idKM = "";
+        string idCT = "";
+        string dv = "";
+        string nv3 = "";
+        int dg3 = 0;
+        DateTime date3 ;
 
         public ucQuanLi()
         {
@@ -434,6 +439,11 @@ namespace BTL_QuanLiFF.UserControls
             {
                 this.Load2();
             }
+
+            if(e.TabPage == QLHDN)
+            {
+                this.Load3();
+            }
         }
 
         public void Load2()
@@ -539,8 +549,10 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnHuy2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Thao tác cuối bạn thực hiện không được lưu", " Thông báo ",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Load2();
-            idKM = "";
+           
         }
 
         private void dgv2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -591,6 +603,266 @@ namespace BTL_QuanLiFF.UserControls
             {
                 MessageBox.Show(Ex.Message, "Lỗi");
             }
+        }
+        public void Load3()
+        {
+            dgv3.DataSource = dtbase.DataReader("SELECT CTHOADONNHAP.idCT , NHACUNGCAP.IDNCC , " +
+                "NGUYENLIEU.tenNL, " +
+                "CTNGUYENLIEU.soLuong , CTNGUYENLIEU.DONGIA , CTNGUYENLIEU.donVi , " +
+                "CTHOADONNHAP.ngayTaoHD ,CTHOADONNHAP.TONGTIEN " +
+                "FROM CTHOADONNHAP " +
+                "INNER JOIN CTNGUYENLIEU ON CTNGUYENLIEU.idCT = CTHOADONNHAP.idCT " +
+                "INNER JOIN NHACUNGCAP ON NHACUNGCAP.idNCC = CTHOADONNHAP.idNCC " +
+                "INNER JOIN NGUYENLIEU ON NGUYENLIEU.idNL = CTNGUYENLIEU.idNL " +
+                "INNER JOIN NHANVIEN ON NHANVIEN.idNV = CTHOADONNHAP.idNV");
+
+            cmbCC.DataSource = dtbase.DataReader("select idNCC from NHACUNGCAP ");
+            cmbCC.DisplayMember = "idNCC";
+            cmbCC.ValueMember = "idNCC";
+
+            cmbNL.DataSource = dtbase.DataReader("select idNL from nguyenlieu ");
+            cmbNL.DisplayMember = "idNL";
+            cmbNL.ValueMember = "idNL";
+
+            cmbCC.Enabled = false;
+            cmbNL.Enabled = false;
+            txtNL.Enabled = false;
+            NUM3.Enabled = false;
+            txtDG.Enabled = false;
+            txtTT3.Enabled = false;
+
+            btnThem3.Enabled = true;
+            btnLuu3.Enabled = false;
+            //btnXoa3.Enabled = false;
+            btnSua3.Enabled = false;
+            btnHuy.Enabled = false;
+
+            this.edit3();
+        }
+
+        public void  edit3()
+        {
+            dgv3.Columns["TONGTIEN"].HeaderText = "Tổng tiền";
+        }
+
+        public void LoadNL3(string mnl)
+        {
+            DataTable dt = dtbase.DataReader("select * from nguyenlieu where idNL = '" + mnl + "'");
+
+            if(dt.Rows.Count >0)
+            {
+                txtNL.Text = dt.Rows[0]["TenNL"].ToString();
+
+            }
+
+        }
+
+        private void dgv3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnThem3.Enabled = true;
+            btnLuu3.Enabled = true;
+            //btnXoa3.Enabled = false;
+            btnSua3.Enabled = true;
+            btnHuy.Enabled = true;
+
+            try
+            {
+                idCT = dgv3.CurrentRow.Cells[0].Value.ToString();
+                cmbCC.Text = dgv3.CurrentRow.Cells[1].Value.ToString();
+                txtNL.Text = dgv3.CurrentRow.Cells[2].Value.ToString();
+                NUM3.Value = Convert.ToInt32(dgv3.CurrentRow.Cells[3].Value.ToString());
+                txtDG.Text = dgv3.CurrentRow.Cells[4].Value.ToString();
+                dv = dgv3.CurrentRow.Cells[5].Value.ToString();
+                date3 = Convert.ToDateTime(dgv3.CurrentRow.Cells[6].Value.ToString());
+                txtTT3.Text = dgv3.CurrentRow.Cells[7].Value.ToString();
+
+                DataTable dt = dtbase.DataReader("select * from nguyenlieu where tenNL = N'" + txtNL.Text + "'");
+            }catch ( Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "Lỗi");
+            }
+        }
+        private void btnHuy3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thao tác cuối bạn thực hiện không được lưu", " Thông báo ",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Load3();
+        }
+
+        private void btnLuu3_Click(object sender, EventArgs e)
+        {
+            if(check3()== true && btnThem3.Enabled == true)
+            {
+                try
+                {
+                    dtbase.DataChange("insert into ctnguyenlieu " +
+                        "values('" + idCT + "', '" + cmbNL.Text +
+                        "' , " + NUM3.Value +
+                        ",   N'Sử dụng' , " +
+                        "'Túi' , " + txtDG.Text + " , N'Không có ghi chú') ");
+
+                    string dateeeee = DateTime.Now.ToShortDateString();
+                    dtbase.DataChange("insert into cthoadonnhap values ('" + idCT + "','" +
+                        nv3 + "','" + cmbCC.Text + "','" + dateeeee + "'," + txtTT3.Text + ")");
+
+                    MessageBox.Show("Thêm hóa đơn nhập thành công", " Thông báo ",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch(Exception Ex)
+                {
+                    dtbase.DataChange("delete ctnguyenlieu where idCT = '" + idCT + "'");
+                    dtbase.DataChange("delete cthoadonnhap where idCT = '" + idCT + "'");
+                    MessageBox.Show(Ex.Message, "Lỗi");
+                    return;
+                }
+            }
+            if(check3() == true && btnSua3.Enabled ==true)
+            {
+                try
+                {
+                    string dateeeee = DateTime.Now.ToShortDateString();
+                    dtbase.DataChange("update ctnguyenlieu set idNL = '" + txtNL.Text + "', soLuong = " +
+                        Convert.ToInt32(NUM3.Value) + " ', N'Túi' , " +
+                        txtDG.Text + "', N'Không có ghi chú' where idCT = '" + idCT + "'");
+
+                    dtbase.DataChange("update cthoadonnhap set idNV ='" + nv3 + "' , idNCC = '" +
+                        cmbCC.Text + "' , ngayTaoHD = '" + dateeeee + "', TONGTIEN = '" + txtTT3.Text + "'" +
+                        " where idCT = '" + idCT + "'");
+
+                    MessageBox.Show("Sửa hóa đơn nhập thành công", " Thông báo ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch(Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message, "Lỗi");
+                   
+                    return;
+                }
+            }
+            this.Load3();
+        }
+
+        public bool check3()
+        {
+            if (cmbCC.Text.Trim() == "")
+            {
+                err4.SetError(cmbCC, "Trường này là bắt buộc");
+                return false;
+            }
+            else
+            {
+                err4.Clear();
+            }
+            if (cmbNL.Text.Trim() == "")
+            {
+                err4.SetError(cmbNL, "Trường này là bắt buộc");
+                return false;
+            }
+            else
+            {
+                err4.Clear();
+            }
+            if(NUM3.Value <= 0 )
+            {
+                err4.SetError(NUM3, "Giá trị không hợp lệ");
+                return false;
+            }
+            else
+            {
+                err4.Clear();
+            }
+
+            if(txtDG.Text.Trim() == "" )
+            {
+                err4.SetError(txtDG, "Trường này là bắt buộc");
+                
+            }
+            else
+            {
+                err4.Clear();
+                try
+                {
+                    dg3 = Convert.ToInt32(txtDG.Text);
+                    if (dg3 < 0)
+                    {
+                        err4.SetError(txtDG, "Đơn giá phải lớn hơn 0 ");
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message, "Lỗi");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void btnThem3_Click(object sender, EventArgs e)
+        {
+            idCT = cm.AutoCode("cthoadonnhap", "idCT", "CT0");
+
+            cmbCC.Enabled = true;
+            cmbNL.Enabled = true;
+            txtNL.Enabled = false;
+            NUM3.Enabled = true;
+            txtDG.Enabled = true;
+            txtTT3.Enabled = false;
+
+            btnThem3.Enabled = true;
+            btnLuu3.Enabled = true;
+            //btnXoa3.Enabled = false;
+            btnSua3.Enabled = false;
+            btnHuy3.Enabled = true;
+        }
+
+        public void getNV(string manv)
+        {
+            nv3 =  manv;
+        }
+
+        private void NUM3_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dg3 = Convert.ToInt32(txtDG.Text);
+                int sl3 = Convert.ToInt32(NUM3.Value);
+
+                txtTT3.Text = Convert.ToString(dg3 * sl3);
+
+            }catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "Lỗi");
+            }
+        }
+
+        private void btnSua3_Click(object sender, EventArgs e)
+        {
+            cmbCC.Enabled = true;
+            cmbNL.Enabled = true;
+            txtNL.Enabled = false;
+            NUM3.Enabled = true;
+            txtDG.Enabled = true;
+            txtTT3.Enabled = false;
+
+            btnThem3.Enabled = true;
+            btnLuu3.Enabled = false;
+            //btnXoa3.Enabled = false;
+            btnSua3.Enabled = false;
+            btnHuy.Enabled = false;
+
+            idCT = dgv3.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void cmbNL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadNL3(cmbNL.Text);
+        }
+
+        private void btnHuy3_Click_1(object sender, EventArgs e)
+        {
+            this.Load3();
         }
     }
 }
