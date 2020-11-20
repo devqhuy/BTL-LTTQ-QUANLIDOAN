@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucThongKe));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -201,9 +202,11 @@
             // 
             // btnTKBestSellXem
             // 
+            this.btnTKBestSellXem.Image = ((System.Drawing.Image)(resources.GetObject("btnTKBestSellXem.Image")));
+            this.btnTKBestSellXem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTKBestSellXem.Location = new System.Drawing.Point(644, 24);
             this.btnTKBestSellXem.Name = "btnTKBestSellXem";
-            this.btnTKBestSellXem.Size = new System.Drawing.Size(160, 32);
+            this.btnTKBestSellXem.Size = new System.Drawing.Size(160, 39);
             this.btnTKBestSellXem.TabIndex = 2;
             this.btnTKBestSellXem.Text = "XEM";
             this.btnTKBestSellXem.UseVisualStyleBackColor = true;
@@ -350,9 +353,11 @@
             // 
             // btnTKHDBXem
             // 
+            this.btnTKHDBXem.Image = ((System.Drawing.Image)(resources.GetObject("btnTKHDBXem.Image")));
+            this.btnTKHDBXem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTKHDBXem.Location = new System.Drawing.Point(637, 18);
             this.btnTKHDBXem.Name = "btnTKHDBXem";
-            this.btnTKHDBXem.Size = new System.Drawing.Size(191, 35);
+            this.btnTKHDBXem.Size = new System.Drawing.Size(191, 42);
             this.btnTKHDBXem.TabIndex = 17;
             this.btnTKHDBXem.Text = "XEM";
             this.btnTKHDBXem.UseVisualStyleBackColor = true;
@@ -502,9 +507,11 @@
             // 
             // btnTKHDNXem
             // 
+            this.btnTKHDNXem.Image = ((System.Drawing.Image)(resources.GetObject("btnTKHDNXem.Image")));
+            this.btnTKHDNXem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTKHDNXem.Location = new System.Drawing.Point(630, 20);
             this.btnTKHDNXem.Name = "btnTKHDNXem";
-            this.btnTKHDNXem.Size = new System.Drawing.Size(191, 35);
+            this.btnTKHDNXem.Size = new System.Drawing.Size(191, 43);
             this.btnTKHDNXem.TabIndex = 5;
             this.btnTKHDNXem.Text = "XEM";
             this.btnTKHDNXem.UseVisualStyleBackColor = true;

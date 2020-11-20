@@ -32,6 +32,7 @@ namespace BTL_QuanLiFF.UserControls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucDoAnUong));
             this.lblFood = new System.Windows.Forms.Label();
             this.lblFoodName = new System.Windows.Forms.Label();
             this.lblDonGia = new System.Windows.Forms.Label();
@@ -145,11 +146,14 @@ namespace BTL_QuanLiFF.UserControls
             // 
             this.btnDoAnUongThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoAnUongThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDoAnUongThem.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAnUongThem.Image")));
+            this.btnDoAnUongThem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoAnUongThem.Location = new System.Drawing.Point(27, 491);
             this.btnDoAnUongThem.Name = "btnDoAnUongThem";
-            this.btnDoAnUongThem.Size = new System.Drawing.Size(105, 42);
+            this.btnDoAnUongThem.Size = new System.Drawing.Size(115, 42);
             this.btnDoAnUongThem.TabIndex = 12;
             this.btnDoAnUongThem.Text = "Thêm";
+            this.btnDoAnUongThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDoAnUongThem.UseVisualStyleBackColor = true;
             this.btnDoAnUongThem.Click += new System.EventHandler(this.btnADD_Click);
             // 
@@ -168,6 +172,8 @@ namespace BTL_QuanLiFF.UserControls
             // 
             this.btnDoAnUongCTHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoAnUongCTHD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDoAnUongCTHD.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAnUongCTHD.Image")));
+            this.btnDoAnUongCTHD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoAnUongCTHD.Location = new System.Drawing.Point(27, 429);
             this.btnDoAnUongCTHD.Name = "btnDoAnUongCTHD";
             this.btnDoAnUongCTHD.Size = new System.Drawing.Size(272, 42);
@@ -228,11 +234,14 @@ namespace BTL_QuanLiFF.UserControls
             // btnDoAnUongHDMoi
             // 
             this.btnDoAnUongHDMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnDoAnUongHDMoi.Location = new System.Drawing.Point(403, 491);
+            this.btnDoAnUongHDMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAnUongHDMoi.Image")));
+            this.btnDoAnUongHDMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoAnUongHDMoi.Location = new System.Drawing.Point(379, 491);
             this.btnDoAnUongHDMoi.Name = "btnDoAnUongHDMoi";
-            this.btnDoAnUongHDMoi.Size = new System.Drawing.Size(164, 42);
+            this.btnDoAnUongHDMoi.Size = new System.Drawing.Size(188, 42);
             this.btnDoAnUongHDMoi.TabIndex = 22;
             this.btnDoAnUongHDMoi.Text = "HÓA ĐƠN MỚI";
+            this.btnDoAnUongHDMoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDoAnUongHDMoi.UseVisualStyleBackColor = true;
             this.btnDoAnUongHDMoi.Click += new System.EventHandler(this.btnTao_Click);
             // 
@@ -240,11 +249,14 @@ namespace BTL_QuanLiFF.UserControls
             // 
             this.btnDoAnUongNhapLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoAnUongNhapLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDoAnUongNhapLai.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAnUongNhapLai.Image")));
+            this.btnDoAnUongNhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoAnUongNhapLai.Location = new System.Drawing.Point(180, 491);
             this.btnDoAnUongNhapLai.Name = "btnDoAnUongNhapLai";
-            this.btnDoAnUongNhapLai.Size = new System.Drawing.Size(119, 42);
+            this.btnDoAnUongNhapLai.Size = new System.Drawing.Size(129, 42);
             this.btnDoAnUongNhapLai.TabIndex = 23;
             this.btnDoAnUongNhapLai.Text = "Nhập lại";
+            this.btnDoAnUongNhapLai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDoAnUongNhapLai.UseVisualStyleBackColor = true;
             this.btnDoAnUongNhapLai.Click += new System.EventHandler(this.btnXoa_Click);
             // 

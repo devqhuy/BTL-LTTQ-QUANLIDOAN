@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucQuanLi));
             this.err4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tpQLNV = new System.Windows.Forms.TabPage();
             this.txtAnh = new System.Windows.Forms.TextBox();
@@ -54,29 +55,29 @@
             this.tabNhanVien = new System.Windows.Forms.TabControl();
             this.tpKM = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmbSP2 = new System.Windows.Forms.ComboBox();
-            this.lblSP2 = new System.Windows.Forms.Label();
+            this.lblGG2 = new System.Windows.Forms.Label();
+            this.txtGG = new System.Windows.Forms.TextBox();
             this.lblTo2 = new System.Windows.Forms.Label();
             this.lblFrom2 = new System.Windows.Forms.Label();
             this.dtpTo2 = new System.Windows.Forms.DateTimePicker();
             this.dtpFrom2 = new System.Windows.Forms.DateTimePicker();
-            this.txtGG = new System.Windows.Forms.TextBox();
-            this.lblGG2 = new System.Windows.Forms.Label();
-            this.dgv2 = new System.Windows.Forms.DataGridView();
-            this.btnThem2 = new System.Windows.Forms.Button();
-            this.btnLuu2 = new System.Windows.Forms.Button();
-            this.btnSua2 = new System.Windows.Forms.Button();
+            this.cmbSP2 = new System.Windows.Forms.ComboBox();
+            this.lblSP2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy2 = new System.Windows.Forms.Button();
+            this.btnSua2 = new System.Windows.Forms.Button();
+            this.btnLuu2 = new System.Windows.Forms.Button();
+            this.btnThem2 = new System.Windows.Forms.Button();
+            this.dgv2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.err4)).BeginInit();
             this.tpQLNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQLNVDSNhanVien)).BeginInit();
             this.tabNhanVien.SuspendLayout();
             this.tpKM.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,11 +155,15 @@
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.Location = new System.Drawing.Point(651, 439);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(134, 48);
             this.btnHuy.TabIndex = 30;
             this.btnHuy.Text = "HỦY";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -167,7 +172,7 @@
             this.rdbNu.AutoSize = true;
             this.rdbNu.Location = new System.Drawing.Point(787, 156);
             this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(56, 26);
+            this.rdbNu.Size = new System.Drawing.Size(57, 27);
             this.rdbNu.TabIndex = 29;
             this.rdbNu.TabStop = true;
             this.rdbNu.Text = "Nữ";
@@ -178,7 +183,7 @@
             this.rdbNam.AutoSize = true;
             this.rdbNam.Location = new System.Drawing.Point(643, 156);
             this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(68, 26);
+            this.rdbNam.Size = new System.Drawing.Size(70, 27);
             this.rdbNam.TabIndex = 28;
             this.rdbNam.TabStop = true;
             this.rdbNam.Text = "Nam";
@@ -198,7 +203,7 @@
             this.lblAnh.AutoSize = true;
             this.lblAnh.Location = new System.Drawing.Point(531, 122);
             this.lblAnh.Name = "lblAnh";
-            this.lblAnh.Size = new System.Drawing.Size(52, 22);
+            this.lblAnh.Size = new System.Drawing.Size(53, 23);
             this.lblAnh.TabIndex = 26;
             this.lblAnh.Text = "ẢNH";
             this.lblAnh.Click += new System.EventHandler(this.lblAnh_Click);
@@ -206,11 +211,15 @@
             // btnLuu1
             // 
             this.btnLuu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLuu1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu1.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu1.Image")));
+            this.btnLuu1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu1.Location = new System.Drawing.Point(511, 439);
             this.btnLuu1.Name = "btnLuu1";
             this.btnLuu1.Size = new System.Drawing.Size(134, 48);
             this.btnLuu1.TabIndex = 25;
             this.btnLuu1.Text = "LƯU";
+            this.btnLuu1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu1.UseVisualStyleBackColor = false;
             this.btnLuu1.Click += new System.EventHandler(this.btnLuu1_Click);
             // 
@@ -221,7 +230,7 @@
             this.cmb.FormattingEnabled = true;
             this.cmb.Location = new System.Drawing.Point(183, 26);
             this.cmb.Name = "cmb";
-            this.cmb.Size = new System.Drawing.Size(200, 30);
+            this.cmb.Size = new System.Drawing.Size(200, 31);
             this.cmb.TabIndex = 19;
             this.cmb.SelectedIndexChanged += new System.EventHandler(this.cmb_SelectedIndexChanged);
             // 
@@ -229,33 +238,45 @@
             // 
             this.btnQLNVThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnQLNVThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnQLNVThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNVThem.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNVThem.Image")));
+            this.btnQLNVThem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLNVThem.Location = new System.Drawing.Point(91, 439);
             this.btnQLNVThem.Name = "btnQLNVThem";
             this.btnQLNVThem.Size = new System.Drawing.Size(134, 48);
             this.btnQLNVThem.TabIndex = 14;
             this.btnQLNVThem.Text = "THÊM";
+            this.btnQLNVThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLNVThem.UseVisualStyleBackColor = false;
             this.btnQLNVThem.Click += new System.EventHandler(this.btnQLNVThem_Click);
             // 
             // btnQLNVXoa
             // 
             this.btnQLNVXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnQLNVXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNVXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNVXoa.Image")));
+            this.btnQLNVXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLNVXoa.Location = new System.Drawing.Point(371, 439);
             this.btnQLNVXoa.Name = "btnQLNVXoa";
             this.btnQLNVXoa.Size = new System.Drawing.Size(134, 48);
             this.btnQLNVXoa.TabIndex = 13;
             this.btnQLNVXoa.Text = "XÓA";
+            this.btnQLNVXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLNVXoa.UseVisualStyleBackColor = false;
             this.btnQLNVXoa.Click += new System.EventHandler(this.btnQLNVXoa_Click);
             // 
             // btnQLNVSua
             // 
             this.btnQLNVSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnQLNVSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNVSua.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNVSua.Image")));
+            this.btnQLNVSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLNVSua.Location = new System.Drawing.Point(231, 439);
             this.btnQLNVSua.Name = "btnQLNVSua";
             this.btnQLNVSua.Size = new System.Drawing.Size(134, 48);
             this.btnQLNVSua.TabIndex = 12;
             this.btnQLNVSua.Text = "SỬA";
+            this.btnQLNVSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLNVSua.UseVisualStyleBackColor = false;
             this.btnQLNVSua.Click += new System.EventHandler(this.btnQLNVSua_Click);
             // 
@@ -275,7 +296,7 @@
             this.lblChucVu.AutoSize = true;
             this.lblChucVu.Location = new System.Drawing.Point(531, 78);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(97, 22);
+            this.lblChucVu.Size = new System.Drawing.Size(102, 23);
             this.lblChucVu.TabIndex = 6;
             this.lblChucVu.Text = "CHỨC VỤ";
             // 
@@ -284,7 +305,7 @@
             this.lblSoDT.AutoSize = true;
             this.lblSoDT.Location = new System.Drawing.Point(531, 34);
             this.lblSoDT.Name = "lblSoDT";
-            this.lblSoDT.Size = new System.Drawing.Size(66, 22);
+            this.lblSoDT.Size = new System.Drawing.Size(69, 23);
             this.lblSoDT.TabIndex = 5;
             this.lblSoDT.Text = "SỐ ĐT";
             // 
@@ -293,7 +314,7 @@
             this.lblNgaySinh.AutoSize = true;
             this.lblNgaySinh.Location = new System.Drawing.Point(63, 122);
             this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(115, 22);
+            this.lblNgaySinh.Size = new System.Drawing.Size(118, 23);
             this.lblNgaySinh.TabIndex = 2;
             this.lblNgaySinh.Text = "NGÀY SINH";
             // 
@@ -302,7 +323,7 @@
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.Location = new System.Drawing.Point(63, 77);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(81, 22);
+            this.lblHoTen.Size = new System.Drawing.Size(86, 23);
             this.lblHoTen.TabIndex = 1;
             this.lblHoTen.Text = "HỌ TÊN";
             // 
@@ -311,7 +332,7 @@
             this.lblIDNhanVien.AutoSize = true;
             this.lblIDNhanVien.Location = new System.Drawing.Point(63, 34);
             this.lblIDNhanVien.Name = "lblIDNhanVien";
-            this.lblIDNhanVien.Size = new System.Drawing.Size(58, 22);
+            this.lblIDNhanVien.Size = new System.Drawing.Size(58, 23);
             this.lblIDNhanVien.TabIndex = 0;
             this.lblIDNhanVien.Text = "id NV";
             // 
@@ -319,6 +340,7 @@
             // 
             this.tabNhanVien.Controls.Add(this.tpQLNV);
             this.tabNhanVien.Controls.Add(this.tpKM);
+            this.tabNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabNhanVien.Location = new System.Drawing.Point(3, 19);
             this.tabNhanVien.Name = "tabNhanVien";
             this.tabNhanVien.SelectedIndex = 0;
@@ -329,9 +351,9 @@
             // tpKM
             // 
             this.tpKM.Controls.Add(this.panel1);
-            this.tpKM.Location = new System.Drawing.Point(4, 31);
+            this.tpKM.Location = new System.Drawing.Point(4, 32);
             this.tpKM.Name = "tpKM";
-            this.tpKM.Size = new System.Drawing.Size(909, 494);
+            this.tpKM.Size = new System.Drawing.Size(909, 493);
             this.tpKM.TabIndex = 1;
             this.tpKM.Text = "QL Khuyến Mại";
             this.tpKM.UseVisualStyleBackColor = true;
@@ -344,19 +366,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(904, 495);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnHuy2);
-            this.panel2.Controls.Add(this.btnSua2);
-            this.panel2.Controls.Add(this.btnLuu2);
-            this.panel2.Controls.Add(this.btnThem2);
-            this.panel2.Controls.Add(this.dgv2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(904, 495);
-            this.panel2.TabIndex = 0;
             // 
             // panel3
             // 
@@ -374,24 +383,21 @@
             this.panel3.Size = new System.Drawing.Size(904, 114);
             this.panel3.TabIndex = 1;
             // 
-            // cmbSP2
+            // lblGG2
             // 
-            this.cmbSP2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbSP2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cmbSP2.FormattingEnabled = true;
-            this.cmbSP2.Location = new System.Drawing.Point(190, 13);
-            this.cmbSP2.Name = "cmbSP2";
-            this.cmbSP2.Size = new System.Drawing.Size(200, 30);
-            this.cmbSP2.TabIndex = 21;
+            this.lblGG2.AutoSize = true;
+            this.lblGG2.Location = new System.Drawing.Point(492, 24);
+            this.lblGG2.Name = "lblGG2";
+            this.lblGG2.Size = new System.Drawing.Size(107, 23);
+            this.lblGG2.TabIndex = 27;
+            this.lblGG2.Text = "GIẢM GIÁ";
             // 
-            // lblSP2
+            // txtGG
             // 
-            this.lblSP2.AutoSize = true;
-            this.lblSP2.Location = new System.Drawing.Point(53, 21);
-            this.lblSP2.Name = "lblSP2";
-            this.lblSP2.Size = new System.Drawing.Size(131, 22);
-            this.lblSP2.TabIndex = 20;
-            this.lblSP2.Text = "id SẢN PHẨM";
+            this.txtGG.Location = new System.Drawing.Point(621, 13);
+            this.txtGG.Name = "txtGG";
+            this.txtGG.Size = new System.Drawing.Size(200, 30);
+            this.txtGG.TabIndex = 26;
             // 
             // lblTo2
             // 
@@ -431,21 +437,89 @@
             this.dtpFrom2.Size = new System.Drawing.Size(200, 30);
             this.dtpFrom2.TabIndex = 22;
             // 
-            // txtGG
+            // cmbSP2
             // 
-            this.txtGG.Location = new System.Drawing.Point(621, 13);
-            this.txtGG.Name = "txtGG";
-            this.txtGG.Size = new System.Drawing.Size(200, 30);
-            this.txtGG.TabIndex = 26;
+            this.cmbSP2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbSP2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cmbSP2.FormattingEnabled = true;
+            this.cmbSP2.Location = new System.Drawing.Point(190, 13);
+            this.cmbSP2.Name = "cmbSP2";
+            this.cmbSP2.Size = new System.Drawing.Size(200, 31);
+            this.cmbSP2.TabIndex = 21;
             // 
-            // lblGG2
+            // lblSP2
             // 
-            this.lblGG2.AutoSize = true;
-            this.lblGG2.Location = new System.Drawing.Point(492, 24);
-            this.lblGG2.Name = "lblGG2";
-            this.lblGG2.Size = new System.Drawing.Size(100, 22);
-            this.lblGG2.TabIndex = 27;
-            this.lblGG2.Text = "GIẢM GIÁ";
+            this.lblSP2.AutoSize = true;
+            this.lblSP2.Location = new System.Drawing.Point(53, 21);
+            this.lblSP2.Name = "lblSP2";
+            this.lblSP2.Size = new System.Drawing.Size(133, 23);
+            this.lblSP2.TabIndex = 20;
+            this.lblSP2.Text = "id SẢN PHẨM";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnHuy2);
+            this.panel2.Controls.Add(this.btnSua2);
+            this.panel2.Controls.Add(this.btnLuu2);
+            this.panel2.Controls.Add(this.btnThem2);
+            this.panel2.Controls.Add(this.dgv2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(904, 495);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnHuy2
+            // 
+            this.btnHuy2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy2.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy2.Image")));
+            this.btnHuy2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy2.Location = new System.Drawing.Point(688, 425);
+            this.btnHuy2.Name = "btnHuy2";
+            this.btnHuy2.Size = new System.Drawing.Size(159, 55);
+            this.btnHuy2.TabIndex = 4;
+            this.btnHuy2.Text = "HỦY";
+            this.btnHuy2.UseVisualStyleBackColor = true;
+            this.btnHuy2.Click += new System.EventHandler(this.btnHuy2_Click);
+            // 
+            // btnSua2
+            // 
+            this.btnSua2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua2.Image = ((System.Drawing.Image)(resources.GetObject("btnSua2.Image")));
+            this.btnSua2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua2.Location = new System.Drawing.Point(481, 425);
+            this.btnSua2.Name = "btnSua2";
+            this.btnSua2.Size = new System.Drawing.Size(159, 55);
+            this.btnSua2.TabIndex = 3;
+            this.btnSua2.Text = "SỬA";
+            this.btnSua2.UseVisualStyleBackColor = true;
+            this.btnSua2.Click += new System.EventHandler(this.btnSua2_Click);
+            // 
+            // btnLuu2
+            // 
+            this.btnLuu2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu2.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu2.Image")));
+            this.btnLuu2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu2.Location = new System.Drawing.Point(279, 425);
+            this.btnLuu2.Name = "btnLuu2";
+            this.btnLuu2.Size = new System.Drawing.Size(159, 55);
+            this.btnLuu2.TabIndex = 2;
+            this.btnLuu2.Text = "LƯU";
+            this.btnLuu2.UseVisualStyleBackColor = true;
+            this.btnLuu2.Click += new System.EventHandler(this.btnLuu2_Click);
+            // 
+            // btnThem2
+            // 
+            this.btnThem2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem2.Image = ((System.Drawing.Image)(resources.GetObject("btnThem2.Image")));
+            this.btnThem2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem2.Location = new System.Drawing.Point(73, 425);
+            this.btnThem2.Name = "btnThem2";
+            this.btnThem2.Size = new System.Drawing.Size(159, 55);
+            this.btnThem2.TabIndex = 1;
+            this.btnThem2.Text = "THÊM";
+            this.btnThem2.UseVisualStyleBackColor = true;
+            this.btnThem2.Click += new System.EventHandler(this.btnThem2_Click);
             // 
             // dgv2
             // 
@@ -458,46 +532,6 @@
             this.dgv2.Size = new System.Drawing.Size(901, 292);
             this.dgv2.TabIndex = 0;
             this.dgv2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellClick);
-            // 
-            // btnThem2
-            // 
-            this.btnThem2.Location = new System.Drawing.Point(73, 425);
-            this.btnThem2.Name = "btnThem2";
-            this.btnThem2.Size = new System.Drawing.Size(159, 55);
-            this.btnThem2.TabIndex = 1;
-            this.btnThem2.Text = "THÊM";
-            this.btnThem2.UseVisualStyleBackColor = true;
-            this.btnThem2.Click += new System.EventHandler(this.btnThem2_Click);
-            // 
-            // btnLuu2
-            // 
-            this.btnLuu2.Location = new System.Drawing.Point(279, 425);
-            this.btnLuu2.Name = "btnLuu2";
-            this.btnLuu2.Size = new System.Drawing.Size(159, 55);
-            this.btnLuu2.TabIndex = 2;
-            this.btnLuu2.Text = "LƯU";
-            this.btnLuu2.UseVisualStyleBackColor = true;
-            this.btnLuu2.Click += new System.EventHandler(this.btnLuu2_Click);
-            // 
-            // btnSua2
-            // 
-            this.btnSua2.Location = new System.Drawing.Point(481, 425);
-            this.btnSua2.Name = "btnSua2";
-            this.btnSua2.Size = new System.Drawing.Size(159, 55);
-            this.btnSua2.TabIndex = 3;
-            this.btnSua2.Text = "SỬA";
-            this.btnSua2.UseVisualStyleBackColor = true;
-            this.btnSua2.Click += new System.EventHandler(this.btnSua2_Click);
-            // 
-            // btnHuy2
-            // 
-            this.btnHuy2.Location = new System.Drawing.Point(688, 425);
-            this.btnHuy2.Name = "btnHuy2";
-            this.btnHuy2.Size = new System.Drawing.Size(159, 55);
-            this.btnHuy2.TabIndex = 4;
-            this.btnHuy2.Text = "HỦY";
-            this.btnHuy2.UseVisualStyleBackColor = true;
-            this.btnHuy2.Click += new System.EventHandler(this.btnHuy2_Click);
             // 
             // ucQuanLi
             // 
@@ -517,9 +551,9 @@
             this.tabNhanVien.ResumeLayout(false);
             this.tpKM.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.ResumeLayout(false);
 

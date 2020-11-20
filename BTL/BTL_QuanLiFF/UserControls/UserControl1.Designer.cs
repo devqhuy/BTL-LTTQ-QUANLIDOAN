@@ -172,8 +172,10 @@
             // 
             // btnKHThem
             // 
-            this.btnKHThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKHThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHThem.Image = ((System.Drawing.Image)(resources.GetObject("btnKHThem.Image")));
+            this.btnKHThem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKHThem.Location = new System.Drawing.Point(41, 457);
             this.btnKHThem.Name = "btnKHThem";
             this.btnKHThem.Size = new System.Drawing.Size(162, 50);
@@ -184,8 +186,10 @@
             // 
             // btnKHSua
             // 
-            this.btnKHSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKHSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHSua.Image = ((System.Drawing.Image)(resources.GetObject("btnKHSua.Image")));
+            this.btnKHSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKHSua.Location = new System.Drawing.Point(209, 457);
             this.btnKHSua.Name = "btnKHSua";
             this.btnKHSua.Size = new System.Drawing.Size(162, 50);
@@ -196,8 +200,10 @@
             // 
             // btnKHXoa
             // 
-            this.btnKHXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKHXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnKHXoa.Image")));
+            this.btnKHXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKHXoa.Location = new System.Drawing.Point(377, 457);
             this.btnKHXoa.Name = "btnKHXoa";
             this.btnKHXoa.Size = new System.Drawing.Size(162, 50);
@@ -253,8 +259,10 @@
             // 
             // btnKHLuu
             // 
-            this.btnKHLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKHLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnKHLuu.Image")));
+            this.btnKHLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKHLuu.Location = new System.Drawing.Point(545, 457);
             this.btnKHLuu.Name = "btnKHLuu";
             this.btnKHLuu.Size = new System.Drawing.Size(162, 50);
@@ -265,8 +273,10 @@
             // 
             // btnKHHuy
             // 
-            this.btnKHHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKHHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKHHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnKHHuy.Image")));
+            this.btnKHHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKHHuy.Location = new System.Drawing.Point(713, 457);
             this.btnKHHuy.Name = "btnKHHuy";
             this.btnKHHuy.Size = new System.Drawing.Size(162, 50);

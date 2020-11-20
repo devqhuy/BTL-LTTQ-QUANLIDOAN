@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCTHoaDon));
             this.grbTT = new System.Windows.Forms.GroupBox();
             this.txtTimKiemNgayBan = new System.Windows.Forms.TextBox();
             this.txtTimKiemMaKH = new System.Windows.Forms.TextBox();
@@ -376,9 +377,12 @@
             // 
             // btnTimKiemInHoaDon
             // 
-            this.btnTimKiemInHoaDon.Location = new System.Drawing.Point(106, 727);
+            this.btnTimKiemInHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemInHoaDon.Image")));
+            this.btnTimKiemInHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemInHoaDon.Location = new System.Drawing.Point(87, 727);
             this.btnTimKiemInHoaDon.Name = "btnTimKiemInHoaDon";
-            this.btnTimKiemInHoaDon.Size = new System.Drawing.Size(258, 43);
+            this.btnTimKiemInHoaDon.Size = new System.Drawing.Size(225, 43);
             this.btnTimKiemInHoaDon.TabIndex = 17;
             this.btnTimKiemInHoaDon.Text = "IN HÓA ĐƠN";
             this.btnTimKiemInHoaDon.UseVisualStyleBackColor = true;
@@ -386,6 +390,9 @@
             // 
             // btnTimKiemThoat
             // 
+            this.btnTimKiemThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemThoat.Image")));
+            this.btnTimKiemThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemThoat.Location = new System.Drawing.Point(908, 727);
             this.btnTimKiemThoat.Name = "btnTimKiemThoat";
             this.btnTimKiemThoat.Size = new System.Drawing.Size(168, 43);
@@ -396,7 +403,10 @@
             // 
             // btnTimKiemXoa
             // 
-            this.btnTimKiemXoa.Location = new System.Drawing.Point(729, 727);
+            this.btnTimKiemXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemXoa.Image")));
+            this.btnTimKiemXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemXoa.Location = new System.Drawing.Point(721, 727);
             this.btnTimKiemXoa.Name = "btnTimKiemXoa";
             this.btnTimKiemXoa.Size = new System.Drawing.Size(168, 43);
             this.btnTimKiemXoa.TabIndex = 19;
@@ -406,7 +416,10 @@
             // 
             // btnTimKiemCapNhat
             // 
-            this.btnTimKiemCapNhat.Location = new System.Drawing.Point(377, 727);
+            this.btnTimKiemCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemCapNhat.Image")));
+            this.btnTimKiemCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemCapNhat.Location = new System.Drawing.Point(338, 727);
             this.btnTimKiemCapNhat.Name = "btnTimKiemCapNhat";
             this.btnTimKiemCapNhat.Size = new System.Drawing.Size(168, 43);
             this.btnTimKiemCapNhat.TabIndex = 20;
@@ -416,11 +429,14 @@
             // 
             // btnTimKiemHuyDon
             // 
-            this.btnTimKiemHuyDon.Location = new System.Drawing.Point(552, 727);
+            this.btnTimKiemHuyDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemHuyDon.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemHuyDon.Image")));
+            this.btnTimKiemHuyDon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemHuyDon.Location = new System.Drawing.Point(531, 727);
             this.btnTimKiemHuyDon.Name = "btnTimKiemHuyDon";
             this.btnTimKiemHuyDon.Size = new System.Drawing.Size(168, 43);
             this.btnTimKiemHuyDon.TabIndex = 21;
-            this.btnTimKiemHuyDon.Text = "HỦY ĐƠN";
+            this.btnTimKiemHuyDon.Text = "HỦY ĐƠN ";
             this.btnTimKiemHuyDon.UseVisualStyleBackColor = true;
             this.btnTimKiemHuyDon.Click += new System.EventHandler(this.btnHuy_Click);
             // 
