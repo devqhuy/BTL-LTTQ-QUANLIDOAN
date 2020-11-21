@@ -23,6 +23,7 @@ namespace BTL_QuanLiFF.Forms
         ucQuanLi ucQuan = new ucQuanLi();
         ucKhachHang ucKhach = new ucKhachHang();
         ucTimKiem ucTim = new ucTimKiem();
+        ucThongTin ucTT = new ucThongTin();
 
         public string username = "";
         public string role = "";
@@ -134,9 +135,12 @@ namespace BTL_QuanLiFF.Forms
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void btnThongTin_Click(object sender, EventArgs e)
         {
+            moveSidePanel(btnThongTin);
+            lblTieuDe.Text = "Mục Thông Tin" ;
 
+            addControlsToPanel(ucTT);
         }
     }
 }

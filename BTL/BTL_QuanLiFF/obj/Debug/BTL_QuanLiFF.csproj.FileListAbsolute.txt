@@ -91,3 +91,4 @@ D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\btl\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\D
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\btl\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.csproj.CopyComplete
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\btl\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.exe
 D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\btl\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.pdb
+D:\Nam3_Ki1_UTC\LapTrinhTrucQuang\btl\BTL-LTTQ-QUANLIDOAN\BTL\BTL_QuanLiFF\obj\Debug\BTL_QuanLiFF.UserControls.ucThongTin.resources

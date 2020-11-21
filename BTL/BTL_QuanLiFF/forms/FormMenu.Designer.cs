@@ -52,6 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
+            this.btnThongTin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +65,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.btnThongTin);
             this.panel1.Controls.Add(this.btnQuanLi);
             this.panel1.Controls.Add(this.btnKhachHang);
             this.panel1.Controls.Add(this.btnThongKe);
@@ -192,7 +194,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(921, 61);
             this.panel3.TabIndex = 1;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // lblTieuDe
             // 
@@ -323,6 +324,23 @@
             // 
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
+            // btnThongTin
+            // 
+            this.btnThongTin.FlatAppearance.BorderSize = 0;
+            this.btnThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongTin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongTin.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnThongTin.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTin.Image")));
+            this.btnThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThongTin.Location = new System.Drawing.Point(9, 484);
+            this.btnThongTin.Name = "btnThongTin";
+            this.btnThongTin.Size = new System.Drawing.Size(199, 77);
+            this.btnThongTin.TabIndex = 7;
+            this.btnThongTin.Text = "THÔNG T‌IN";
+            this.btnThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongTin.UseVisualStyleBackColor = true;
+            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -380,5 +398,6 @@
         private System.Windows.Forms.Label lblIDNV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnThongTin;
     }
 }
