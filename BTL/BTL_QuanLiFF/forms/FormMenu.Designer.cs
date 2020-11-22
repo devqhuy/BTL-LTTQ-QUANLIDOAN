@@ -53,7 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
-            this.btn1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +66,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btn1);
             this.panel1.Controls.Add(this.btnThongTin);
             this.panel1.Controls.Add(this.btnQuanLi);
             this.panel1.Controls.Add(this.btnKhachHang);
@@ -346,16 +344,6 @@
             // 
             this.timerTime.Tick += new System.EventHandler(this.timerTime_Tick);
             // 
-            // btn1
-            // 
-            this.btn1.Location = new System.Drawing.Point(77, 627);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(109, 43);
-            this.btn1.TabIndex = 8;
-            this.btn1.Text = "passladay";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -414,6 +402,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnThongTin;
-        private System.Windows.Forms.Button btn1;
     }
 }

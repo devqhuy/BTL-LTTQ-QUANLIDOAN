@@ -151,6 +151,7 @@ namespace BTL_QuanLiFF.Forms
 
         }
 
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
             //Tạo MD5 
@@ -171,5 +172,7 @@ namespace BTL_QuanLiFF.Forms
             //trong "X2" thành "x"
             dtbase.DataChange("update taikhoan set matKhau = '" + sb.ToString()+ "' where idUSER = 'US03' ");   
         }
+
+        */
     }
 }
