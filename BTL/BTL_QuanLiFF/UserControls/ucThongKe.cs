@@ -54,13 +54,20 @@ namespace BTL_QuanLiFF.UserControls
         {
             if (e.TabPage == tabPage1)
             {
-
                 dgv1.DataSource = dtbase.DataReader("select * from SANPHAM");
+
+                dgv1.Columns["idSP"].HeaderText = "Mã SP";
+                dgv1.Columns["tenSP"].HeaderText = "Tên sản phẩm";
+                dgv1.Columns["imgSP"].HeaderText = "Tên ảnh";
+                dgv1.Columns["moTaSP"].HeaderText = "Mô tả SP";
+                dgv1.Columns["giaTienSP"].HeaderText = "Giá tiền SP";
+                dgv1.Columns["Status"].HeaderText = "Tình trạng";
             }
                 
             else if (e.TabPage == tabPage2)
             {
-                dgv2.DataSource = dtbase.DataReader("select HOADONBAN.idHD , idSP, soLuong, idNV, ngayTao, giaTien, tongTien  " +
+                dgv2.DataSource = dtbase.DataReader("select HOADONBAN.idHD , " +
+                    "idSP, soLuong, idNV, ngayTao, giaTien, tongTien  " +
                     "from HOADONBAN inner" +
                     " join CTHOADONBAN ON HOADONBAN.idHD = CTHOADONBAN.idHD");
 
@@ -68,6 +75,15 @@ namespace BTL_QuanLiFF.UserControls
                 dgv2.Columns[2].Width = 100;
                 dgv2.Columns[0].Width = 210;
                 dgv2.Columns[4].Width = 214;
+
+                dgv2.Columns["idHD"].HeaderText = "Mã HĐ";
+                dgv2.Columns["idNV"].HeaderText = "Mã NV";
+                dgv2.Columns["ngayTao"].HeaderText = "Ngày tạo";
+                dgv2.Columns["giaTien"].HeaderText = "Giá tiền";
+                dgv2.Columns["tongTien"].HeaderText = "Tổng tiền";
+                dgv2.Columns["idSP"].HeaderText = "Mã SP";
+                dgv2.Columns["soLuong"].HeaderText = "Số lượng";
+               
 
             }
             else if( e.TabPage == tabPage3)
@@ -80,7 +96,6 @@ namespace BTL_QuanLiFF.UserControls
                 "INNER JOIN NHACUNGCAP ON NHACUNGCAP.idNCC = CTHOADONNHAP.idNCC " +
                 "INNER JOIN NHANVIEN ON NHANVIEN.idNV = CTHOADONNHAP.idNV ");
 
-
                 dgv3.Columns[1].Width = 200;
                 dgv3.Columns[5].Width = 200;
 
@@ -88,6 +103,14 @@ namespace BTL_QuanLiFF.UserControls
                 cbTKHDNTenNV.DataSource = dt;
                 cbTKHDNTenNV.DisplayMember = "tenNL";
                 cbTKHDNTenNV.ValueMember = "tenNL";
+
+                dgv3.Columns["idCT"].HeaderText = "Mã CT";
+                dgv3.Columns["hotenNV"].HeaderText = "Họ tên NV";
+                dgv3.Columns["idNCC"].HeaderText = "Nhà CC";
+                dgv3.Columns["tenNL"].HeaderText = "Tên NL";
+                dgv3.Columns["soLuong"].HeaderText = "Số lượng";
+                dgv3.Columns["ngayTaoHD"].HeaderText = "Ngày tạo";
+                dgv3.Columns["sex"].HeaderText = "Giới tính";
 
             }
 
@@ -110,21 +133,23 @@ namespace BTL_QuanLiFF.UserControls
             if (rdb11.Checked) rdb = "DESC";
             else rdb = "ASC";
 
-            dt = dtbase.DataReader("SELECT TOP(10) WITH TIES tenSP, giaTienSP , sum(soLuong) as tong " +
+            dt = dtbase.DataReader("SELECT TOP(10) WITH TIES SANPHAM.idSP ,tenSP, giaTienSP , sum(soLuong) as tong " +
                 "FROM SANPHAM " +
                 "INNER JOIN CTHOADONBAN ON CTHOADONBAN.idSP = SANPHAM.idSP " +
                 "INNER JOIN HOADONBAN  ON CTHOADONBAN.idHD = HOADONBAN.idHD " +
                 "WHERE ngayTao >= '" + Convert.ToDateTime(from1) +
                 "' and ngayTao <= '" + Convert.ToDateTime(to1) + "' " +
-                "GROUP BY tenSP, giaTienSP " +
+                "GROUP BY SANPHAM.idSP , tenSP, giaTienSP " +
                 " ORDER BY  tong " +rdb);
 
+            dgv1.Columns[3].Width = 150;
+          
             dgv1.DataSource = dt;
-        }
-
-        private void btnIN1_Click(object sender, EventArgs e)
-        {
-
+            dgv1.Columns["idSP"].HeaderText = "Mã SP";
+            dgv1.Columns["tenSP"].HeaderText = "Tên sản phẩm";
+            dgv1.Columns["tong"].HeaderText = "Tổng số lượng";
+            dgv1.Columns["giaTienSP"].HeaderText = "Giá tiền SP";
+            
         }
 
         public void checkTabPage2()
@@ -142,7 +167,7 @@ namespace BTL_QuanLiFF.UserControls
 
             manv = cbTKHDBTenNV.Text;
 
-            dt = dtbase.DataReader("select HOADONBAN.idHD , idSP, soLuong, " +
+            dt = dtbase.DataReader("select HOADONBAN.idHD , " +
                 "hoTenNV, ngayTao, giaTien, tongTien " +
                 "from HOADONBAN " +
                 "inner join CTHOADONBAN ON HOADONBAN.idHD = CTHOADONBAN.idHD " +
@@ -151,22 +176,22 @@ namespace BTL_QuanLiFF.UserControls
                 "' and ngayTao <= '" + Convert.ToDateTime(to2) + "' " +
                  " ORDER BY tongTien " + rdb); 
 
-
             dgv2.DataSource = dt;
             dgv2.Columns[0].Width = 200;
-            dgv2.Columns[3].Width = 200;
-            dgv2.Columns[4].Width = 200;
-            dgv2.Columns[5].Width = 200;
+            dgv2.Columns[1].Width = 200;
+            dgv2.Columns[2].Width = 200;
+            dgv2.Columns[4].Width = 120;
+
+            dgv2.Columns["idHD"].HeaderText = "Mã HĐ";
+            dgv2.Columns["hotenNV"].HeaderText = "Họ tên NV";
+            dgv2.Columns["ngayTao"].HeaderText = "Ngày tạo";
+            dgv2.Columns["giaTien"].HeaderText = "Giá tiền";
+            dgv2.Columns["tongTien"].HeaderText = "Tổng tiền";
         }
 
         private void btnXem2_Click(object sender, EventArgs e)
         {
             checkTabPage2();
-        }
-
-        private void btnIN2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnXem3_Click(object sender, EventArgs e)
@@ -185,22 +210,32 @@ namespace BTL_QuanLiFF.UserControls
             manv = cbTKHDBTenNV.Text;
 
             dt = dtbase.DataReader("SELECT CTHOADONNHAP.idCT, NHANVIEN.hoTenNV , " +
-                "CTHOADONNHAP.idNCC, nguyenlieu.tenNL, ctnguyenlieu.soLuong, ngayTaoHD , sex  " +
+                "CTHOADONNHAP.idNCC, nguyenlieu.tenNL, ctnguyenlieu.soLuong, " +
+                "ngayTaoHD , sex  , cthoadonnhap.tongTien " +
                 "FROM CTHOADONNHAP " +
                 "INNER JOIN CTNGUYENLIEU ON CTNGUYENLIEU.idCT = CTHOADONNHAP.idCT " +
                 "INNER JOIN NGUYENLIEU ON NGUYENLIEU.idNL = CTNGUYENLIEU.idNL " +
                 "INNER JOIN NHACUNGCAP ON NHACUNGCAP.idNCC = CTHOADONNHAP.idNCC " +
                 "INNER JOIN NHANVIEN ON NHANVIEN.idNV = '" + manv + "'" +
-                "WHERE ngayTao >= '" + Convert.ToDateTime(from3) +
-                "' and ngayTao <= '" + Convert.ToDateTime(to3) + "' " +
+                "WHERE ngayTaoHD >= '" + Convert.ToDateTime(from3) +
+                "' and ngayTaoHD <= '" + Convert.ToDateTime(to3) + "' " +
                  " ORDER BY tongTien " + rdb);
 
+            dgv3.DataSource = dt;
+            dgv3.Columns[0].Width = 200;
+            dgv3.Columns[0].Width = 120;
+            dgv3.Columns[3].Width = 200;
+            dgv3.Columns[4].Width = 200;
+            dgv3.Columns[5].Width = 200;
 
-            dgv2.DataSource = dt;
-            dgv2.Columns[0].Width = 200;
-            dgv2.Columns[3].Width = 200;
-            dgv2.Columns[4].Width = 200;
-            dgv2.Columns[5].Width = 200;
+            dgv3.Columns["idCT"].HeaderText = "Mã CT";
+            dgv3.Columns["hotenNV"].HeaderText = "Họ tên NV";
+            dgv3.Columns["idNCC"].HeaderText = "Nhà CC";
+            dgv3.Columns["tenNL"].HeaderText = "Tên NL";
+            dgv3.Columns["soLuong"].HeaderText = "Số lượng";
+            dgv3.Columns["ngayTaoHD"].HeaderText = "Ngày tạo";
+            dgv3.Columns["sex"].HeaderText = "Giới tính";
+            dgv3.Columns["tongTien"].HeaderText = "Tổng tiền";
         }
     }
 }

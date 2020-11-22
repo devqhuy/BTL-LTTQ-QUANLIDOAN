@@ -303,7 +303,17 @@ namespace BTL_QuanLiFF.forms
                 Excel.Workbook exBook =
                 exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
                 Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
-                
+
+                Excel.Range range = exSheet.Range["C1:H3"];
+                Excel.Borders borders = range.Borders;
+                borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                borders.Weight = 3d;
+
+                Excel.Range range1 = exSheet.Range["A8:M11"];
+                Excel.Borders borders1 = range.Borders;
+                borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                borders.Weight = 3d;
+
 
                 //Định dạng chung
                 Excel.Range hoadon = (Excel.Range)exSheet.Cells[1, 3];
@@ -331,8 +341,8 @@ namespace BTL_QuanLiFF.forms
                 dtCuaHang.Font.Color = Color.Black;
                 dtCuaHang.Value = "Điện thoại: xxxxxxxxxx";
 
-                Excel.Range header = (Excel.Range)exSheet.Cells[6, 2];
-                exSheet.get_Range("B6:G6").Merge(true);
+                Excel.Range header = (Excel.Range)exSheet.Cells[6, 3];
+                exSheet.get_Range("C6:G6").Merge(true);
                 header.Font.Size = 20;
                 header.Font.Bold = true;
                 header.Font.Color = Color.FromArgb(255, 218, 135);
@@ -371,7 +381,7 @@ namespace BTL_QuanLiFF.forms
                 exSheet.get_Range("K8").ColumnWidth = 10;
 
                 exSheet.get_Range("M8").Value = "Tổng tiền";
-                exSheet.get_Range("M8").ColumnWidth = 20;
+                exSheet.get_Range("M8").ColumnWidth = 10;
 
                 exSheet.get_Range("L8").Value = "Yêu cầu thêm";
                 exSheet.get_Range("L8").ColumnWidth = 12;
@@ -419,7 +429,8 @@ namespace BTL_QuanLiFF.forms
                                 dt.Rows[i]["giaTien"].ToString();
                     exSheet.get_Range("L" + (i + 9).ToString()).Value =
                                 dt.Rows[i]["yeuCau"].ToString();
-                 
+
+                   
 
                 }
                 exSheet.Name = "Hang";
@@ -433,6 +444,8 @@ namespace BTL_QuanLiFF.forms
                 if (dlgSave.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     exBook.SaveAs(dlgSave.FileName.ToString());//Lưu file Excel
                 exApp.Quit();//Thoát khỏi ứng dụng
+
+
 
                 this.Close();
                                    

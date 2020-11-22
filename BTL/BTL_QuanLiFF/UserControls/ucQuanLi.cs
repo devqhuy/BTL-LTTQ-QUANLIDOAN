@@ -40,7 +40,6 @@ namespace BTL_QuanLiFF.UserControls
                 dtgvQLNVDSNhanVien.Columns[0].Width = 100;
                 dtgvQLNVDSNhanVien.Columns[1].Width = 200;
 
-
                 cmb.Enabled = true;
                 txtQLNVHoTen.Enabled = false;
                 txtDoB.Enabled = false;
@@ -83,9 +82,7 @@ namespace BTL_QuanLiFF.UserControls
                 else rdbNu.Checked = true;
 
                 txtAnh.Text = dt.Rows[0]["imgNV"].ToString();
-
             }
-
         }
 
         private void btnQLNVThem_Click(object sender, EventArgs e)
@@ -142,12 +139,11 @@ namespace BTL_QuanLiFF.UserControls
             {
                 err4.SetError(txtQLNVChucVu, "Trường này là bắt buộc");
                 return false;
-
             }
             else
             {
-                if(txtQLNVChucVu.Text.Trim() != "Thu ngân" && 
-                        txtQLNVChucVu.Text.Trim() != "Quản lý" &&
+                if(txtQLNVChucVu.Text.Trim() != "Thu Ngân" && 
+                        txtQLNVChucVu.Text.Trim() != "Quản Lý" &&
                         txtQLNVChucVu.Text.Trim() != "Admin")
                 {
                     err4.SetError(txtQLNVChucVu, "Chức vụ hiện có thu ngân và quản lý");
@@ -190,7 +186,7 @@ namespace BTL_QuanLiFF.UserControls
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Nhập không đúng định dạng " , "Lỗi");
                     return false;
                 }
                 
@@ -212,73 +208,110 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnLuu1_Click(object sender, EventArgs e)
         {
-            if (check1()== true && btnQLNVThem.Enabled == true)
+            if(btnQLNVThem.Enabled == true)
             {
-
-                try
+                if (check1() == true)
                 {
-                    dtbase.DataChange("insert into nhanvien values('" + cmb.Text +
-                   "',  N'" + txtQLNVHoTen.Text + "', '" + txtDoB.Text +
-                   "', N'" + txtAnh.Text + "', '" + txtQLNVSoDT.Text +
-                   "', N'" + txtQLNVChucVu.Text + "', N'" + gt +
-                   "')");
+                    try
+                    {
+                        dtbase.DataChange("insert into nhanvien values('" + cmb.Text +
+                       "',  N'" + txtQLNVHoTen.Text + "', '" + txtDoB.Text +
+                       "', N'" + txtAnh.Text + "', '" + txtQLNVSoDT.Text +
+                       "', N'" + txtQLNVChucVu.Text + "', N'" + gt +
+                       "')");
 
-                    MessageBox.Show("Thêm nhân viên thành công", " Thông báo ",
-                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm nhân viên thành công", " Thông báo ",
+                          MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        dtgvQLNVDSNhanVien.DataSource = dtbase.DataReader("select * from nhanvien");
+                        this.customDgv1();
+
+                        cmb.DataSource = dtbase.DataReader("select idNV from NHANVIEN");
+                        cmb.DisplayMember = "idNV";
+                        cmb.ValueMember = "idNV";
+
+                        cmb.Enabled = true;
+                        txtQLNVHoTen.Enabled = false;
+                        txtDoB.Enabled = false;
+                        txtQLNVSoDT.Enabled = false;
+                        txtQLNVChucVu.Enabled = false;
+                        rdbNam.Checked = true;
+                        btnLuu1.Enabled = false;
+                        txtAnh.Enabled = false;
+                        btnHuy.Enabled = false;
+
+                        txtQLNVHoTen.Text = "";
+                        txtQLNVSoDT.Text = "";
+                        txtQLNVChucVu.Text = "";
+
+                        txtDoB.Text = "";
+                        txtAnh.Text = "";
+                    }
+                    catch (Exception Ex)
+                    {
+                        try
+                        {
+                            System.IO.File.Delete(path + @"\Images\KhachHang\" + txtAnh.Text);
+                        }
+                        catch (Exception exx)
+                        {
+
+                        }
+                        MessageBox.Show(Ex.Message, "Lỗi");
+                        return;
+                    }
+
                 }
-                catch (Exception Ex)
-                {
-                    System.IO.File.Delete(path + @"\Images\KhachHang\" + txtAnh.Text);
-                    MessageBox.Show(Ex.Message, "Lỗi");
-                    
-                }
-
-            }
-            if (check1() && btnQLNVSua.Enabled == true)
-            {
-                try
-                {
-                    dtbase.DataChange("update NHANVIEN set hoTenNV = N'" +
-                        txtQLNVHoTen.Text + "' , ngaySinh = '" +
-                        txtDoB.Text + "', soDT = ' " +
-                        txtQLNVSoDT.Text + "', chucVu = N'" +
-                        txtQLNVChucVu.Text + "', sex = N'" +
-                        gt + " ' " + 
-                        "where idNV = '" + cmb.Text + "'");
-
-                    MessageBox.Show("Sửa thông tin nhân viên thành công", " Thông báo ",
-                      MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message, "Lỗi");
-                }
-            }
-            dtgvQLNVDSNhanVien.DataSource = dtbase.DataReader("select * from nhanvien");
-            this.customDgv1();
-
-            cmb.DataSource = dtbase.DataReader("select idNV from NHANVIEN");
-            cmb.DisplayMember = "idNV";
-            cmb.ValueMember = "idNV";
-
-            cmb.Enabled = true;
-            txtQLNVHoTen.Enabled = false;
-            txtDoB.Enabled = false;
-            txtQLNVSoDT.Enabled = false;
-            txtQLNVChucVu.Enabled = false;
-            rdbNam.Checked = true;
-            btnLuu1.Enabled = false;
-            txtAnh.Enabled = false;
-            btnHuy.Enabled = false;
-
-            txtQLNVHoTen.Text = "";
-            txtQLNVSoDT.Text = "";
-            txtQLNVChucVu.Text = "";
+            }    
             
-            txtDoB.Text = "";
-            txtAnh.Text = "";
+
+            if(btnQLNVSua.Enabled == true)
+            {
+                if (check1() == true)
+                {
+                    try
+                    {
+                        dtbase.DataChange("update NHANVIEN set hoTenNV = N'" +
+                            txtQLNVHoTen.Text + "' , ngaySinh = '" +
+                            txtDoB.Text + "', soDT = ' " +
+                            txtQLNVSoDT.Text + "', chucVu = N'" +
+                            txtQLNVChucVu.Text + "', sex = N'" +
+                            gt + " ' " +
+                            "where idNV = '" + cmb.Text + "'");
+
+                        MessageBox.Show("Sửa thông tin nhân viên thành công", " Thông báo ",
+                          MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        dtgvQLNVDSNhanVien.DataSource = dtbase.DataReader("select * from nhanvien");
+                        this.customDgv1();
+
+                        cmb.DataSource = dtbase.DataReader("select idNV from NHANVIEN");
+                        cmb.DisplayMember = "idNV";
+                        cmb.ValueMember = "idNV";
+
+                        cmb.Enabled = true;
+                        txtQLNVHoTen.Enabled = false;
+                        txtDoB.Enabled = false;
+                        txtQLNVSoDT.Enabled = false;
+                        txtQLNVChucVu.Enabled = false;
+                        rdbNam.Checked = true;
+                        btnLuu1.Enabled = false;
+                        txtAnh.Enabled = false;
+                        btnHuy.Enabled = false;
+
+                        txtQLNVHoTen.Text = "";
+                        txtQLNVSoDT.Text = "";
+                        txtQLNVChucVu.Text = "";
+
+                        txtDoB.Text = "";
+                        txtAnh.Text = "";
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message, "Lỗi");
+                    }
+                }
+            }
         }
 
         private void lblAnh_Click(object sender, EventArgs e)
@@ -296,8 +329,12 @@ namespace BTL_QuanLiFF.UserControls
                 strImageFileName = Anh[Anh.Length - 1];
                 txtAnh.Text = strImageFileName;
 
+                try { 
                 System.IO.File.Copy(dlgOpen.FileName, path + @"\Images\KhachHang\" + strImageFileName);
+                 } catch (Exception Ex)
+                {
 
+                }
             }
         }
 
@@ -314,12 +351,22 @@ namespace BTL_QuanLiFF.UserControls
 
         public void customDgv1()
         {
+            dtgvQLNVDSNhanVien.Columns["idNV"].HeaderText = "Mã NV";
+            dtgvQLNVDSNhanVien.Columns["hotenNV"].HeaderText = "Họ tên NV";
+            dtgvQLNVDSNhanVien.Columns["ngaySinh"].HeaderText = "Ngày sinh";
+            dtgvQLNVDSNhanVien.Columns["imgNV"].HeaderText = "Tên ảnh";
+            dtgvQLNVDSNhanVien.Columns["soDT"].HeaderText = "Số ĐT";
+            dtgvQLNVDSNhanVien.Columns["chucVu"].HeaderText = "Chức vụ";
             dtgvQLNVDSNhanVien.Columns["sex"].HeaderText = "Giới tính";
         }
 
         public void customDgv2()
         {
-
+            dgv2.Columns["idKM"].HeaderText = "Mã khuyến mại";
+            dgv2.Columns["idSP"].HeaderText = "Mã SP";
+            dgv2.Columns["ngayBatDau"].HeaderText = "Ngày bắt đầu";
+            dgv2.Columns["ngayKetThuc"].HeaderText = "Ngày kết thúc";
+            dgv2.Columns["giamGia"].HeaderText = "Giảm giá";
         }
 
         private void btnQLNVSua_Click(object sender, EventArgs e)
@@ -434,12 +481,10 @@ namespace BTL_QuanLiFF.UserControls
 
                 this.customDgv1();
             }
-
             if(e.TabPage == tpKM)
             {
                 this.Load2();
             }
-
             if(e.TabPage == QLHDN)
             {
                 this.Load3();
@@ -464,14 +509,11 @@ namespace BTL_QuanLiFF.UserControls
                 btnLuu2.Enabled = false;
                 btnSua2.Enabled = false;
                 btnHuy2.Enabled = false;
-
             }
             catch(Exception Ex)
             {
                 MessageBox.Show(Ex.Message);
             }
-            
-
             this.customDgv2();
         }
 
@@ -574,7 +616,6 @@ namespace BTL_QuanLiFF.UserControls
             {
                 MessageBox.Show(Ex.Message);
             }
-
             btnLuu1.Enabled = true;
             btnSua2.Enabled = true;
             btnThem2.Enabled = true;
@@ -643,6 +684,13 @@ namespace BTL_QuanLiFF.UserControls
         public void  edit3()
         {
             dgv3.Columns["TONGTIEN"].HeaderText = "Tổng tiền";
+            dgv3.Columns["idCT"].HeaderText = "Mã CT";
+            dgv3.Columns["idNCC"].HeaderText = "Mã NCC";
+            dgv3.Columns["soLuong"].HeaderText = "Số lượng";
+            dgv3.Columns["donGia"].HeaderText = "Đơn giá";
+            dgv3.Columns["donVi"].HeaderText = "Đơn Vị";
+            dgv3.Columns["ngayTaoHD"].HeaderText = "Ngày tạo";
+            dgv3.Columns["tenNL"].HeaderText = "Tên NL";
         }
 
         public void LoadNL3(string mnl)
@@ -692,54 +740,64 @@ namespace BTL_QuanLiFF.UserControls
 
         private void btnLuu3_Click(object sender, EventArgs e)
         {
-            if(check3()== true && btnThem3.Enabled == true)
+
+            if(btnThem3.Enabled == true)
             {
-                try
+                if (check3() == true && btnThem3.Enabled == true)
                 {
-                    dtbase.DataChange("insert into ctnguyenlieu " +
-                        "values('" + idCT + "', '" + cmbNL.Text +
-                        "' , " + NUM3.Value +
-                        ",   N'Sử dụng' , " +
-                        "'Túi' , " + txtDG.Text + " , N'Không có ghi chú') ");
+                    try
+                    {
+                        dtbase.DataChange("insert into ctnguyenlieu " +
+                            "values('" + idCT + "', '" + cmbNL.Text +
+                            "' , " + NUM3.Value +
+                            ",   N'Sử dụng' , " +
+                            "'Túi' , " + txtDG.Text + " , N'Không có ghi chú') ");
 
-                    string dateeeee = DateTime.Now.ToShortDateString();
-                    dtbase.DataChange("insert into cthoadonnhap values ('" + idCT + "','" +
-                        nv3 + "','" + cmbCC.Text + "','" + dateeeee + "'," + txtTT3.Text + ")");
+                        string dateeeee = DateTime.Now.ToShortDateString();
+                        dtbase.DataChange("insert into cthoadonnhap values ('" + idCT + "','" +
+                            nv3 + "','" + cmbCC.Text + "','" + dateeeee + "'," + txtTT3.Text + ")");
 
-                    MessageBox.Show("Thêm hóa đơn nhập thành công", " Thông báo ",
-                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm hóa đơn nhập thành công", " Thông báo ",
+                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-                catch(Exception Ex)
-                {
-                    dtbase.DataChange("delete ctnguyenlieu where idCT = '" + idCT + "'");
-                    dtbase.DataChange("delete cthoadonnhap where idCT = '" + idCT + "'");
-                    MessageBox.Show(Ex.Message, "Lỗi");
-                    return;
+                    }
+                    catch (Exception Ex)
+                    {
+                        dtbase.DataChange("delete ctnguyenlieu where idCT = '" + idCT + "'");
+                        dtbase.DataChange("delete cthoadonnhap where idCT = '" + idCT + "'");
+                        MessageBox.Show(Ex.Message, "Lỗi");
+                        return;
+                    }
                 }
             }
-            if(check3() == true && btnSua3.Enabled ==true)
+            
+
+            if(btnSua3.Enabled == true)
             {
-                try
+                if (check3() == true && btnSua3.Enabled == true)
                 {
-                    string dateeeee = DateTime.Now.ToShortDateString();
-                    dtbase.DataChange("update ctnguyenlieu set idNL = '" + txtNL.Text + "', soLuong = " +
-                        Convert.ToInt32(NUM3.Value) + " ', N'Túi' , " +
-                        txtDG.Text + "', N'Không có ghi chú' where idCT = '" + idCT + "'");
+                    try
+                    {
+                        string dateeeee = DateTime.Now.ToShortDateString();
+                        dtbase.DataChange("update ctnguyenlieu set idNL = '" + txtNL.Text + "', soLuong = " +
+                            Convert.ToInt32(NUM3.Value) + " ', N'Túi' , " +
+                            txtDG.Text + "', N'Không có ghi chú' where idCT = '" + idCT + "'");
 
-                    dtbase.DataChange("update cthoadonnhap set idNV ='" + nv3 + "' , idNCC = '" +
-                        cmbCC.Text + "' , ngayTaoHD = '" + dateeeee + "', TONGTIEN = '" + txtTT3.Text + "'" +
-                        " where idCT = '" + idCT + "'");
+                        dtbase.DataChange("update cthoadonnhap set idNV ='" + nv3 + "' , idNCC = '" +
+                            cmbCC.Text + "' , ngayTaoHD = '" + dateeeee + "', TONGTIEN = '" + txtTT3.Text + "'" +
+                            " where idCT = '" + idCT + "'");
 
-                    MessageBox.Show("Sửa hóa đơn nhập thành công", " Thông báo ",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Sửa hóa đơn nhập thành công", " Thông báo ",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message, "Lỗi");
+
+                        return;
+                    }
                 }
-                catch(Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message, "Lỗi");
-                   
-                    return;
-                }
+            
             }
             this.Load3();
         }
@@ -847,7 +905,7 @@ namespace BTL_QuanLiFF.UserControls
             txtTT3.Enabled = false;
 
             btnThem3.Enabled = true;
-            btnLuu3.Enabled = false;
+            btnLuu3.Enabled = true;
             //btnXoa3.Enabled = false;
             btnSua3.Enabled = false;
             btnHuy.Enabled = false;

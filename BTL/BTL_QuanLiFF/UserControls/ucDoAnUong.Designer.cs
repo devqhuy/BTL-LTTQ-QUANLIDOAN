@@ -236,7 +236,7 @@ namespace BTL_QuanLiFF.UserControls
             this.btnDoAnUongHDMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnDoAnUongHDMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnDoAnUongHDMoi.Image")));
             this.btnDoAnUongHDMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDoAnUongHDMoi.Location = new System.Drawing.Point(379, 491);
+            this.btnDoAnUongHDMoi.Location = new System.Drawing.Point(403, 488);
             this.btnDoAnUongHDMoi.Name = "btnDoAnUongHDMoi";
             this.btnDoAnUongHDMoi.Size = new System.Drawing.Size(188, 42);
             this.btnDoAnUongHDMoi.TabIndex = 22;
@@ -290,7 +290,7 @@ namespace BTL_QuanLiFF.UserControls
             this.lblTT.AutoSize = true;
             this.lblTT.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTT.Location = new System.Drawing.Point(575, 505);
+            this.lblTT.Location = new System.Drawing.Point(604, 504);
             this.lblTT.Name = "lblTT";
             this.lblTT.Size = new System.Drawing.Size(160, 29);
             this.lblTT.TabIndex = 17;
@@ -311,7 +311,7 @@ namespace BTL_QuanLiFF.UserControls
             this.lblTT2.AutoSize = true;
             this.lblTT2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTT2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTT2.Location = new System.Drawing.Point(745, 511);
+            this.lblTT2.Location = new System.Drawing.Point(770, 510);
             this.lblTT2.Name = "lblTT2";
             this.lblTT2.Size = new System.Drawing.Size(129, 22);
             this.lblTT2.TabIndex = 27;

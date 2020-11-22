@@ -206,6 +206,7 @@ namespace BTL_QuanLiFF.UserControls
             
             if (check())
             {
+                
                 try
                 {
                     dtbase.DataChange("INSERT INTO KHACHHANG VALUES('" +
@@ -256,8 +257,9 @@ namespace BTL_QuanLiFF.UserControls
                     Anh = dlgOpen.FileName.ToString().Split('\\');
                     strImageFileName = Anh[Anh.Length - 1];
                    
+                    try { 
                     System.IO.File.Copy(dlgOpen.FileName, path + @"\Images\KhachHang\" + strImageFileName);
-                    
+                    } catch(Exception Ex ) {}
                 }
             }
             
@@ -290,6 +292,13 @@ namespace BTL_QuanLiFF.UserControls
                     btnKHSua.Enabled = false;
                     btnKHXoa.Enabled = false;
                     btnKHHuy.Enabled = false;
+
+
+                    txtKHNgaySinh.Enabled = true;
+                    txtKHHoTen.Enabled = true;
+                    txtKHSoDT.Enabled = true;
+                    txtKHDiaChi.Enabled = true;
+                    picAnh.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -352,6 +361,11 @@ namespace BTL_QuanLiFF.UserControls
                 btnKHHuy.Enabled = false;
                 btnKHXoa.Enabled = false;
 
+                txtKHNgaySinh.Enabled = true;
+                txtKHHoTen.Enabled = true;
+                txtKHSoDT.Enabled = true;
+                txtKHDiaChi.Enabled = true;
+                picAnh.Enabled = true;
             }
         }
 

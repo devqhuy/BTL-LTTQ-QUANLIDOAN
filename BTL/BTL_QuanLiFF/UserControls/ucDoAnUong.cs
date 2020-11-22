@@ -148,7 +148,7 @@ namespace BTL_QuanLiFF.UserControls
             double gg = sales(txtDoAnUongMaMon.Text);
             if (gg != 0)
             {
-                MessageBox.Show("Sản phẩm " + txtDoAnUongMaMon.Text + "được giảm giá " + gg + "%",
+                MessageBox.Show("Sản phẩm " + txtDoAnUongMaMon.Text + "được giảm giá " + gg * 100 + "%",
                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -213,6 +213,7 @@ namespace BTL_QuanLiFF.UserControls
                 idKH = cbDoAnUongMaKH.Text;
                 frmCTHD = new FormCTHoaDon(txtKHMaHD.Text, idKH );
                 frmCTHD.ShowDialog();
+
             }
             else
             {

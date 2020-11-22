@@ -301,7 +301,7 @@
             // 
             this.rdb22.AutoSize = true;
             this.rdb22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb22.Location = new System.Drawing.Point(476, 73);
+            this.rdb22.Location = new System.Drawing.Point(513, 75);
             this.rdb22.Name = "rdb22";
             this.rdb22.Size = new System.Drawing.Size(69, 26);
             this.rdb22.TabIndex = 24;
@@ -313,7 +313,7 @@
             // 
             this.rdb21.AutoSize = true;
             this.rdb21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb21.Location = new System.Drawing.Point(348, 71);
+            this.rdb21.Location = new System.Drawing.Point(382, 75);
             this.rdb21.Name = "rdb21";
             this.rdb21.Size = new System.Drawing.Size(81, 26);
             this.rdb21.TabIndex = 23;
@@ -325,7 +325,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 75);
+            this.label2.Location = new System.Drawing.Point(24, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(281, 22);
             this.label2.TabIndex = 21;
@@ -335,7 +335,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(290, 30);
+            this.label4.Location = new System.Drawing.Point(316, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 22);
             this.label4.TabIndex = 19;
@@ -345,7 +345,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 30);
+            this.label5.Location = new System.Drawing.Point(24, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 22);
             this.label5.TabIndex = 18;
@@ -367,7 +367,7 @@
             // 
             this.dtpTKHDBTo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTKHDBTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTKHDBTo.Location = new System.Drawing.Point(348, 21);
+            this.dtpTKHDBTo.Location = new System.Drawing.Point(382, 22);
             this.dtpTKHDBTo.Name = "dtpTKHDBTo";
             this.dtpTKHDBTo.Size = new System.Drawing.Size(200, 30);
             this.dtpTKHDBTo.TabIndex = 16;
@@ -397,9 +397,9 @@
             // 
             this.pnBOTTOM3.Controls.Add(this.dgv3);
             this.pnBOTTOM3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBOTTOM3.Location = new System.Drawing.Point(3, 123);
+            this.pnBOTTOM3.Location = new System.Drawing.Point(3, 117);
             this.pnBOTTOM3.Name = "pnBOTTOM3";
-            this.pnBOTTOM3.Size = new System.Drawing.Size(870, 349);
+            this.pnBOTTOM3.Size = new System.Drawing.Size(870, 355);
             this.pnBOTTOM3.TabIndex = 1;
             // 
             // dgv3
@@ -410,7 +410,7 @@
             this.dgv3.Name = "dgv3";
             this.dgv3.RowHeadersWidth = 51;
             this.dgv3.RowTemplate.Height = 24;
-            this.dgv3.Size = new System.Drawing.Size(870, 349);
+            this.dgv3.Size = new System.Drawing.Size(870, 355);
             this.dgv3.TabIndex = 0;
             // 
             // pnTOP3
@@ -429,7 +429,7 @@
             this.pnTOP3.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTOP3.Location = new System.Drawing.Point(3, 3);
             this.pnTOP3.Name = "pnTOP3";
-            this.pnTOP3.Size = new System.Drawing.Size(870, 120);
+            this.pnTOP3.Size = new System.Drawing.Size(870, 114);
             this.pnTOP3.TabIndex = 0;
             // 
             // lblNL3

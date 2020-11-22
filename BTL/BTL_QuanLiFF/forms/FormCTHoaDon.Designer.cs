@@ -84,9 +84,9 @@
             this.grbTT.Controls.Add(this.label6);
             this.grbTT.Controls.Add(this.label4);
             this.grbTT.Controls.Add(this.label2);
-            this.grbTT.Location = new System.Drawing.Point(87, 43);
+            this.grbTT.Location = new System.Drawing.Point(16, 43);
             this.grbTT.Name = "grbTT";
-            this.grbTT.Size = new System.Drawing.Size(1019, 256);
+            this.grbTT.Size = new System.Drawing.Size(1019, 206);
             this.grbTT.TabIndex = 0;
             this.grbTT.TabStop = false;
             this.grbTT.Text = "THÔNG TIN CHUNG";
@@ -95,7 +95,7 @@
             // 
             this.txtTimKiemNgayBan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemNgayBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtTimKiemNgayBan.Location = new System.Drawing.Point(188, 90);
+            this.txtTimKiemNgayBan.Location = new System.Drawing.Point(730, 39);
             this.txtTimKiemNgayBan.Name = "txtTimKiemNgayBan";
             this.txtTimKiemNgayBan.Size = new System.Drawing.Size(200, 30);
             this.txtTimKiemNgayBan.TabIndex = 18;
@@ -105,7 +105,7 @@
             this.txtTimKiemMaKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemMaKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTimKiemMaKH.Enabled = false;
-            this.txtTimKiemMaKH.Location = new System.Drawing.Point(667, 31);
+            this.txtTimKiemMaKH.Location = new System.Drawing.Point(252, 99);
             this.txtTimKiemMaKH.Name = "txtTimKiemMaKH";
             this.txtTimKiemMaKH.Size = new System.Drawing.Size(200, 30);
             this.txtTimKiemMaKH.TabIndex = 16;
@@ -115,7 +115,7 @@
             this.txtTimKiemSoDT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemSoDT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTimKiemSoDT.Enabled = false;
-            this.txtTimKiemSoDT.Location = new System.Drawing.Point(667, 214);
+            this.txtTimKiemSoDT.Location = new System.Drawing.Point(252, 155);
             this.txtTimKiemSoDT.Name = "txtTimKiemSoDT";
             this.txtTimKiemSoDT.Size = new System.Drawing.Size(200, 30);
             this.txtTimKiemSoDT.TabIndex = 15;
@@ -125,9 +125,10 @@
             this.txtTimKiemDiaChi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemDiaChi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTimKiemDiaChi.Enabled = false;
-            this.txtTimKiemDiaChi.Location = new System.Drawing.Point(667, 155);
+            this.txtTimKiemDiaChi.Location = new System.Drawing.Point(730, 155);
+            this.txtTimKiemDiaChi.Multiline = true;
             this.txtTimKiemDiaChi.Name = "txtTimKiemDiaChi";
-            this.txtTimKiemDiaChi.Size = new System.Drawing.Size(200, 30);
+            this.txtTimKiemDiaChi.Size = new System.Drawing.Size(200, 38);
             this.txtTimKiemDiaChi.TabIndex = 14;
             // 
             // txtTimKiemTenKH
@@ -135,7 +136,8 @@
             this.txtTimKiemTenKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemTenKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTimKiemTenKH.Enabled = false;
-            this.txtTimKiemTenKH.Location = new System.Drawing.Point(667, 96);
+            this.txtTimKiemTenKH.Location = new System.Drawing.Point(730, 99);
+            this.txtTimKiemTenKH.Multiline = true;
             this.txtTimKiemTenKH.Name = "txtTimKiemTenKH";
             this.txtTimKiemTenKH.Size = new System.Drawing.Size(200, 30);
             this.txtTimKiemTenKH.TabIndex = 13;
@@ -144,7 +146,7 @@
             // 
             this.txtTimKiemMaHD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemMaHD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtTimKiemMaHD.Location = new System.Drawing.Point(188, 39);
+            this.txtTimKiemMaHD.Location = new System.Drawing.Point(252, 39);
             this.txtTimKiemMaHD.Name = "txtTimKiemMaHD";
             this.txtTimKiemMaHD.Size = new System.Drawing.Size(200, 30);
             this.txtTimKiemMaHD.TabIndex = 8;
@@ -152,7 +154,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(538, 217);
+            this.label9.Location = new System.Drawing.Point(92, 163);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 22);
             this.label9.TabIndex = 7;
@@ -161,7 +163,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(538, 99);
+            this.label8.Location = new System.Drawing.Point(577, 107);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 22);
             this.label8.TabIndex = 6;
@@ -170,7 +172,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(538, 158);
+            this.label7.Location = new System.Drawing.Point(577, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 22);
             this.label7.TabIndex = 5;
@@ -179,7 +181,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(538, 40);
+            this.label6.Location = new System.Drawing.Point(92, 107);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 22);
             this.label6.TabIndex = 4;
@@ -188,7 +190,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 98);
+            this.label4.Location = new System.Drawing.Point(577, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 22);
             this.label4.TabIndex = 2;
@@ -197,7 +199,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 39);
+            this.label2.Location = new System.Drawing.Point(92, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 22);
             this.label2.TabIndex = 0;
@@ -206,9 +208,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(510, 18);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(319, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 22);
+            this.label1.Size = new System.Drawing.Size(282, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "CHI TIẾT HÓA ĐƠN";
             // 
@@ -229,7 +232,7 @@
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Location = new System.Drawing.Point(87, 305);
+            this.groupBox2.Location = new System.Drawing.Point(16, 255);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1019, 406);
             this.groupBox2.TabIndex = 16;
@@ -241,9 +244,10 @@
             this.txtTimKiemKhuyenMai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemKhuyenMai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTimKiemKhuyenMai.Enabled = false;
-            this.txtTimKiemKhuyenMai.Location = new System.Drawing.Point(799, 36);
+            this.txtTimKiemKhuyenMai.Location = new System.Drawing.Point(799, 29);
+            this.txtTimKiemKhuyenMai.Multiline = true;
             this.txtTimKiemKhuyenMai.Name = "txtTimKiemKhuyenMai";
-            this.txtTimKiemKhuyenMai.Size = new System.Drawing.Size(160, 30);
+            this.txtTimKiemKhuyenMai.Size = new System.Drawing.Size(160, 37);
             this.txtTimKiemKhuyenMai.TabIndex = 26;
             // 
             // lblKM
@@ -259,14 +263,14 @@
             // 
             this.txtTimKiemMaMon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemMaMon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtTimKiemMaMon.Location = new System.Drawing.Point(189, 29);
+            this.txtTimKiemMaMon.Location = new System.Drawing.Point(189, 34);
             this.txtTimKiemMaMon.Name = "txtTimKiemMaMon";
             this.txtTimKiemMaMon.Size = new System.Drawing.Size(145, 30);
             this.txtTimKiemMaMon.TabIndex = 24;
             // 
             // txtTimKiemTongTien
             // 
-            this.txtTimKiemTongTien.Location = new System.Drawing.Point(829, 364);
+            this.txtTimKiemTongTien.Location = new System.Drawing.Point(829, 360);
             this.txtTimKiemTongTien.Name = "txtTimKiemTongTien";
             this.txtTimKiemTongTien.Size = new System.Drawing.Size(160, 30);
             this.txtTimKiemTongTien.TabIndex = 23;
@@ -274,7 +278,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(679, 372);
+            this.label10.Location = new System.Drawing.Point(679, 368);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(113, 22);
             this.label10.TabIndex = 22;
@@ -297,6 +301,7 @@
             this.txtTimKiemThanhTien.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTimKiemThanhTien.Enabled = false;
             this.txtTimKiemThanhTien.Location = new System.Drawing.Point(799, 89);
+            this.txtTimKiemThanhTien.Multiline = true;
             this.txtTimKiemThanhTien.Name = "txtTimKiemThanhTien";
             this.txtTimKiemThanhTien.Size = new System.Drawing.Size(160, 30);
             this.txtTimKiemThanhTien.TabIndex = 19;
@@ -315,16 +320,17 @@
             this.txtTimKiemTenMon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemTenMon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTimKiemTenMon.Enabled = false;
-            this.txtTimKiemTenMon.Location = new System.Drawing.Point(465, 36);
+            this.txtTimKiemTenMon.Location = new System.Drawing.Point(464, 29);
+            this.txtTimKiemTenMon.Multiline = true;
             this.txtTimKiemTenMon.Name = "txtTimKiemTenMon";
-            this.txtTimKiemTenMon.Size = new System.Drawing.Size(160, 30);
+            this.txtTimKiemTenMon.Size = new System.Drawing.Size(160, 37);
             this.txtTimKiemTenMon.TabIndex = 17;
             // 
             // txtTimKiemSoLuong
             // 
             this.txtTimKiemSoLuong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtTimKiemSoLuong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtTimKiemSoLuong.Location = new System.Drawing.Point(187, 84);
+            this.txtTimKiemSoLuong.Location = new System.Drawing.Point(189, 89);
             this.txtTimKiemSoLuong.Name = "txtTimKiemSoLuong";
             this.txtTimKiemSoLuong.Size = new System.Drawing.Size(145, 30);
             this.txtTimKiemSoLuong.TabIndex = 16;
@@ -333,7 +339,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(360, 89);
+            this.label11.Location = new System.Drawing.Point(361, 97);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 22);
             this.label11.TabIndex = 6;
@@ -342,7 +348,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(360, 39);
+            this.label13.Location = new System.Drawing.Point(360, 37);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 22);
             this.label13.TabIndex = 4;
@@ -351,7 +357,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(54, 87);
+            this.label15.Location = new System.Drawing.Point(37, 97);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(109, 22);
             this.label15.TabIndex = 2;
@@ -360,7 +366,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(666, 97);
+            this.label16.Location = new System.Drawing.Point(659, 97);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(127, 22);
             this.label16.TabIndex = 1;
@@ -369,7 +375,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(54, 39);
+            this.label17.Location = new System.Drawing.Point(37, 44);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(129, 22);
             this.label17.TabIndex = 0;
@@ -380,7 +386,7 @@
             this.btnTimKiemInHoaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemInHoaDon.Image")));
             this.btnTimKiemInHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemInHoaDon.Location = new System.Drawing.Point(87, 727);
+            this.btnTimKiemInHoaDon.Location = new System.Drawing.Point(28, 670);
             this.btnTimKiemInHoaDon.Name = "btnTimKiemInHoaDon";
             this.btnTimKiemInHoaDon.Size = new System.Drawing.Size(225, 43);
             this.btnTimKiemInHoaDon.TabIndex = 17;
@@ -393,7 +399,7 @@
             this.btnTimKiemThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemThoat.Image")));
             this.btnTimKiemThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemThoat.Location = new System.Drawing.Point(908, 727);
+            this.btnTimKiemThoat.Location = new System.Drawing.Point(849, 670);
             this.btnTimKiemThoat.Name = "btnTimKiemThoat";
             this.btnTimKiemThoat.Size = new System.Drawing.Size(168, 43);
             this.btnTimKiemThoat.TabIndex = 18;
@@ -406,7 +412,7 @@
             this.btnTimKiemXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemXoa.Image")));
             this.btnTimKiemXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemXoa.Location = new System.Drawing.Point(721, 727);
+            this.btnTimKiemXoa.Location = new System.Drawing.Point(662, 670);
             this.btnTimKiemXoa.Name = "btnTimKiemXoa";
             this.btnTimKiemXoa.Size = new System.Drawing.Size(168, 43);
             this.btnTimKiemXoa.TabIndex = 19;
@@ -419,7 +425,7 @@
             this.btnTimKiemCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemCapNhat.Image")));
             this.btnTimKiemCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemCapNhat.Location = new System.Drawing.Point(338, 727);
+            this.btnTimKiemCapNhat.Location = new System.Drawing.Point(279, 670);
             this.btnTimKiemCapNhat.Name = "btnTimKiemCapNhat";
             this.btnTimKiemCapNhat.Size = new System.Drawing.Size(168, 43);
             this.btnTimKiemCapNhat.TabIndex = 20;
@@ -432,7 +438,7 @@
             this.btnTimKiemHuyDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemHuyDon.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiemHuyDon.Image")));
             this.btnTimKiemHuyDon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemHuyDon.Location = new System.Drawing.Point(531, 727);
+            this.btnTimKiemHuyDon.Location = new System.Drawing.Point(472, 670);
             this.btnTimKiemHuyDon.Name = "btnTimKiemHuyDon";
             this.btnTimKiemHuyDon.Size = new System.Drawing.Size(168, 43);
             this.btnTimKiemHuyDon.TabIndex = 21;
@@ -445,7 +451,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1189, 793);
+            this.ClientSize = new System.Drawing.Size(1047, 726);
             this.Controls.Add(this.btnTimKiemHuyDon);
             this.Controls.Add(this.btnTimKiemCapNhat);
             this.Controls.Add(this.btnTimKiemXoa);

@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,8 @@ namespace BTL_QuanLiFF.Forms
     
     public partial class frmMenu : Form
     {
+        Classes.DataBaseProcess dtbase = new Classes.DataBaseProcess();
+
         public static frmMenu fMenu = new frmMenu();
         frmLogin frmLogin1 = new frmLogin();
         ucThongKe ucDAU = new ucThongKe();
@@ -141,6 +144,32 @@ namespace BTL_QuanLiFF.Forms
             lblTieuDe.Text = "Mục Thông Tin" ;
 
             addControlsToPanel(ucTT);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Tạo MD5 
+            MD5 mh = MD5.Create();
+            //Chuyển kiểu chuổi thành kiểu byte
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes("2894490800");
+            //mã hóa chuỗi đã chuyển
+            byte[] hash = mh.ComputeHash(inputBytes);
+            //tạo đối tượng StringBuilder (làm việc với kiểu dữ liệu lớn)
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            MessageBox.Show(sb.ToString());
+            //nếu bạn muốn các chữ cái in thường thay vì in hoa thì bạn thay chữ "X" in hoa 
+            //trong "X2" thành "x"
+            dtbase.DataChange("update taikhoan set matKhau = '" + sb.ToString()+ "' where idUSER = 'US03' ");   
         }
     }
 }

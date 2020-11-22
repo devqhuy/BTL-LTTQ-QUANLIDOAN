@@ -166,10 +166,14 @@
     <Content Include="bin\Debug\Images\exitMenu.png" />
     <Content Include="bin\Debug\Images\food.png" />
     <Content Include="bin\Debug\Images\hamburger.png" />
+    <Content Include="bin\Debug\Images\Icon\error.jpg" />
+    <Content Include="bin\Debug\Images\Icon\warning.icon.png" />
+    <Content Include="bin\Debug\Images\Icon\warning.icon.svg" />
     <Content Include="bin\Debug\Images\KhachHang\kh01.jpg" />
     <Content Include="bin\Debug\Images\KhachHang\kh02.jpg" />
     <Content Include="bin\Debug\Images\KhachHang\kh03.jpg" />
     <Content Include="bin\Debug\Images\KhachHang\laptop-user.jpg" />
+    <Content Include="bin\Debug\Images\KhachHang\vidu-2999.png" />
     <Content Include="bin\Debug\Images\remove-button.png" />
     <Content Include="bin\Debug\Images\testimonials.png" />
     <Content Include="bin\Debug\Images\waiter.png" />

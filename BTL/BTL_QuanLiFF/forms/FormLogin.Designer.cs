@@ -86,7 +86,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(218, 128);
+            this.pictureBox2.Location = new System.Drawing.Point(218, 134);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(146, 113);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +100,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(160, 264);
+            this.label2.Location = new System.Drawing.Point(160, 270);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(289, 28);
             this.label2.TabIndex = 3;
@@ -132,13 +132,13 @@
             // 
             this.lblMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMK.AutoSize = true;
-            this.lblMK.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMK.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.lblMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
             this.lblMK.Location = new System.Drawing.Point(31, 451);
             this.lblMK.Name = "lblMK";
-            this.lblMK.Size = new System.Drawing.Size(120, 23);
+            this.lblMK.Size = new System.Drawing.Size(109, 23);
             this.lblMK.TabIndex = 6;
-            this.lblMK.Text = "MẬT KHẨU :";
+            this.lblMK.Text = "MẬT KHẨU:";
             // 
             // txtLoginMK
             // 
